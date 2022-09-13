@@ -31,6 +31,9 @@ def CavCondStudy(fig,ax):
     DFCond["Date and Time"] = parse_dates(DFCond,"Date","Time")
 
     ax.plot(DF["Date and Time"],DF["power"])
+    for i, row in DFCond.iterrows():
+        ax.vlines(row["Date and Time"],0,300,linestyles='dashed',color='k')
+        
     print(DF["power"].head())
     return(fig,ax)
 
