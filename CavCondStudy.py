@@ -25,7 +25,7 @@ def parse_date(date, time):
         print("Failed to parse time.",ex)
 
 def CavCondStudy(fig,ax):
-    timeframe = 43200
+    timeframe = float(input("How long before and after conditioning should be considered? (hrs)\n>>> "))*3600
     
     DF = pd.read_csv("output.csv")
     DFCond = pd.read_csv("Conditioning times.csv")
@@ -67,8 +67,6 @@ def CavCondStudy(fig,ax):
     After["power (W)"] = PowerA
     After["Iteration"] = IterationA
 
-    print(Before.head())
-
     for i,row in Before.iterrows():
         try:
             ax.vlines(row["Date and Time"],0,300,colors='red',linestyles='dashed')
@@ -89,6 +87,10 @@ def CavCondStudy(fig,ax):
         
         paired_data.append(diff)
 
+    with open("paired t test.txt","w") as f:
+        for d in paired_data:
+            f.write(str(d)+"\n")
+            
     tstat, pvalue = stats.ttest_1samp(paired_data,0)
     print("test statistic: {:4.2f}\np-value: {:4.3f}".format(tstat,pvalue))
     
