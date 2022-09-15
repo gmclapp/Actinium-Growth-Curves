@@ -9,22 +9,22 @@ import json
 class dir_popup:
     def __init__(self,parent):
         self.parent = parent
-        child = tk.Toplevel(self.parent.master)
-        child.geometry("250x400")
-        child.title("Directory selector")
-        beamDataPB = ttk.Button(child,text="Select Beam Data",command=self.dir_cmd)
-        schedPB = ttk.Button(child,text="Select Target Data",command=self.target_cmd)
-        targetPB = ttk.Button(child,text="Select Schedule Data",command=self.sch_cmd)
+        self.child = tk.Toplevel(self.parent.master)
+        self.child.geometry("250x400")
+        self.child.title("Directory selector")
+        beamDataPB = ttk.Button(self.child,text="Select Beam Data",command=self.dir_cmd)
+        schedPB = ttk.Button(self.child,text="Select Target Data",command=self.target_cmd)
+        targetPB = ttk.Button(self.child,text="Select Schedule Data",command=self.sch_cmd)
 ##        powerSchedPB = ttk.Button(child,text="Select Beam Data",command=)
-##        OKPB = ttk.Button(child,text="Select Beam Data",command=)
-        CancelPB = ttk.Button(child,text="Cancel",command=child.destroy)
+
+        DonePB = ttk.Button(self.child,text="Done",command=self.child.destroy)
 
         beamDataPB.grid(column=0,row=0)
         schedPB.grid(column=0,row=1)
         targetPB.grid(column=0,row=2)
 ##        powerSchedPB.grid(column=,row=)
-##        OKPB.grid(column=,row=)
-        CancelPB.grid(column=0,row=3)
+
+        DonePB.grid(column=0,row=3)
         
     def dir_cmd(self):
         self.parent.beamPath.set(askopenfile().name)
@@ -32,21 +32,17 @@ class dir_popup:
 
         # Open the data base and retrieve recent data for form autofill
         self.parent.get_last_data(self.parent.beamPath.get())
-
+        self.child.attributes('-topmost',True)
+        
     def target_cmd(self):
         self.parent.targetMeasPath.set(askopenfile().name)
         print("Target measurement path set to {}".format(self.parent.targetMeasPath.get()))
-
-        # Open the data base and retrieve recent data for form autofill
-##        self.parent.get_last_data(self.parent.targetMeasPath.get())
-
+        self.child.attributes('-topmost',True)
+        
     def sch_cmd(self):
         self.parent.downSchedPath.set(askopenfile().name)
         print("Beam path set to {}".format(self.parent.downSchedPath.get()))
-
-        # Open the data base and retrieve recent data for form autofill
-##        self.parent.get_last_data(self.parent.beamPath.get())
-
+        self.child.attributes('-topmost',True)
         
 class GUI:
     def __init__(self,master,version,mod_date):
