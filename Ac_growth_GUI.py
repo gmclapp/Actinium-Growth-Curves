@@ -13,28 +13,11 @@ class dir_popup:
         self.child.geometry("450x250")
         self.child.title("Directory selector")
 
-        beamDataLabel = ttk.Label(self.child,text="Select the csv file with irradiation data: ")
-        schedLabel = ttk.Label(self.child,text="Select the csv file with scheduled down time: ")
-        targetLabel = ttk.Label(self.child,text="Select the csv file with the target activity measurements: ")
-        
-        beamDataPB = ttk.Button(self.child,text="Select Beam Data",command=self.dir_cmd)
-        schedPB = ttk.Button(self.child,text="Select Target Data",command=self.target_cmd)
-        targetPB = ttk.Button(self.child,text="Select Schedule Data",command=self.sch_cmd)
-##        powerSchedPB = ttk.Button(child,text="Select Beam Data",command=)
+        # Frame creation
+        self.dir_frame()
 
-        DonePB = ttk.Button(self.child,text="Done",command=self.child.destroy)
-
-        beamDataLabel.grid(column=0,row=0)
-        beamDataPB.grid(column=1,row=0)
-
-        schedLabel.grid(column=0,row=1)
-        schedPB.grid(column=1,row=1)
-
-        targetLabel.grid(column=0,row=2)
-        targetPB.grid(column=1,row=2)
-##        powerSchedPB.grid(column=,row=)
-
-        DonePB.grid(column=0,row=3)
+        # Frame placement
+        self.dirFR.grid(row=0,column=0,padx=2,pady=2)
         
     def dir_cmd(self):
         self.parent.beamPath.set(askopenfile().name)
@@ -53,6 +36,35 @@ class dir_popup:
         self.parent.downSchedPath.set(askopenfile().name)
         print("Beam path set to {}".format(self.parent.downSchedPath.get()))
         self.child.attributes('-topmost',True)
+
+# ------------------- L A B E L   F R A M E   S E T U P S ------------------- #
+    def dir_frame(self):
+        self.dirFR = tk.LabelFrame(self.child,
+                                   text="Data sources")
+
+        beamDataPB = ttk.Button(self.dirFR,text="Select Beam Data",command=self.dir_cmd)
+        schedPB = ttk.Button(self.dirFR,text="Select Target Data",command=self.target_cmd)
+        targetPB = ttk.Button(self.dirFR,text="Select Schedule Data",command=self.sch_cmd)
+##        powerSchedPB = ttk.Button(self.dirFR,text="Select Beam Data",command=)
+
+        DonePB = ttk.Button(self.dirFR,text="Done",command=self.child.destroy)
+
+
+        beamDataLabel = ttk.Label(self.dirFR,text="Select the csv file with irradiation data: ")
+        schedLabel = ttk.Label(self.dirFR,text="Select the csv file with scheduled down time: ")
+        targetLabel = ttk.Label(self.dirFR,text="Select the csv file with the target activity measurements: ")
+
+        beamDataLabel.grid(column=0,row=0)
+        beamDataPB.grid(column=1,row=0)
+
+        schedLabel.grid(column=0,row=1)
+        schedPB.grid(column=1,row=1)
+
+        targetLabel.grid(column=0,row=2)
+        targetPB.grid(column=1,row=2)
+##        powerSchedPB.grid(column=,row=)
+
+        DonePB.grid(column=0,row=3)
         
 class GUI:
     def __init__(self,master,version,mod_date):
