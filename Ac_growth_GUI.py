@@ -6,6 +6,34 @@ from datetime import datetime
 from Ac_growth import *
 import json
 
+class dir_popup:
+    def __init__(self,parent):
+        self.parent = parent
+        child = tk.Toplevel(self.parent.master)
+        child.geometry("250x400")
+        child.title("Directory selector")
+        beamDataPB = ttk.Button(child,text="Select Beam Data",command=self.dir_cmd)
+##        schedPB = ttk.Button(child,text="Select Beam Data",command=)
+##        targetPB = ttk.Button(child,text="Select Beam Data",command=)
+##        powerSchedPB = ttk.Button(child,text="Select Beam Data",command=)
+##        OKPB = ttk.Button(child,text="Select Beam Data",command=)
+        CancelPB = ttk.Button(child,text="Cancel",command=child.destroy)
+
+        beamDataPB.grid(column=0,row=0)
+##        schedPB.grid(column=,row=)
+##        targetPB.grid(column=,row=)
+##        powerSchedPB.grid(column=,row=)
+##        OKPB.grid(column=,row=)
+        CancelPB.grid(column=0,row=1)
+        
+    def dir_cmd(self):
+        self.parent.beamPath.set(askopenfile().name)
+        print("Beam path set to {}".format(self.parent.beamPath.get()))
+
+        # Open the data base and retrieve recent data for form autofill
+        self.parent.get_last_data(self.parent.beamPath.get())
+
+        
 class GUI:
     def __init__(self,master,version,mod_date):
         self.version = version
@@ -64,12 +92,7 @@ class GUI:
             print(last_line["Energy (MeV)"].item())
 
 # ----------------- P U S H   B U T T O N   C O M M A N D S ----------------- #
-    def dir_cmd(self):
-        self.beamPath.set(askopenfile().name)
-        print("Beam path set to {}".format(self.beamPath.get()))
-
-        # Open the data base and retrieve recent data for form autofill
-        self.get_last_data(self.beamPath.get())
+    
 
     def report_cmd(self):
         Ac_growth(self.beamPath.get())
@@ -114,6 +137,9 @@ class GUI:
             meta["plot y-scale"] = self.ylim.get()
             
             json.dump(meta,f,indent=4)
+
+    def open_directory_popup(self):
+        child = dir_popup(self)
     
 # ------------------- L A B E L   F R A M E   S E T U P S ------------------- #
     def dir_frame(self):
@@ -125,7 +151,7 @@ class GUI:
                                       text="Beam data database: ")
         self.ask_filePB = ttk.Button(self.dirFR,
                                      text="Select",
-                                     command=self.dir_cmd)
+                                     command=self.open_directory_popup)
         self.reportPB = ttk.Button(self.dirFR,
                                    text="Create Report",
                                    command=self.report_cmd)
