@@ -212,7 +212,7 @@ def Ac_growth(GUI_obj):
     # ----------------- S C R I P T   S E T T I N G S  -------------------------- #
 
     Adjustable_Ratio = meta["Adjustable ratio"]
-    Fudge_Factor = meta["Fudge factor"]
+##    Fudge_Factor = meta["Fudge factor"]
     Reaction_Rate_Modification_Factor = meta["Reaction rate modification factor"]
     mGy_min_watt = meta["mGy per min per watt"]
 
@@ -331,6 +331,7 @@ def Ac_growth(GUI_obj):
                         Reaction_Rate_Modification_Factor)
 
     DF.to_csv("output.csv")
+    DF_custom.to_csv("Alex.csv")
     DF_proj.to_csv("projection.csv")
 
     # ------------------- B E G I N   P L O T T I N G ---------------------------- #
@@ -478,10 +479,10 @@ def Ac_growth(GUI_obj):
 class dummy_GUI:
     def __init__(self):
         root = tk.Tk()
-        self.beamPath = tk.StringVar(value=r"data/irradiation log.csv")
-        self.targetMeasPath = tk.StringVar(value=r"data/Target measurements.csv")
-        self.downSchedPath = tk.StringVar(value=r"data/Schedule.csv")
-        self.powerSchedPath = tk.StringVar(value=r"data/Power scalar schedule.csv")
+        self.beamPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/irradiation log.csv")
+        self.targetMeasPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Target measurements.csv")
+        self.downSchedPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Schedule.csv")
+        self.powerSchedPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Power scalar schedule.csv")
         
 if __name__ == '__main__':
     GUI = dummy_GUI()
