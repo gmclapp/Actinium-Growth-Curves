@@ -34,7 +34,12 @@ class dir_popup:
         
     def sch_cmd(self):
         self.parent.downSchedPath.set(askopenfile().name)
-        print("Beam path set to {}".format(self.parent.downSchedPath.get()))
+        print("Dowtime schedule path set to {}".format(self.parent.downSchedPath.get()))
+        self.child.attributes('-topmost',True)
+
+    def pow_cmd(self):
+        self.parent.powerSchedPath.set(askopenfile().name)
+        print("Power scalar path set to {}".format(self.parent.powerSchedPath.get()))
         self.child.attributes('-topmost',True)
 
 # ------------------- L A B E L   F R A M E   S E T U P S ------------------- #
@@ -43,9 +48,9 @@ class dir_popup:
                                    text="Data sources")
 
         beamDataPB = ttk.Button(self.dirFR,text="Select Beam Data",command=self.dir_cmd)
-        schedPB = ttk.Button(self.dirFR,text="Select Target Data",command=self.target_cmd)
-        targetPB = ttk.Button(self.dirFR,text="Select Schedule Data",command=self.sch_cmd)
-##        powerSchedPB = ttk.Button(self.dirFR,text="Select Beam Data",command=)
+        targetPB = ttk.Button(self.dirFR,text="Select Target Data",command=self.target_cmd)
+        schedPB = ttk.Button(self.dirFR,text="Select Schedule Data",command=self.sch_cmd)
+        powerSchedPB = ttk.Button(self.dirFR,text="Select Beam Data",command=self.pow_cmd)
 
         DonePB = ttk.Button(self.dirFR,text="Done",command=self.child.destroy)
 
@@ -62,9 +67,10 @@ class dir_popup:
 
         targetLabel.grid(column=0,row=2)
         targetPB.grid(column=1,row=2)
-##        powerSchedPB.grid(column=,row=)
+        
+        powerSchedPB.grid(column=2,row=3)
 
-        DonePB.grid(column=0,row=3)
+        DonePB.grid(column=0,row=4)
         
 class GUI:
     def __init__(self,master,version,mod_date):

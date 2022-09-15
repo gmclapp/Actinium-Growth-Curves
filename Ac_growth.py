@@ -188,7 +188,20 @@ def createPowerProjection(df,Schedule,mean_power,std_power,stds_from_avg,include
         lower_power.append(mean-stds_from_avg*sd)
 
     return(upper_power,mean_power,lower_power,extraction)
-
+def scale_power(df, dfpower):
+    dfpower["Start Date and Time"] = parse_dates(dfpower,"Start date","Start time")
+    dfpower["End Date and Time"] = parse_dates(dfpower,"End date","End time")
+    phase1end = DT.datetime(2022,8,19,9,0)
+    
+    for i,row in df.iterrows():
+        for j,jow in dfpower.iterrows():
+            start = jow["Start Date and Time"].to_pydatetime()
+            end = jow["End Date and Time"].to_pydatetime()
+            if start < row["Date and Time"].to_pydatetime() < end:
+                df.at[i,"Integrated Power (kWhr from Acc)"] = df.at[i,"Integrated Power (kWhr from Acc)"]*jow["Scalar"]
+            else:
+                pass
+    
 def Ac_growth(GUI_obj):
     # ------------------- R E T R I E V E   D A T A  ---------------------------- #
     
@@ -205,22 +218,19 @@ def Ac_growth(GUI_obj):
 
     DF = pd.read_csv(GUI_obj.beamPath.get(),parse_dates=True)
     DFmeas = pd.read_csv(GUI_obj.targetMeasPath.get())
-##    DFmeas = pd.read_csv("Target measurements.csv")
 
     DF["Date and Time"] = parse_dates(DF,"Date","Time")
     DF["Elapsed time (s)"] = (DF["Date and Time"] - DF["Date and Time"][0]).dt.total_seconds()
     calculate_delta(DF)
 
     # Create calculated data
+##    DF["Integrated Power (kWhr from Acc)"] = dose_to_accumulated_power(DF["Accumulated Dose"],
+##                                                                       mGy_min_watt)/Fudge_Factor
     DF["Integrated Power (kWhr from Acc)"] = dose_to_accumulated_power(DF["Accumulated Dose"],
-                                                                       mGy_min_watt)/Fudge_Factor
-
-    phase1end = DT.datetime(2022,8,19,9,0)
-##    for i,row in DF.iterrows():
-##        if row["Date and Time"].to_pydatetime() < phase1end:
-##            DF.at[i,"Integrated Power (kWhr from Acc)"] = DF.at[i,"Integrated Power (kWhr from Acc)"]*Fudge_Factor/1
-##        else:
-##            DF.at[i,"Integrated Power (kWhr from Acc)"] = DF.at[i,"Integrated Power (kWhr from Acc)"]*Fudge_Factor/1
+                                                                       mGy_min_watt)
+    DFPowerScale = pd.read_csv(GUI_obj.powerSchedPath.get())
+    scale_power(DF,DFPowerScale)
+    
     DF["Dose rate (Gy/s)"] = DF["Accumulated Dose"]/DF["dt (s)"]
     
     start_time = DF["Date and Time"][0].to_pydatetime()
@@ -254,9 +264,12 @@ def Ac_growth(GUI_obj):
     Dose_mean = meta["Project dt (s)"]*masked_df["Dose rate (Gy/s)"].tail(meta["Moving avg length"]).mean()
     Dose_std = meta["Project dt (s)"]*masked_df["Dose rate (Gy/s)"].tail(meta["Moving avg length"]).std()
     
-    Projected_power = dose_to_accumulated_power(Dose_mean,mGy_min_watt)/Fudge_Factor
-    Power_std = dose_to_accumulated_power(Dose_std,mGy_min_watt)/Fudge_Factor
+##    Projected_power = dose_to_accumulated_power(Dose_mean,mGy_min_watt)/Fudge_Factor
+##    Power_std = dose_to_accumulated_power(Dose_std,mGy_min_watt)/Fudge_Factor
 
+    Projected_power = dose_to_accumulated_power(Dose_mean,mGy_min_watt)
+    Power_std = dose_to_accumulated_power(Dose_std,mGy_min_watt)
+    
     End = DF["Date and Time"].tail(1).item().to_pydatetime() # Get the last date
     
     # Create a series of datetime objects with parameters from meta data for projection
@@ -292,6 +305,11 @@ def Ac_growth(GUI_obj):
                            
     DF_custom["Integrated Power (kWhr from Acc)"] = meta["Custom projection power"]*(DF_custom["dt (s)"]/3600)/1000
 
+    scale_power(DF_proj,DFPowerScale)
+    scale_power(DF_custom,DFPowerScale)
+    scale_power(DF_lower,DFPowerScale)
+    scale_power(DF_upper,DFPowerScale)
+    
     reaction_calculator(DF_proj,
                         DF.tail(1)["Radium-225"].item(),
                         DF.tail(1)["Actinium-225"].item(),
@@ -422,7 +440,7 @@ def Ac_growth(GUI_obj):
     ax.set_xticklabels(ax.get_xticklabels(), rotation = 45, fontsize = 16);
     ax.set(
          title      = r'Niowave R&D milestones $^{225}$Ac Campaign - Beam Power',
-         ylabel     = r'Power (W)',
+         ylabel     = r'Power ("Chad Watts")',
          ylim       = ylim,
          yscale     = 'linear'
     )
@@ -463,7 +481,7 @@ class dummy_GUI:
         self.beamPath = tk.StringVar(value=r"data/irradiation log.csv")
         self.targetMeasPath = tk.StringVar(value=r"data/Target measurements.csv")
         self.downSchedPath = tk.StringVar(value=r"data/Schedule.csv")
-        self.powerSchedPath = tk.StringVar(value=r"Power scalar schedule.csv")
+        self.powerSchedPath = tk.StringVar(value=r"data/Power scalar schedule.csv")
         
 if __name__ == '__main__':
     GUI = dummy_GUI()
