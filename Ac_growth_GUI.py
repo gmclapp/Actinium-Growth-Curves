@@ -13,18 +13,18 @@ class dir_popup:
         child.geometry("250x400")
         child.title("Directory selector")
         beamDataPB = ttk.Button(child,text="Select Beam Data",command=self.dir_cmd)
-##        schedPB = ttk.Button(child,text="Select Beam Data",command=)
-##        targetPB = ttk.Button(child,text="Select Beam Data",command=)
+        schedPB = ttk.Button(child,text="Select Target Data",command=self.target_cmd)
+        targetPB = ttk.Button(child,text="Select Schedule Data",command=self.sch_cmd)
 ##        powerSchedPB = ttk.Button(child,text="Select Beam Data",command=)
 ##        OKPB = ttk.Button(child,text="Select Beam Data",command=)
         CancelPB = ttk.Button(child,text="Cancel",command=child.destroy)
 
         beamDataPB.grid(column=0,row=0)
-##        schedPB.grid(column=,row=)
-##        targetPB.grid(column=,row=)
+        schedPB.grid(column=0,row=1)
+        targetPB.grid(column=0,row=2)
 ##        powerSchedPB.grid(column=,row=)
 ##        OKPB.grid(column=,row=)
-        CancelPB.grid(column=0,row=1)
+        CancelPB.grid(column=0,row=3)
         
     def dir_cmd(self):
         self.parent.beamPath.set(askopenfile().name)
@@ -32,6 +32,20 @@ class dir_popup:
 
         # Open the data base and retrieve recent data for form autofill
         self.parent.get_last_data(self.parent.beamPath.get())
+
+    def target_cmd(self):
+        self.parent.targetMeasPath.set(askopenfile().name)
+        print("Target measurement path set to {}".format(self.parent.targetMeasPath.get()))
+
+        # Open the data base and retrieve recent data for form autofill
+##        self.parent.get_last_data(self.parent.targetMeasPath.get())
+
+    def sch_cmd(self):
+        self.parent.downSchedPath.set(askopenfile().name)
+        print("Beam path set to {}".format(self.parent.downSchedPath.get()))
+
+        # Open the data base and retrieve recent data for form autofill
+##        self.parent.get_last_data(self.parent.beamPath.get())
 
         
 class GUI:
@@ -98,7 +112,8 @@ class GUI:
     
 
     def report_cmd(self):
-        Ac_growth(self.beamPath.get())
+##        Ac_growth(self.beamPath.get())
+        Ac_growth(self)
 
     def submit_data_cmd(self):
         
@@ -147,13 +162,13 @@ class GUI:
 # ------------------- L A B E L   F R A M E   S E T U P S ------------------- #
     def dir_frame(self):
         self.dirFR = tk.LabelFrame(self.master,
-                                   text="Choose a beam data file")
+                                   text="Reporting")
 
         # Create elements
         self.beamdirLabel = ttk.Label(self.dirFR,
-                                      text="Beam data database: ")
+                                      text="Choose data sources")
         self.ask_filePB = ttk.Button(self.dirFR,
-                                     text="Select",
+                                     text="Choose",
                                      command=self.open_directory_popup)
         self.reportPB = ttk.Button(self.dirFR,
                                    text="Create Report",

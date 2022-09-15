@@ -134,11 +134,11 @@ def power_to_integrated_power(power,dt):
     '''takes power in W and dt in seconds and returns kwHr of integrated power'''
     return(power/1000*dt/3600)
 
-def createPowerProjection(df,mean_power,std_power,stds_from_avg,include_schedule=False):
+def createPowerProjection(df,Schedule,mean_power,std_power,stds_from_avg,include_schedule=False):
     '''Takes a mean power from historical data, a standard deviation of power
     from historical data and populates the integrated power column of the given
     data frame'''
-    Schedule = "Schedule.csv"
+##    Schedule = "Schedule.csv"
     SchDF = pd.read_csv(Schedule)
     SchDF["Start date and time"] = parse_dates(SchDF,"Start date","Start time")
     SchDF["End date and time"] = parse_dates(SchDF,"End date","End time")
@@ -181,9 +181,9 @@ def createPowerProjection(df,mean_power,std_power,stds_from_avg,include_schedule
 
     return(upper_power,mean_power,lower_power,extraction)
 
-def Ac_growth(beam_data):
+def Ac_growth(GUI_obj):
     # ------------------- R E T R I E V E   D A T A  ---------------------------- #
-
+    
     # Import data from file
     with open("Ac_growth_meta.txt","r") as f:
         meta = json.load(f)
@@ -195,8 +195,9 @@ def Ac_growth(beam_data):
     Reaction_Rate_Modification_Factor = meta["Reaction rate modification factor"]
     mGy_min_watt = meta["mGy per min per watt"]
 
-    DF = pd.read_csv(beam_data,parse_dates=True)
-    DFmeas = pd.read_csv("Target measurements.csv")
+    DF = pd.read_csv(GUI_obj.beamPath.get(),parse_dates=True)
+    DFmeas = pd.read_csv(GUI_obj.targetMeasPath.get())
+##    DFmeas = pd.read_csv("Target measurements.csv")
 
     DF["Date and Time"] = parse_dates(DF,"Date","Time")
     DF["Elapsed time (s)"] = (DF["Date and Time"] - DF["Date and Time"][0]).dt.total_seconds()
@@ -259,6 +260,7 @@ def Ac_growth(beam_data):
     DF_proj = pd.DataFrame(columns=masked_df.columns)
     DF_proj["Date and Time"] = dates
     upper, mean, lower, extraction = createPowerProjection(DF_proj,
+                                                           GUI_obj.downSchedPath.get(),
                                                            Projected_power,
                                                            Power_std,
                                                            meta["Standard deviations from average"],
