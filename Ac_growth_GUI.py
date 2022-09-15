@@ -10,7 +10,6 @@ class dir_popup:
     def __init__(self,parent):
         self.parent = parent
         self.child = tk.Toplevel(self.parent.master)
-        self.child.geometry("450x250")
         self.child.title("Directory selector")
 
         # Frame creation
@@ -47,10 +46,10 @@ class dir_popup:
         self.dirFR = tk.LabelFrame(self.child,
                                    text="Data sources")
 
-        beamDataPB = ttk.Button(self.dirFR,text="Select Beam Data",command=self.dir_cmd)
-        targetPB = ttk.Button(self.dirFR,text="Select Target Data",command=self.target_cmd)
-        schedPB = ttk.Button(self.dirFR,text="Select Schedule Data",command=self.sch_cmd)
-        powerSchedPB = ttk.Button(self.dirFR,text="Select Beam Data",command=self.pow_cmd)
+        beamDataPB = ttk.Button(self.dirFR,text="Select Beam Data",width=20,command=self.dir_cmd)
+        targetPB = ttk.Button(self.dirFR,text="Select Target Data",width=20,command=self.target_cmd)
+        schedPB = ttk.Button(self.dirFR,text="Select Schedule Data",width=20,command=self.sch_cmd)
+        powerSchedPB = ttk.Button(self.dirFR,text="Select Beam Data",width=20,command=self.pow_cmd)
 
         DonePB = ttk.Button(self.dirFR,text="Done",command=self.child.destroy)
 
@@ -58,17 +57,19 @@ class dir_popup:
         beamDataLabel = ttk.Label(self.dirFR,text="Select the csv file with irradiation data: ")
         schedLabel = ttk.Label(self.dirFR,text="Select the csv file with scheduled down time: ")
         targetLabel = ttk.Label(self.dirFR,text="Select the csv file with the target activity measurements: ")
+        powerLabel = ttk.Label(self.dirFR,text="Select the csv file with the power scalars: ")
 
         beamDataLabel.grid(column=0,row=0)
-        beamDataPB.grid(column=1,row=0)
+        beamDataPB.grid(column=1,row=0,padx=2,pady=2)
 
         schedLabel.grid(column=0,row=1)
-        schedPB.grid(column=1,row=1)
+        schedPB.grid(column=1,row=1,padx=2,pady=2)
 
         targetLabel.grid(column=0,row=2)
-        targetPB.grid(column=1,row=2)
-        
-        powerSchedPB.grid(column=2,row=3)
+        targetPB.grid(column=1,row=2,padx=2,pady=2)
+
+        powerLabel.grid(column=0,row=3)
+        powerSchedPB.grid(column=1,row=3,padx=2,pady=2)
 
         DonePB.grid(column=0,row=4)
         
@@ -109,7 +110,7 @@ class GUI:
         # Frame placement
         self.dirFR.grid(row=0,column=0,padx=2,pady=2)
         self.simFR.grid(row=1,column=0,padx=2,pady=2)
-        self.doseFR.grid(row=2,column=0,padx=2,pady=2)
+        self.doseFR.grid(row=2,column=0,padx=2,pady=2)  
 
         self.dirFR.grid_columnconfigure(1,weight=1)
         self.simFR.grid_columnconfigure(1,weight=1)
@@ -186,7 +187,8 @@ class GUI:
 # ------------------- L A B E L   F R A M E   S E T U P S ------------------- #
     def dir_frame(self):
         self.dirFR = tk.LabelFrame(self.master,
-                                   text="Reporting")
+                                   text="Reporting",
+                                   width=250)
 
         # Create elements
         self.beamdirLabel = ttk.Label(self.dirFR,
@@ -205,7 +207,8 @@ class GUI:
 
     def sim_frame(self):
         self.simFR = tk.LabelFrame(self.master,
-                                   text="Simulation settings")
+                                   text="Simulation settings",
+                                   width=250)
 
         # Create elements
         self.customPowerLabel = ttk.Label(self.simFR,
@@ -250,7 +253,8 @@ class GUI:
     def dose_frame(self):
         # Create elements
         self.doseFR = tk.LabelFrame(self.master,
-                                    text="Dose data entry")
+                                    text="Dose data entry",
+                                    width=250)
 
         self.last_data_label = ttk.Label(self.doseFR,
                                          textvariable=self.last_data_datetime)
