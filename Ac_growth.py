@@ -23,6 +23,7 @@ import pandas as pd
 import json
 import warnings
 warnings.filterwarnings("ignore", message="FixedFormatter should only be used together with FixedLocator")
+import tkinter as tk
 
 # ------------------- P L O T   S E T T I N G S  ---------------------------- #
 
@@ -138,31 +139,38 @@ def createPowerProjection(df,Schedule,mean_power,std_power,stds_from_avg,include
     '''Takes a mean power from historical data, a standard deviation of power
     from historical data and populates the integrated power column of the given
     data frame'''
-##    Schedule = "Schedule.csv"
     SchDF = pd.read_csv(Schedule)
     SchDF["Start date and time"] = parse_dates(SchDF,"Start date","Start time")
     SchDF["End date and time"] = parse_dates(SchDF,"End date","End time")
     print(SchDF.head())
 
     sims = []
-    for i in range(10):
+    for i in range(100):
         power = []
         extraction = []
         for d in df["Date and Time"]:
+            down=False
+            ex=False
             for i,row in SchDF.iterrows():
                 if row["Start date and time"] < d <= row["End date and time"]:
+                    down = True
                     new_power = 0
                     if row["Extraction"] == "YES":
-                        extraction.append("YES")
-                    
-                    else:
-                        extraction.append("NO")
+                        ex=True
                     break
+
+            if down:
+                new_power = 0
+                if ex:
+                    extraction.append("YES")
                 else:
-                    new_power = -1
-                    while new_power < 0:
-                        new_power = random.normalvariate(mean_power,std_power)
-                    extraction.append("NO")
+                    extraction.append("NO")      
+            else:
+                new_power = -1
+                while new_power < 0:
+                    new_power = random.normalvariate(mean_power,std_power)
+                extraction.append("NO")
+                
                     
             power.append(new_power)
         sims.append(power)
@@ -449,5 +457,14 @@ def Ac_growth(GUI_obj):
     file_name = f'{date_string_2}_ac_225_growth_curve_power.png'
     plt.savefig(file_name, bbox_inches = 'tight')
 
+class dummy_GUI:
+    def __init__(self):
+        root = tk.Tk()
+        self.beamPath = tk.StringVar(value=r"data/irradiation log.csv")
+        self.targetMeasPath = tk.StringVar(value=r"data/Target measurements.csv")
+        self.downSchedPath = tk.StringVar(value=r"data/Schedule.csv")
+        self.powerSchedPath = tk.StringVar(value=r"Power scalar schedule.csv")
+        
 if __name__ == '__main__':
-    Ac_growth("irradiation log.csv")
+    GUI = dummy_GUI()
+    Ac_growth(dummy_GUI())
