@@ -10,8 +10,13 @@ class dir_popup:
     def __init__(self,parent):
         self.parent = parent
         self.child = tk.Toplevel(self.parent.master)
-        self.child.geometry("250x400")
+        self.child.geometry("450x250")
         self.child.title("Directory selector")
+
+        beamDataLabel = ttk.Label(self.child,text="Select the csv file with irradiation data: ")
+        schedLabel = ttk.Label(self.child,text="Select the csv file with scheduled down time: ")
+        targetLabel = ttk.Label(self.child,text="Select the csv file with the target activity measurements: ")
+        
         beamDataPB = ttk.Button(self.child,text="Select Beam Data",command=self.dir_cmd)
         schedPB = ttk.Button(self.child,text="Select Target Data",command=self.target_cmd)
         targetPB = ttk.Button(self.child,text="Select Schedule Data",command=self.sch_cmd)
@@ -19,9 +24,14 @@ class dir_popup:
 
         DonePB = ttk.Button(self.child,text="Done",command=self.child.destroy)
 
-        beamDataPB.grid(column=0,row=0)
-        schedPB.grid(column=0,row=1)
-        targetPB.grid(column=0,row=2)
+        beamDataLabel.grid(column=0,row=0)
+        beamDataPB.grid(column=1,row=0)
+
+        schedLabel.grid(column=0,row=1)
+        schedPB.grid(column=1,row=1)
+
+        targetLabel.grid(column=0,row=2)
+        targetPB.grid(column=1,row=2)
 ##        powerSchedPB.grid(column=,row=)
 
         DonePB.grid(column=0,row=3)
