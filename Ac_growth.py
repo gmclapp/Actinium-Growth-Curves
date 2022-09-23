@@ -185,7 +185,13 @@ def createPowerProjection(df,Schedule,mean_power,std_power,stds_from_avg,include
         
         mean_power.append(mean)
         upper_power.append(mean+stds_from_avg*sd)
-        lower_power.append(mean-stds_from_avg*sd)
+
+        lower = mean-stds_from_avg*sd
+        if lower > 0:
+            lower_power.append(lower)
+        else:
+            lower_power.append(0)
+        
 
     return(upper_power,mean_power,lower_power,extraction)
 def scale_power(df, dfpower):
