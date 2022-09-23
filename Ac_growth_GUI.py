@@ -46,10 +46,10 @@ class dir_popup:
         self.dirFR = tk.LabelFrame(self.child,
                                    text="Data sources")
 
-        beamDataPB = ttk.Button(self.dirFR,text="Select Beam Data",width=20,command=self.dir_cmd)
-        targetPB = ttk.Button(self.dirFR,text="Select Target Data",width=20,command=self.target_cmd)
-        schedPB = ttk.Button(self.dirFR,text="Select Schedule Data",width=20,command=self.sch_cmd)
-        powerSchedPB = ttk.Button(self.dirFR,text="Select Beam Data",width=20,command=self.pow_cmd)
+        beamDataPB = ttk.Button(self.dirFR,text="Select Beam Data",width=25,command=self.dir_cmd)
+        targetPB = ttk.Button(self.dirFR,text="Select Target Data",width=25,command=self.target_cmd)
+        schedPB = ttk.Button(self.dirFR,text="Select Schedule Data",width=25,command=self.sch_cmd)
+        powerSchedPB = ttk.Button(self.dirFR,text="Select Power Scale Data",width=25,command=self.pow_cmd)
 
         DonePB = ttk.Button(self.dirFR,text="Done",command=self.child.destroy)
 
