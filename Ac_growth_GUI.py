@@ -52,7 +52,6 @@ class dir_popup:
     def dir_cmd(self):
         self.parent.beamPath.set(askopenfile().name)
         append_to_log("Beam path set to {}".format(self.parent.beamPath.get()))
-##        print("Beam path set to {}".format(self.parent.beamPath.get()))
 
         # Open the data base and retrieve recent data for form autofill
         self.parent.get_last_data(self.parent.beamPath.get())
@@ -61,19 +60,16 @@ class dir_popup:
     def target_cmd(self):
         self.parent.targetMeasPath.set(askopenfile().name)
         append_to_log("Target measurement path set to {}".format(self.parent.targetMeasPath.get()))
-##        print("Target measurement path set to {}".format(self.parent.targetMeasPath.get()))
         self.child.attributes('-topmost',True)
         
     def sch_cmd(self):
         self.parent.downSchedPath.set(askopenfile().name)
         append_to_log("Downtime schedule path set to {}".format(self.parent.downSchedPath.get()))
-##        print("Downtime schedule path set to {}".format(self.parent.downSchedPath.get()))
         self.child.attributes('-topmost',True)
 
     def pow_cmd(self):
         self.parent.powerSchedPath.set(askopenfile().name)
         append_to_log("Power scalar path set to {}".format(self.parent.powerSchedPath.get()))
-##        print("Power scalar path set to {}".format(self.parent.powerSchedPath.get()))
         self.child.attributes('-topmost',True)
 
 # ------------------- L A B E L   F R A M E   S E T U P S ------------------- #
@@ -174,6 +170,21 @@ class GUI:
 
     def report_cmd(self):
         append_to_log("Generating report")
+
+        if self.beamPath.get()[-4:] != ".csv":
+            error_popup(self.master,"Beam path selection is missing or invalid")
+            return()
+        elif self.targetMeasPath.get()[-4:] != ".csv":
+            error_popup(self.master,"Target measurement path selection is missing or invalid")
+            return()
+        elif self.downSchedPath.get()[-4:] != ".csv":
+            error_popup(self.master,"Downtime schedule path selection is missing or invalid")
+            return()
+        elif self.powerSchedPath.get()[-4:] != ".csv":
+            error_popup(self.master,"Power scalar schedule path selection is missing or invalid")
+            return()
+            
+        
         Ac_growth(self)
 
     def submit_data_cmd(self):

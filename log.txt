@@ -6,3 +6,28 @@
 2022-09-26 09:07:45.471101: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
 2022-09-26 09:07:50.070038: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
 2022-09-26 09:08:05.924267: Generating report
+2022-09-26 09:13:02.113341: Generating report
+2022-09-26 09:18:26.257109: Generating report
+2022-09-26 09:18:26.265390: Beam path selection is missing or invalid
+2022-09-26 09:18:28.328172: Error: Beam path selection is missing or invalid acknowledged by user
+2022-09-26 09:18:29.217424: Generating report
+2022-09-26 09:18:29.226675: Beam path selection is missing or invalid
+2022-09-26 09:18:30.034640: Error: Beam path selection is missing or invalid acknowledged by user
+2022-09-26 09:18:35.910499: Directory selection dialog opened
+2022-09-26 09:18:39.285830: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-26 09:18:41.922211: Generating report
+2022-09-26 09:18:41.930086: Target measurement path selection is missing or invalid
+2022-09-26 09:18:48.392419: Error: Target measurement path selection is missing or invalid acknowledged by user
+2022-09-26 09:18:49.683210: Directory selection dialog opened
+2022-09-26 09:18:57.396840: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-09-26 09:19:00.074608: Generating report
+2022-09-26 09:19:00.082440: Downtime schedule path selection is missing or invalid
+2022-09-26 09:19:05.476514: Error: Downtime schedule path selection is missing or invalid acknowledged by user
+2022-09-26 09:19:11.326177: Directory selection dialog opened
+2022-09-26 09:19:14.529514: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-09-26 09:19:16.699103: Generating report
+2022-09-26 09:19:16.708310: Power scalar schedule path selection is missing or invalid
+2022-09-26 09:19:18.779272: Error: Power scalar schedule path selection is missing or invalid acknowledged by user
+2022-09-26 09:19:20.555558: Directory selection dialog opened
+2022-09-26 09:19:23.562465: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-09-26 09:19:25.508539: Generating report
