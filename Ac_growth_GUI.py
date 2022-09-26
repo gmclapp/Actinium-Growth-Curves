@@ -6,6 +6,23 @@ from datetime import datetime
 from Ac_growth import *
 import json
 
+class error_popup:
+    def __init__(self,parent,error):
+        self.parent = parent
+        self.badchild = tk.Toplevel(self.parent.master)
+        self.badchild.geometry("250x75")
+        self.badchild.title("Error: \n{}".format(error))
+
+        self.badchild.grid_columnconfigure(0,weight=1)
+        
+        # create elements
+        Error_msg = ttk.Label(self.badchild,text=error)
+        AckPB = ttk.Button(self.badchild,text="OK",command=self.badchild.destroy)
+        
+        # place elements
+        Error_msg.grid(column=0,row=0)
+        AckPB.grid(column=0,row=1)
+        
 class dir_popup:
     def __init__(self,parent):
         self.parent = parent
@@ -115,6 +132,8 @@ class GUI:
         self.dirFR.grid_columnconfigure(1,weight=1)
         self.simFR.grid_columnconfigure(1,weight=1)
         self.doseFR.grid_columnconfigure(1,weight=1)
+
+        Error = error_popup(self.master,"Test error!")
         
 # --------------------- H E L P E R   F U N C T I O N S --------------------- #
     def get_last_data(self,path):
