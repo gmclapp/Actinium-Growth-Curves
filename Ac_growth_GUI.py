@@ -184,8 +184,10 @@ class GUI:
             error_popup(self.master,"Power scalar schedule path selection is missing or invalid")
             return()
             
-        
+        start = datetime.now()
         Ac_growth(self)
+        runtime = datetime.now()-start
+        append_to_log("Report generation complete, run time: {:4.2f} seconds".format(runtime.total_seconds()))
 
     def submit_data_cmd(self):
         
@@ -216,6 +218,7 @@ class GUI:
         self.dose.set(0)
         # Open the data base and retrieve recent data for form autofill
         self.get_last_data(self.beamPath.get())
+        append_to_log("New datapoint submitted")
 
     def apply_sim_settings(self):
         with open ("Ac_growth_meta.txt","r") as f:
@@ -227,6 +230,7 @@ class GUI:
             meta["plot y-scale"] = self.ylim.get()
             
             json.dump(meta,f,indent=4)
+        append_to_log("Meta data settings saved")
 
     def open_directory_popup(self):
         child = dir_popup(self)
