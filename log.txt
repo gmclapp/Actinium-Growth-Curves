@@ -1,2 +1,8 @@
 2022-09-26 08:53:28.154343: Test error!
 2022-09-26 08:53:29.564789: Error: Test error! acknowledged by user
+2022-09-26 09:07:26.460413: Directory selection dialog opened
+2022-09-26 09:07:38.706078: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-26 09:07:42.320565: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-09-26 09:07:45.471101: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-09-26 09:07:50.070038: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-09-26 09:08:05.924267: Generating report

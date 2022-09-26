@@ -47,10 +47,12 @@ class dir_popup:
 
         # Frame placement
         self.dirFR.grid(row=0,column=0,padx=2,pady=2)
+        append_to_log("Directory selection dialog opened")
         
     def dir_cmd(self):
         self.parent.beamPath.set(askopenfile().name)
-        print("Beam path set to {}".format(self.parent.beamPath.get()))
+        append_to_log("Beam path set to {}".format(self.parent.beamPath.get()))
+##        print("Beam path set to {}".format(self.parent.beamPath.get()))
 
         # Open the data base and retrieve recent data for form autofill
         self.parent.get_last_data(self.parent.beamPath.get())
@@ -58,17 +60,20 @@ class dir_popup:
         
     def target_cmd(self):
         self.parent.targetMeasPath.set(askopenfile().name)
-        print("Target measurement path set to {}".format(self.parent.targetMeasPath.get()))
+        append_to_log("Target measurement path set to {}".format(self.parent.targetMeasPath.get()))
+##        print("Target measurement path set to {}".format(self.parent.targetMeasPath.get()))
         self.child.attributes('-topmost',True)
         
     def sch_cmd(self):
         self.parent.downSchedPath.set(askopenfile().name)
-        print("Dowtime schedule path set to {}".format(self.parent.downSchedPath.get()))
+        append_to_log("Downtime schedule path set to {}".format(self.parent.downSchedPath.get()))
+##        print("Downtime schedule path set to {}".format(self.parent.downSchedPath.get()))
         self.child.attributes('-topmost',True)
 
     def pow_cmd(self):
         self.parent.powerSchedPath.set(askopenfile().name)
-        print("Power scalar path set to {}".format(self.parent.powerSchedPath.get()))
+        append_to_log("Power scalar path set to {}".format(self.parent.powerSchedPath.get()))
+##        print("Power scalar path set to {}".format(self.parent.powerSchedPath.get()))
         self.child.attributes('-topmost',True)
 
 # ------------------- L A B E L   F R A M E   S E T U P S ------------------- #
@@ -145,8 +150,6 @@ class GUI:
         self.dirFR.grid_columnconfigure(1,weight=1)
         self.simFR.grid_columnconfigure(1,weight=1)
         self.doseFR.grid_columnconfigure(1,weight=1)
-
-        Error = error_popup(self.master,"Test error!")
         
 # --------------------- H E L P E R   F U N C T I O N S --------------------- #
     def get_last_data(self,path):
@@ -162,14 +165,15 @@ class GUI:
             last_str = "Last data point: "+last_date.strftime('%y%m%d')+" "+last_time
             self.last_data_datetime.set(last_str)
         except Exception as ex:
-            print("Failed to retrieve last line\nException: {}".format(ex))
-            print(last_line["Energy (MeV)"].item())
+            error_popup(self.master,"Failed to retrieve last line\nException: {}".format(ex))
+##            print("Failed to retrieve last line\nException: {}".format(ex))
+##            print(last_line["Energy (MeV)"].item())
 
 # ----------------- P U S H   B U T T O N   C O M M A N D S ----------------- #
     
 
     def report_cmd(self):
-##        Ac_growth(self.beamPath.get())
+        append_to_log("Generating report")
         Ac_growth(self)
 
     def submit_data_cmd(self):
@@ -181,7 +185,7 @@ class GUI:
         submit_hour = str(self.hour.get()).zfill(2)
         
         if int(submit_hour) > 23:
-            print("Hour must be between 0 and 23")
+            error_popup(self.master,"Hour must be between 0 and 23")
             return()
 
         
