@@ -6,9 +6,15 @@ from datetime import datetime
 from Ac_growth import *
 import json
 
+def append_to_log(message):
+    with open("log.txt",mode='a') as f:
+        today = datetime.today()
+        f.write("{}: {}\n".format(today,message))
+
 class error_popup:
     def __init__(self,parent,error):
         self.parent = parent
+        self.error = error
         self.badchild = tk.Toplevel(self.parent.master)
         self.badchild.geometry("250x75")
         self.badchild.title("Error: \n{}".format(error))
@@ -17,11 +23,18 @@ class error_popup:
         
         # create elements
         Error_msg = ttk.Label(self.badchild,text=error)
-        AckPB = ttk.Button(self.badchild,text="OK",command=self.badchild.destroy)
+        AckPB = ttk.Button(self.badchild,text="OK",command=self.acknowledge_error)
         
         # place elements
         Error_msg.grid(column=0,row=0)
         AckPB.grid(column=0,row=1)
+        self.badchild.attributes('-topmost',True)
+        append_to_log(error)
+
+    def acknowledge_error(self):
+        append_to_log("Error: {} acknowledged by user".format(self.error))
+        self.badchild.destroy()
+        
         
 class dir_popup:
     def __init__(self,parent):
