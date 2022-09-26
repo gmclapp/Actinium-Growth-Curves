@@ -298,17 +298,21 @@ class GUI:
             submit_extraction = ("YES" if self.extraction.get() == True else "NO")
 
             if not data_submission_error:
-                with open(self.beamPath.get(), 'a') as file:
-                    file.write(f"{submit_month}/{submit_day}/{submit_year} {submit_hour}:{submit_minute},")
-                    file.write(f"{submit_month}/{submit_day}/{submit_year},")
-                    file.write(f"{submit_hour}:{submit_minute},")
-                    file.write(f"{submit_energy},{submit_dose},0,{submit_target_mass},")
-                    file.write(f"{submit_extraction}\n")
-                    
-                self.dose.set(0)
-                # Open the data base and retrieve recent data for form autofill
-                self.get_last_data(self.beamPath.get())
-                append_to_log("New datapoint submitted")
+                try:
+                    with open(self.beamPath.get(), 'a') as file:
+                        file.write(f"{submit_month}/{submit_day}/{submit_year} {submit_hour}:{submit_minute},")
+                        file.write(f"{submit_month}/{submit_day}/{submit_year},")
+                        file.write(f"{submit_hour}:{submit_minute},")
+                        file.write(f"{submit_energy},{submit_dose},0,{submit_target_mass},")
+                        file.write(f"{submit_extraction}\n")
+                        
+                    self.dose.set(0)
+                    # Open the data base and retrieve recent data for form autofill
+                    self.get_last_data(self.beamPath.get())
+                    append_to_log("New datapoint submitted")
+                except FileNotFoundError as ex:
+                    error_popup(self.master,"You must first choose an irradiation log.")
+                    append_to_log("A datapoint was not submitted because no irradiation log was chosen.")
             else:
                 append_to_log("An error prevented a datapoint from being submitted.")
         except TclError as ex:
@@ -477,5 +481,8 @@ if __name__ == '__main__':
     root = tk.Tk()
 
     app = GUI(root,__version__,last_modified)
-    root.mainloop()
+    try:
+        root.mainloop()
+    except Exception as ex:
+        append_to_log("There was an unhandled exception and the program was forced to close")
     root.destroy()

@@ -144,3 +144,6 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-09-26 14:24:09.025350: Invalid data point entry: expected floating-point number but got "Jason"
 2022-09-26 14:24:09.025350: An error prevented a datapoint from being submitted.
 2022-09-26 14:24:14.669152: Error: Invalid data point entry: expected floating-point number but got "Jason" acknowledged by user
+2022-09-26 14:37:01.660846: You must first choose an irradiation log.
+2022-09-26 14:37:01.660846: A datapoint was not submitted because no irradiation log was chosen.
+2022-09-26 14:37:03.569101: Error: You must first choose an irradiation log. acknowledged by user
