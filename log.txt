@@ -113,3 +113,34 @@ Exception: 'NoneType' object has no attribute 'strftime'
 2022-09-26 11:15:40.506174: New datapoint submitted
 2022-09-26 11:15:44.992784: Error: Failed to retrieve last line
 Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-09-26 13:34:48.718645: Directory selection dialog opened
+2022-09-26 13:34:54.778522: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-26 13:34:58.619876: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-09-26 13:35:01.214112: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-09-26 13:35:05.979916: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-09-26 13:35:32.018299: New datapoint submitted
+2022-09-26 13:35:43.708490: New datapoint submitted
+2022-09-26 13:35:55.031347: Generating report
+2022-09-26 13:36:03.727714: Report generation complete, run time: 8.70 seconds
+2022-09-26 13:36:55.548853: Generating report
+2022-09-26 13:37:04.901528: Report generation complete, run time: 9.35 seconds
+2022-09-26 14:15:32.056275: Directory selection dialog opened
+2022-09-26 14:15:36.213593: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-26 14:15:50.013171: Dose must be greater than 0 Gy
+2022-09-26 14:15:50.013171: An error prevented a datapoint from being submitted.
+2022-09-26 14:15:51.766336: Error: Dose must be greater than 0 Gy acknowledged by user
+2022-09-26 14:15:57.915036: Target mass must be greater than 0mg
+2022-09-26 14:15:57.915036: An error prevented a datapoint from being submitted.
+2022-09-26 14:15:59.412529: Error: Target mass must be greater than 0mg acknowledged by user
+2022-09-26 14:16:05.262936: Energy must be greater than 0 MeV
+2022-09-26 14:16:05.262936: An error prevented a datapoint from being submitted.
+2022-09-26 14:16:06.712855: Error: Energy must be greater than 0 MeV acknowledged by user
+2022-09-26 14:19:38.891041: Directory selection dialog opened
+2022-09-26 14:19:42.307413: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-26 14:22:41.457657: Directory selection dialog opened
+2022-09-26 14:22:45.147866: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-26 14:23:59.740782: Directory selection dialog opened
+2022-09-26 14:24:03.069486: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-26 14:24:09.025350: Invalid data point entry: expected floating-point number but got "Jason"
+2022-09-26 14:24:09.025350: An error prevented a datapoint from being submitted.
+2022-09-26 14:24:14.669152: Error: Invalid data point entry: expected floating-point number but got "Jason" acknowledged by user

@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter.filedialog import askopenfile, asksaveasfilename
-from tkinter import ttk
+from tkinter import ttk, TclError
 import os
 from datetime import datetime
 from Ac_growth import *
@@ -261,36 +261,60 @@ class GUI:
         append_to_log("Report generation complete, run time: {:4.2f} seconds".format(runtime.total_seconds()))
 
     def submit_data_cmd(self):
-        
-        submit_day = datetime.strptime(self.date.get(), '%y%m%d').day
-        submit_month = datetime.strptime(self.date.get(), '%y%m%d').month
-        submit_year = datetime.strptime(self.date.get(), '%y%m%d').year
-        
-        submit_hour = str(self.hour.get()).zfill(2)
-        
-        if int(submit_hour) > 23:
-            error_popup(self.master,"Hour must be between 0 and 23")
-            return()
 
-        
-        submit_minute = str(self.minute.get()).zfill(2)
-        submit_energy = self.energy.get()
-        submit_dose = self.dose.get()
-        submit_target_mass = self.targetmass.get()/1000
-        submit_extraction = ("YES" if self.extraction.get() == True else "NO")
-        
-        with open(self.beamPath.get(), 'a') as file:
-            file.write(f"{submit_month}/{submit_day}/{submit_year} {submit_hour}:{submit_minute},")
-            file.write(f"{submit_month}/{submit_day}/{submit_year},")
-            file.write(f"{submit_hour}:{submit_minute},")
-            file.write(f"{submit_energy},{submit_dose},0,{submit_target_mass},")
-            file.write(f"{submit_extraction}\n")
+        try:
+            data_submission_error = False
+            submit_day = datetime.strptime(self.date.get(), '%y%m%d').day
+            submit_month = datetime.strptime(self.date.get(), '%y%m%d').month
+            submit_year = datetime.strptime(self.date.get(), '%y%m%d').year
             
-        self.dose.set(0)
-        # Open the data base and retrieve recent data for form autofill
-        self.get_last_data(self.beamPath.get())
-        append_to_log("New datapoint submitted")
+            submit_hour = str(self.hour.get()).zfill(2)
 
+            if int(submit_hour) > 23:
+                error_popup(self.master,"Hour must be between 0 and 23")
+                data_submission_error = True
+
+            
+            submit_minute = str(self.minute.get()).zfill(2)
+            if int(submit_minute) > 59 or int(submit_minute) < 0:
+                error_popup(self.master,"Minute must be between 0 and 59")
+                data_submission_error = True
+                
+            submit_energy = self.energy.get()
+            if float(submit_energy)<0:
+                error_popup(self.master,"Energy must be greater than 0 MeV")
+                data_submission_error = True
+                
+            submit_dose = self.dose.get()
+            if float(submit_dose)<0:
+                error_popup(self.master,"Dose must be greater than 0 Gy")
+                data_submission_error = True
+                
+            submit_target_mass = self.targetmass.get()/1000
+            if float(submit_target_mass)<0:
+                error_popup(self.master,"Target mass must be greater than 0mg")
+                data_submission_error = True
+                
+            submit_extraction = ("YES" if self.extraction.get() == True else "NO")
+
+            if not data_submission_error:
+                with open(self.beamPath.get(), 'a') as file:
+                    file.write(f"{submit_month}/{submit_day}/{submit_year} {submit_hour}:{submit_minute},")
+                    file.write(f"{submit_month}/{submit_day}/{submit_year},")
+                    file.write(f"{submit_hour}:{submit_minute},")
+                    file.write(f"{submit_energy},{submit_dose},0,{submit_target_mass},")
+                    file.write(f"{submit_extraction}\n")
+                    
+                self.dose.set(0)
+                # Open the data base and retrieve recent data for form autofill
+                self.get_last_data(self.beamPath.get())
+                append_to_log("New datapoint submitted")
+            else:
+                append_to_log("An error prevented a datapoint from being submitted.")
+        except TclError as ex:
+            error_popup(self.master,"Invalid data point entry: {}".format(ex))
+            append_to_log("An error prevented a datapoint from being submitted.")
+            
     def apply_sim_settings(self):
         with open ("Ac_growth_meta.txt","r") as f:
             meta = json.load(f)
