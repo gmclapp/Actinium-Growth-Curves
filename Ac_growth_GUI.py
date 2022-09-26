@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter.filedialog import askopenfile
+from tkinter.filedialog import askopenfile, asksaveasfilename
 from tkinter import ttk
 import os
 from datetime import datetime
@@ -41,6 +41,7 @@ class dir_popup:
         self.parent = parent
         self.child = tk.Toplevel(self.parent.master)
         self.child.title("Directory selector")
+        
 
         # Frame creation
         self.dir_frame()
@@ -72,15 +73,76 @@ class dir_popup:
         append_to_log("Power scalar path set to {}".format(self.parent.powerSchedPath.get()))
         self.child.attributes('-topmost',True)
 
+    def new_beam_data_cmd(self):
+        pathstr = None
+        pathstr = asksaveasfilename(defaultextension=".csv")
+        if pathstr:
+            temp = pd.DataFrame(columns=["Date and Time",
+                                         "Date",
+                                         "Time",
+                                         "Energy (MeV)",
+                                         "Accumulated Dose",
+                                         "Pressure",
+                                         "Radium target mass (g)",
+                                         "Extraction"])
+            temp.to_csv(pathstr)
+            self.parent.beamPath.set(pathstr)
+            append_to_log("Created beam data file {} and set as beam path".format(pathstr))
+        
+    def new_sched_data_cmd(self):
+        pathstr = None
+        pathstr = asksaveasfilename(defaultextension=".csv")
+        if pathstr:
+            temp = pd.DataFrame(columns=["Start date",
+                                         "Start time",
+                                         "End date",
+                                         "End time",
+                                         "Extraction",
+                                         "Target mass addition"])
+            temp.to_csv(pathstr)
+            self.parent.downSchedPath.set(pathstr)
+            append_to_log("Created downtime schedule data file {} and set as downtime schedule path".format(pathstr))
+            
+    def new_target_data_cmd(self):
+        pathstr = None
+        pathstr = asksaveasfilename(defaultextension=".csv")
+        if pathstr:
+            temp = pd.DataFrame(columns=["Date",
+                                         "Time",
+                                         "Ac-225"])
+            temp.to_csv(pathstr)
+            self.parent.targetMeasPath.set(pathstr)
+            append_to_log("Created target measurement data file {} and set as target measurement path".format(pathstr))
+            
+    def new_power_sched_data_cmd(self):
+        pathstr = None
+        pathstr = asksaveasfilename(defaultextension=".csv")
+        if pathstr:
+            temp = pd.DataFrame(columns=["Start date",
+                                         "Start time",
+                                         "End date",
+                                         "End time",
+                                         "Scalar"])
+            temp.to_csv(pathstr)
+            self.parent.powerSchedPath.set(pathstr)
+            append_to_log("Created power scalar schedule data file {} and set as power scalar schedule path".format(pathstr))
+
 # ------------------- L A B E L   F R A M E   S E T U P S ------------------- #
     def dir_frame(self):
         self.dirFR = tk.LabelFrame(self.child,
                                    text="Data sources")
-
+        
         beamDataPB = ttk.Button(self.dirFR,text="Select Beam Data",width=25,command=self.dir_cmd)
+        newBeamDataPB = ttk.Button(self.dirFR,text="New",command=self.new_beam_data_cmd)
+        
         targetPB = ttk.Button(self.dirFR,text="Select Target Data",width=25,command=self.target_cmd)
+        newTargetDataPB = ttk.Button(self.dirFR,text="New",command=self.new_target_data_cmd)
+        
         schedPB = ttk.Button(self.dirFR,text="Select Schedule Data",width=25,command=self.sch_cmd)
+        newSchedDataPB = ttk.Button(self.dirFR,text="New",command=self.new_sched_data_cmd)
+        
         powerSchedPB = ttk.Button(self.dirFR,text="Select Power Scale Data",width=25,command=self.pow_cmd)
+        newPowerSchedDataPB = ttk.Button(self.dirFR,text="New",command=self.new_power_sched_data_cmd)
 
         DonePB = ttk.Button(self.dirFR,text="Done",command=self.child.destroy)
 
@@ -92,17 +154,21 @@ class dir_popup:
 
         beamDataLabel.grid(column=0,row=0)
         beamDataPB.grid(column=1,row=0,padx=2,pady=2)
+        newBeamDataPB.grid(column=2,row=0,padx=2,pady=2)
 
         schedLabel.grid(column=0,row=1)
         schedPB.grid(column=1,row=1,padx=2,pady=2)
-
+        newTargetDataPB.grid(column=2,row=1,padx=2,pady=2)
+        
         targetLabel.grid(column=0,row=2)
         targetPB.grid(column=1,row=2,padx=2,pady=2)
+        newSchedDataPB.grid(column=2,row=2,padx=2,pady=2)
 
         powerLabel.grid(column=0,row=3)
         powerSchedPB.grid(column=1,row=3,padx=2,pady=2)
+        newPowerSchedDataPB.grid(column=2,row=3,padx=2,pady=2)
 
-        DonePB.grid(column=0,row=4)
+        DonePB.grid(column=0,row=4,columnspan=3)
         
 class GUI:
     def __init__(self,master,version,mod_date):
@@ -185,7 +251,12 @@ class GUI:
             return()
             
         start = datetime.now()
-        Ac_growth(self)
+        try:
+            Ac_growth(self)
+        except IndexError:
+            testDF = pd.read_csv(self.beamPath.get())
+            print(testDF)
+            
         runtime = datetime.now()-start
         append_to_log("Report generation complete, run time: {:4.2f} seconds".format(runtime.total_seconds()))
 

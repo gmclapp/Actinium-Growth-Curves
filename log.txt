@@ -65,3 +65,51 @@
 2022-09-26 09:33:14.944035: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
 2022-09-26 09:33:16.869627: Generating report
 2022-09-26 09:33:25.315233: Report generation complete, run time: 8.41
+2022-09-26 09:50:12.220983: Directory selection dialog opened
+2022-09-26 09:58:24.637305: Directory selection dialog opened
+2022-09-26 09:59:38.247585: Directory selection dialog opened
+2022-09-26 10:01:50.477645: Directory selection dialog opened
+2022-09-26 10:03:11.931181: Directory selection dialog opened
+2022-09-26 10:04:55.772661: Directory selection dialog opened
+2022-09-26 10:05:25.120349: Directory selection dialog opened
+2022-09-26 10:30:58.120484: Directory selection dialog opened
+2022-09-26 10:32:06.485961: Directory selection dialog opened
+2022-09-26 10:33:29.465957: Directory selection dialog opened
+2022-09-26 10:34:05.476952: Directory selection dialog opened
+2022-09-26 10:38:15.215522: Directory selection dialog opened
+2022-09-26 10:38:23.944272: Created beam data file C:/Users/clapp/Desktop/Ac Growth data/Test irradiation.csv and set as beam path
+2022-09-26 10:38:25.657259: Generating report
+2022-09-26 10:38:25.680301: Target measurement path selection is missing or invalid
+2022-09-26 10:38:27.328378: Error: Target measurement path selection is missing or invalid acknowledged by user
+2022-09-26 11:05:30.912395: Directory selection dialog opened
+2022-09-26 11:05:52.806631: Created beam data file C:/Users/clapp/Desktop/Ac Growth data/Test data files/beam data.csv and set as beam path
+2022-09-26 11:08:39.724450: Directory selection dialog opened
+2022-09-26 11:09:01.189389: Created beam data file C:/Users/clapp/Desktop/Ac Growth data/Test data/beam data.csv and set as beam path
+2022-09-26 11:09:02.484183: Directory selection dialog opened
+2022-09-26 11:09:08.583481: Created target measurement data file C:/Users/clapp/Desktop/Ac Growth data/Test data/downtime.csv and set as target measurement path
+2022-09-26 11:09:22.724483: Created downtime schedule data file C:/Users/clapp/Desktop/Ac Growth data/Test data/RaT measurements.csv and set as downtime schedule path
+2022-09-26 11:09:29.943270: Created power scalar schedule data file C:/Users/clapp/Desktop/Ac Growth data/Test data/power.csv and set as power scalar schedule path
+2022-09-26 11:09:38.065124: Generating report
+2022-09-26 11:12:39.308610: Directory selection dialog opened
+2022-09-26 11:12:44.726838: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/Test data/beam data.csv
+2022-09-26 11:12:44.748584: Failed to retrieve last line
+Exception: can only convert an array of size 1 to a Python scalar
+2022-09-26 11:13:21.610943: Error: Failed to retrieve last line
+Exception: can only convert an array of size 1 to a Python scalar acknowledged by user
+2022-09-26 11:13:33.738468: Created beam data file C:/Users/clapp/Desktop/Ac Growth data/Test data/other beam data.csv and set as beam path
+2022-09-26 11:13:37.790316: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Test data/downtime.csv
+2022-09-26 11:13:40.039859: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Test data/RaT measurements.csv
+2022-09-26 11:13:42.308219: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Test data/power.csv
+2022-09-26 11:13:44.687689: Generating report
+2022-09-26 11:13:45.203535: Report generation complete, run time: 0.51 seconds
+2022-09-26 11:14:29.241810: Directory selection dialog opened
+2022-09-26 11:14:33.490970: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/Test data/beam data.csv
+2022-09-26 11:14:33.503443: Failed to retrieve last line
+Exception: can only convert an array of size 1 to a Python scalar
+2022-09-26 11:14:37.596901: Error: Failed to retrieve last line
+Exception: can only convert an array of size 1 to a Python scalar acknowledged by user
+2022-09-26 11:15:40.494168: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-09-26 11:15:40.506174: New datapoint submitted
+2022-09-26 11:15:44.992784: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
