@@ -147,3 +147,13 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-09-26 14:37:01.660846: You must first choose an irradiation log.
 2022-09-26 14:37:01.660846: A datapoint was not submitted because no irradiation log was chosen.
 2022-09-26 14:37:03.569101: Error: You must first choose an irradiation log. acknowledged by user
+2022-09-26 14:50:49.092810: Directory selection dialog opened
+2022-09-26 14:50:52.996629: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-26 14:50:56.544139: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-09-26 14:50:59.229418: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-09-26 14:51:03.912550: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-09-26 14:51:07.218298: Generating report
+2022-09-26 14:51:16.860319: Report generation complete, run time: 9.64 seconds
+2022-09-26 15:09:56.369117: Directory selection dialog opened
+2022-09-26 15:10:12.582355: Created beam data file C:/Users/clapp/Desktop/Ac Growth data/Test new files/Beam data.csv and set as beam path
+2022-09-26 15:10:38.750876: New datapoint submitted

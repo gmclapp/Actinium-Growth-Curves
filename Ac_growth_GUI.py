@@ -85,7 +85,7 @@ class dir_popup:
                                          "Pressure",
                                          "Radium target mass (g)",
                                          "Extraction"])
-            temp.to_csv(pathstr)
+            temp.to_csv(pathstr,index=False)
             self.parent.beamPath.set(pathstr)
             append_to_log("Created beam data file {} and set as beam path".format(pathstr))
         
@@ -99,7 +99,7 @@ class dir_popup:
                                          "End time",
                                          "Extraction",
                                          "Target mass addition"])
-            temp.to_csv(pathstr)
+            temp.to_csv(pathstr,index=False)
             self.parent.downSchedPath.set(pathstr)
             append_to_log("Created downtime schedule data file {} and set as downtime schedule path".format(pathstr))
             
@@ -110,7 +110,7 @@ class dir_popup:
             temp = pd.DataFrame(columns=["Date",
                                          "Time",
                                          "Ac-225"])
-            temp.to_csv(pathstr)
+            temp.to_csv(pathstr,index=False)
             self.parent.targetMeasPath.set(pathstr)
             append_to_log("Created target measurement data file {} and set as target measurement path".format(pathstr))
             
@@ -123,7 +123,7 @@ class dir_popup:
                                          "End date",
                                          "End time",
                                          "Scalar"])
-            temp.to_csv(pathstr)
+            temp.to_csv(pathstr,index=False)
             self.parent.powerSchedPath.set(pathstr)
             append_to_log("Created power scalar schedule data file {} and set as power scalar schedule path".format(pathstr))
 
