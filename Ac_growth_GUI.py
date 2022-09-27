@@ -77,8 +77,7 @@ class dir_popup:
         pathstr = None
         pathstr = asksaveasfilename(defaultextension=".csv")
         if pathstr:
-            temp = pd.DataFrame(columns=["Date and Time",
-                                         "Date",
+            temp = pd.DataFrame(columns=["Date",
                                          "Time",
                                          "Energy (MeV)",
                                          "Accumulated Dose",
@@ -300,7 +299,7 @@ class GUI:
             if not data_submission_error:
                 try:
                     with open(self.beamPath.get(), 'a') as file:
-                        file.write(f"{submit_month}/{submit_day}/{submit_year} {submit_hour}:{submit_minute},")
+##                        file.write(f"{submit_month}/{submit_day}/{submit_year} {submit_hour}:{submit_minute},")
                         file.write(f"{submit_month}/{submit_day}/{submit_year},")
                         file.write(f"{submit_hour}:{submit_minute},")
                         file.write(f"{submit_energy},{submit_dose},0,{submit_target_mass},")
