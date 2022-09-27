@@ -269,9 +269,6 @@ def Ac_growth(GUI_obj):
 
     Dose_mean = meta["Project dt (s)"]*masked_df["Dose rate (Gy/s)"].tail(meta["Moving avg length"]).mean()
     Dose_std = meta["Project dt (s)"]*masked_df["Dose rate (Gy/s)"].tail(meta["Moving avg length"]).std()
-    
-##    Projected_power = dose_to_accumulated_power(Dose_mean,mGy_min_watt)/Fudge_Factor
-##    Power_std = dose_to_accumulated_power(Dose_std,mGy_min_watt)/Fudge_Factor
 
     Projected_power = dose_to_accumulated_power(Dose_mean,mGy_min_watt)
     Power_std = dose_to_accumulated_power(Dose_std,mGy_min_watt)
@@ -310,11 +307,6 @@ def Ac_growth(GUI_obj):
     Interval = meta["Standard deviations from average"]*Power_std
                            
     DF_custom["Integrated Power (kWhr from Acc)"] = meta["Custom projection power"]*(DF_custom["dt (s)"]/3600)/1000
-
-    scale_power(DF_proj,DFPowerScale)
-    scale_power(DF_custom,DFPowerScale)
-    scale_power(DF_lower,DFPowerScale)
-    scale_power(DF_upper,DFPowerScale)
     
     reaction_calculator(DF_proj,
                         DF.tail(1)["Radium-225"].item(),
