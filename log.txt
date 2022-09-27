@@ -186,3 +186,23 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-09-27 07:06:13.982676: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
 2022-09-27 07:06:17.507737: Generating report
 2022-09-27 07:06:28.667763: Report generation complete, run time: 11.16 seconds
+2022-09-27 10:35:22.831225: Directory selection dialog opened
+2022-09-27 10:35:26.832297: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-27 10:35:30.949052: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-09-27 10:35:33.190079: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-09-27 10:35:35.632247: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Regression testing.csv
+2022-09-27 10:35:51.934035: New datapoint submitted
+2022-09-27 10:35:54.017561: Generating report
+2022-09-27 10:36:01.096049: Report generation complete, run time: 7.08 seconds
+2022-09-27 10:38:08.496331: Meta data settings saved
+2022-09-27 10:38:09.452998: Generating report
+2022-09-27 10:38:15.452464: Report generation complete, run time: 6.00 seconds
+2022-09-27 10:53:24.610409: New datapoint submitted
+2022-09-27 10:53:26.753965: Generating report
+2022-09-27 10:53:32.853079: Report generation complete, run time: 6.10 seconds
+2022-09-27 10:53:42.651255: Meta data settings saved
+2022-09-27 10:53:43.532176: Generating report
+2022-09-27 10:53:49.650532: Report generation complete, run time: 6.12 seconds
+2022-09-27 10:54:45.772933: Meta data settings saved
+2022-09-27 10:54:47.040579: Generating report
+2022-09-27 10:54:53.145658: Report generation complete, run time: 6.11 seconds

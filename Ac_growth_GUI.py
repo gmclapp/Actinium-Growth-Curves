@@ -227,8 +227,6 @@ class GUI:
             self.last_data_datetime.set(last_str)
         except Exception as ex:
             error_popup(self.master,"Failed to retrieve last line\nException: {}".format(ex))
-##            print("Failed to retrieve last line\nException: {}".format(ex))
-##            print(last_line["Energy (MeV)"].item())
 
 # ----------------- P U S H   B U T T O N   C O M M A N D S ----------------- #
     
@@ -299,7 +297,6 @@ class GUI:
             if not data_submission_error:
                 try:
                     with open(self.beamPath.get(), 'a') as file:
-##                        file.write(f"{submit_month}/{submit_day}/{submit_year} {submit_hour}:{submit_minute},")
                         file.write(f"{submit_month}/{submit_day}/{submit_year},")
                         file.write(f"{submit_hour}:{submit_minute},")
                         file.write(f"{submit_energy},{submit_dose},0,{submit_target_mass},")
