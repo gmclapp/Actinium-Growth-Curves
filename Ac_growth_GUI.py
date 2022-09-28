@@ -197,20 +197,24 @@ class GUI:
         self.sim_length = tk.IntVar(value=meta["Project length (days)"])
         self.movingAvgLen = tk.IntVar(value=meta["Moving avg length"])
         self.ylim = tk.DoubleVar(value=meta["plot y-scale"])
+        self.xlim = tk.StringVar()
 
         # Frame creation
         self.dir_frame()
         self.dose_frame()
         self.sim_frame()
+        self.plot_frame()
 
         # Frame placement
         self.dirFR.grid(row=0,column=0,padx=2,pady=2)
         self.simFR.grid(row=1,column=0,padx=2,pady=2)
-        self.doseFR.grid(row=2,column=0,padx=2,pady=2)  
+        self.plotFR.grid(row=2,column=0,padx=2,pady=2)
+        self.doseFR.grid(row=3,column=0,padx=2,pady=2)  
 
-        self.dirFR.grid_columnconfigure(1,weight=1)
-        self.simFR.grid_columnconfigure(1,weight=1)
-        self.doseFR.grid_columnconfigure(1,weight=1)
+        self.dirFR.grid_columnconfigure(0,weight=1)
+        self.simFR.grid_columnconfigure(0,weight=1)
+        self.plotFR.grid_columnconfigure(0,weight=1)
+        self.doseFR.grid_columnconfigure(0,weight=1)
         
 # --------------------- H E L P E R   F U N C T I O N S --------------------- #
     def get_last_data(self,path):
@@ -229,8 +233,6 @@ class GUI:
             error_popup(self.master,"Failed to retrieve last line\nException: {}".format(ex))
 
 # ----------------- P U S H   B U T T O N   C O M M A N D S ----------------- #
-    
-
     def report_cmd(self):
         append_to_log("Generating report")
 
@@ -327,6 +329,9 @@ class GUI:
             json.dump(meta,f,indent=4)
         append_to_log("Meta data settings saved")
 
+    def apply_plot_settings(self):
+        append_to_log("plot settings saved")
+        
     def open_directory_popup(self):
         child = dir_popup(self)
     
@@ -370,11 +375,6 @@ class GUI:
 
         self.movingAvgLenEntry = ttk.Entry(self.simFR,
                                            textvariable=self.movingAvgLen)
-
-        self.ylimLabel = ttk.Label(self.simFR,
-                                   text="Enter the upper limit of the y axis in mCi")
-        self.ylimEntry = ttk.Entry(self.simFR,
-                                   textvariable=self.ylim)
         
         self.applyPB = ttk.Button(self.simFR,
                                   text="Apply",
@@ -391,10 +391,9 @@ class GUI:
         self.movingAvgLenLabel.grid(column=0,row=2,padx=2,pady=2)
         self.movingAvgLenEntry.grid(column=1,row=2,padx=2,pady=2)
 
-        self.ylimLabel.grid(column=0,row=3,padx=2,pady=2)
-        self.ylimEntry.grid(column=1,row=3,padx=2,pady=2)
 
-        self.applyPB.grid(column=0,row=4,padx=2,pady=2)
+
+        self.applyPB.grid(column=0,row=3,padx=2,pady=2)
         
     def dose_frame(self):
         # Create elements
@@ -468,6 +467,31 @@ class GUI:
         self.energyEntry.grid(column=1, row=6)
         
         self.submitPB.grid(column=0,row=7,columnspan=5)
+
+    def plot_frame(self):
+        # Create elements
+        self.plotFR = tk.LabelFrame(self.master,
+                                    text="Plot settings",
+                                    width=250)
+        
+        self.ylimLabel = ttk.Label(self.plotFR,
+                                   text="Enter the upper limit of the y axis in mCi")
+        self.ylimEntry = ttk.Entry(self.plotFR,
+                                   textvariable=self.ylim)
+        self.xlimLabel = ttk.Label(self.plotFR,
+                                   text="Enter the end date for the plot (YYMMDD)")
+        self.xlimEntry = ttk.Entry(self.plotFR,
+                                   textvariable=self.xlim)
+        self.applyPlotPB = ttk.Button(self.plotFR,
+                                  text="Apply",
+                                  command=self.apply_plot_settings)
+        
+        # Place elements
+        self.ylimLabel.grid(column=0,row=1,padx=2,pady=2)
+        self.ylimEntry.grid(column=1,row=1,padx=2,pady=2)
+        self.xlimLabel.grid(column=0,row=2,padx=2,pady=2)
+        self.xlimEntry.grid(column=1,row=2,padx=2,pady=2)
+        self.applyPlotPB.grid(column=0,row=3,columnspan=2,padx=2,pady=2)
         
 if __name__ == '__main__':
 
