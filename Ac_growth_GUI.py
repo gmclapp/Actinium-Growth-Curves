@@ -197,13 +197,14 @@ class GUI:
         self.sim_length = tk.IntVar(value=meta["Project length (days)"])
         self.movingAvgLen = tk.IntVar(value=meta["Moving avg length"])
         self.ylim = tk.DoubleVar(value=meta["plot y-scale"])
-        self.xlim = tk.StringVar()
+        self.xlimMin = tk.StringVar()
+        self.xlimMax = tk.StringVar()
 
         # Frame creation
         self.dir_frame()
-        self.dose_frame()
         self.sim_frame()
         self.plot_frame()
+        self.dose_frame()
 
         # Frame placement
         self.dirFR.grid(row=0,column=0,padx=2,pady=2)
@@ -324,12 +325,18 @@ class GUI:
             meta["Custom projection power"] = self.custom_power.get()
             meta["Project length (days)"] = self.sim_length.get()
             meta["Moving avg length"] = self.movingAvgLen.get()
-            meta["plot y-scale"] = self.ylim.get()
             
             json.dump(meta,f,indent=4)
         append_to_log("Meta data settings saved")
 
     def apply_plot_settings(self):
+        with open ("Ac_growth_meta.txt","r") as f:
+            meta = json.load(f)
+        with open ("Ac_growth_meta.txt","w") as f:
+            meta["plot x min"]=self.xlimMin.get()
+            meta["plot x max"]=self.xlimMax.get()
+            meta["plot y-scale"] = self.ylim.get()
+            json.dump(meta,f,indent=4)
         append_to_log("plot settings saved")
         
     def open_directory_popup(self):
@@ -478,10 +485,14 @@ class GUI:
                                    text="Enter the upper limit of the y axis in mCi")
         self.ylimEntry = ttk.Entry(self.plotFR,
                                    textvariable=self.ylim)
-        self.xlimLabel = ttk.Label(self.plotFR,
-                                   text="Enter the end date for the plot (YYMMDD)")
-        self.xlimEntry = ttk.Entry(self.plotFR,
-                                   textvariable=self.xlim)
+        self.xlimMinLabel = ttk.Label(self.plotFR,
+                                      text="Enter the start date for the plot (YYMMDD)")
+        self.xlimMinEntry = ttk.Entry(self.plotFR,
+                                      textvariable=self.xlimMin)
+        self.xlimMaxLabel = ttk.Label(self.plotFR,
+                                      text="Enter the end date for the plot (YYMMDD)")
+        self.xlimMaxEntry = ttk.Entry(self.plotFR,
+                                      textvariable=self.xlimMax)
         self.applyPlotPB = ttk.Button(self.plotFR,
                                   text="Apply",
                                   command=self.apply_plot_settings)
@@ -489,9 +500,11 @@ class GUI:
         # Place elements
         self.ylimLabel.grid(column=0,row=1,padx=2,pady=2)
         self.ylimEntry.grid(column=1,row=1,padx=2,pady=2)
-        self.xlimLabel.grid(column=0,row=2,padx=2,pady=2)
-        self.xlimEntry.grid(column=1,row=2,padx=2,pady=2)
-        self.applyPlotPB.grid(column=0,row=3,columnspan=2,padx=2,pady=2)
+        self.xlimMinLabel.grid(column=0,row=2,padx=2,pady=2)
+        self.xlimMinEntry.grid(column=1,row=2,padx=2,pady=2)
+        self.xlimMaxLabel.grid(column=0,row=3,padx=2,pady=2)
+        self.xlimMaxEntry.grid(column=1,row=3,padx=2,pady=2)
+        self.applyPlotPB.grid(column=0,row=4,columnspan=2,padx=2,pady=2)
         
 if __name__ == '__main__':
 

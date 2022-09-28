@@ -207,3 +207,32 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-09-27 10:54:47.040579: Generating report
 2022-09-27 10:54:53.145658: Report generation complete, run time: 6.11 seconds
 2022-09-27 11:16:14.299890: plot settings saved
+2022-09-28 05:16:00.988225: Generating report
+2022-09-28 05:16:01.002575: Beam path selection is missing or invalid
+2022-09-28 05:16:04.532668: Error: Beam path selection is missing or invalid acknowledged by user
+2022-09-28 05:36:16.928049: Directory selection dialog opened
+2022-09-28 05:36:20.519866: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-28 05:36:23.302992: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-09-28 05:36:26.010705: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-09-28 05:36:28.952007: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Regression testing.csv
+2022-09-28 05:36:49.366736: New datapoint submitted
+2022-09-28 05:36:56.648284: New datapoint submitted
+2022-09-28 05:37:04.102710: New datapoint submitted
+2022-09-28 05:37:13.831334: New datapoint submitted
+2022-09-28 05:37:22.732611: New datapoint submitted
+2022-09-28 05:37:32.224532: New datapoint submitted
+2022-09-28 05:37:42.230674: New datapoint submitted
+2022-09-28 05:37:51.339064: New datapoint submitted
+2022-09-28 05:38:05.820785: New datapoint submitted
+2022-09-28 05:38:10.233620: Generating report
+2022-09-28 05:38:16.422202: Report generation complete, run time: 6.19 seconds
+2022-09-28 05:38:38.239564: Meta data settings saved
+2022-09-28 05:38:39.652971: Generating report
+2022-09-28 05:38:45.570066: Report generation complete, run time: 5.92 seconds
+2022-09-28 05:39:23.061236: plot settings saved
+2022-09-28 05:39:24.722501: Meta data settings saved
+2022-09-28 05:39:26.325636: Generating report
+2022-09-28 05:39:32.110055: Report generation complete, run time: 5.78 seconds
+2022-09-28 06:02:09.070143: plot settings saved
+2022-09-28 06:11:12.021684: plot settings saved
+2022-09-28 06:12:31.397280: plot settings saved
