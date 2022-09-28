@@ -33,6 +33,12 @@ matplotlib.rcParams['mathtext.fontset'] = 'stix'
 matplotlib.rcParams['font.family'] = 'STIXGeneral'
 
 # ------------------ H E L P E R  F U N C T I O N S ------------------------- #
+def parse_6dig_date(date):
+    day = DT.datetime.strptime(date, '%y%m%d').day
+    month = DT.datetime.strptime(date, '%y%m%d').month
+    year = DT.datetime.strptime(date, '%y%m%d').year
+    return(DT.datetime(year,month,day))
+    
 def parse_dates(DF, date_col, time_col):
     new_series = []
     
@@ -230,8 +236,6 @@ def Ac_growth(GUI_obj):
     calculate_delta(DF)
 
     # Create calculated data
-##    DF["Integrated Power (kWhr from Acc)"] = dose_to_accumulated_power(DF["Accumulated Dose"],
-##                                                                       mGy_min_watt)/Fudge_Factor
     DF["Integrated Power (kWhr from Acc)"] = dose_to_accumulated_power(DF["Accumulated Dose"],
                                                                        mGy_min_watt)
     DFPowerScale = pd.read_csv(GUI_obj.powerSchedPath.get())
@@ -357,8 +361,10 @@ def Ac_growth(GUI_obj):
 
     # Plotting black dashed line at last reported data
     ylim    = (0,meta["plot y-scale"])
+    xlim = (parse_6dig_date(meta["plot x min"]),parse_6dig_date(meta["plot x max"]))
     ax.plot([latest_time,latest_time],[ylim[0],ylim[1]],'k--')
     ax.set_ylim(0.0,ylim[1])
+    ax.set_xlim(xlim[0],xlim[1])
 
     # Plot target measurements
     try:
