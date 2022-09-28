@@ -192,26 +192,27 @@ class GUI:
         self.targetMeasPath = tk.StringVar()
         self.downSchedPath = tk.StringVar()
         self.powerSchedPath = tk.StringVar()
-        self.last_data_datetime = tk.StringVar(value=" ")
+        self.last_data_datetime = tk.StringVar(value="No irradiation log selected")
         self.custom_power = tk.DoubleVar(value=meta["Custom projection power"])
         self.sim_length = tk.IntVar(value=meta["Project length (days)"])
         self.movingAvgLen = tk.IntVar(value=meta["Moving avg length"])
         self.ylim = tk.DoubleVar(value=meta["plot y-scale"])
-        self.xlimMin = tk.StringVar()
-        self.xlimMax = tk.StringVar()
+        self.xlimMin = tk.StringVar(value=meta["plot x min"])
+        self.xlimMax = tk.StringVar(value=meta["plot x max"])
 
         # Frame creation
-        self.dir_frame()
-        self.sim_frame()
-        self.plot_frame()
         self.dose_frame()
+        self.plot_frame()
+        self.sim_frame()
+        self.dir_frame()
+        
 
         # Frame placement
-        self.dirFR.grid(row=0,column=0,padx=2,pady=2)
-        self.simFR.grid(row=1,column=0,padx=2,pady=2)
-        self.plotFR.grid(row=2,column=0,padx=2,pady=2)
-        self.doseFR.grid(row=3,column=0,padx=2,pady=2)  
-
+        self.doseFR.grid(row=0,column=0,padx=2,pady=2)
+        self.plotFR.grid(row=1,column=0,padx=2,pady=2)
+        self.simFR.grid(row=2,column=0,padx=2,pady=2)
+        self.dirFR.grid(row=3,column=0,padx=2,pady=2)
+        
         self.dirFR.grid_columnconfigure(0,weight=1)
         self.simFR.grid_columnconfigure(0,weight=1)
         self.plotFR.grid_columnconfigure(0,weight=1)
@@ -350,17 +351,13 @@ class GUI:
 
         # Create elements
         self.beamdirLabel = ttk.Label(self.dirFR,
-                                      text="Choose data sources")
-        self.ask_filePB = ttk.Button(self.dirFR,
-                                     text="Choose",
-                                     command=self.open_directory_popup)
+                                      text="Click to generate report")
         self.reportPB = ttk.Button(self.dirFR,
                                    text="Create Report",
                                    command=self.report_cmd)
 
         # Place elements
         self.beamdirLabel.grid(column=0,row=0)
-        self.ask_filePB.grid(column=1,row=0,padx=2,pady=2)
         self.reportPB.grid(column=2,row=0,padx=2,pady=2)
 
     def sim_frame(self):
@@ -410,7 +407,9 @@ class GUI:
 
         self.last_data_label = ttk.Label(self.doseFR,
                                          textvariable=self.last_data_datetime)
-        
+        self.ask_filePB = ttk.Button(self.doseFR,
+                                     text="Choose",
+                                     command=self.open_directory_popup)
         self.end_time_label = ttk.Label(self.doseFR,
                                         text="End time (24hr format)")
         
@@ -452,6 +451,7 @@ class GUI:
 
         # Place elements
         self.last_data_label.grid(column=0, row=0)
+        self.ask_filePB.grid(column=1,row=0,padx=2,pady=2)
         self.date_label.grid(column=0, row=1)
         self.dateEntry.grid(column=1, row=1)
         

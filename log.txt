@@ -253,3 +253,10 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-09-28 06:37:47.593797: plot settings saved
 2022-09-28 06:37:49.667591: Generating report
 2022-09-28 06:37:55.806565: Report generation complete, run time: 6.14 seconds
+2022-09-28 06:44:34.200835: Directory selection dialog opened
+2022-09-28 06:44:37.295510: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-28 06:46:01.115735: Directory selection dialog opened
+2022-09-28 06:46:03.849519: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-28 06:46:45.959436: Generating report
+2022-09-28 06:46:45.962563: Beam path selection is missing or invalid
+2022-09-28 06:46:48.125167: Error: Beam path selection is missing or invalid acknowledged by user
