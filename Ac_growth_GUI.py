@@ -199,6 +199,7 @@ class GUI:
         self.ylim = tk.DoubleVar(value=meta["plot y-scale"])
         self.xlimMin = tk.StringVar(value=meta["plot x min"])
         self.xlimMax = tk.StringVar(value=meta["plot x max"])
+        self.simulationToggle = tk.BooleanVar(value=True)
 
         # Frame creation
         self.dose_frame()
@@ -493,6 +494,8 @@ class GUI:
                                       text="Enter the end date for the plot (YYMMDD)")
         self.xlimMaxEntry = ttk.Entry(self.plotFR,
                                       textvariable=self.xlimMax)
+        self.simulationCB = ttk.Checkbutton(self.plotFR,
+                                            variable=self.simulationToggle)
         self.applyPlotPB = ttk.Button(self.plotFR,
                                   text="Apply",
                                   command=self.apply_plot_settings)

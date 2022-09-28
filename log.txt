@@ -260,3 +260,34 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-09-28 06:46:45.959436: Generating report
 2022-09-28 06:46:45.962563: Beam path selection is missing or invalid
 2022-09-28 06:46:48.125167: Error: Beam path selection is missing or invalid acknowledged by user
+2022-09-28 06:51:18.096123: Directory selection dialog opened
+2022-09-28 06:51:20.601108: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-28 06:51:23.252520: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-09-28 06:51:25.490978: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-09-28 06:51:28.601984: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-09-28 06:51:44.957577: New datapoint submitted
+2022-09-28 06:51:52.209747: Meta data settings saved
+2022-09-28 06:51:54.016645: Generating report
+2022-09-28 06:52:00.351529: Report generation complete, run time: 6.33 seconds
+2022-09-28 06:52:24.265752: Directory selection dialog opened
+2022-09-28 06:52:28.097979: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Regression testing.csv
+2022-09-28 06:52:30.178940: Generating report
+2022-09-28 06:52:36.306380: Report generation complete, run time: 6.13 seconds
+2022-09-28 06:54:03.296252: Meta data settings saved
+2022-09-28 06:54:04.245053: Generating report
+2022-09-28 06:54:10.431672: Report generation complete, run time: 6.19 seconds
+2022-09-28 11:03:15.823317: Directory selection dialog opened
+2022-09-28 11:03:19.460876: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-09-28 11:03:22.813877: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-09-28 11:03:24.875357: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-09-28 11:03:27.399421: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Regression testing.csv
+2022-09-28 11:04:03.319948: New datapoint submitted
+2022-09-28 11:04:13.927250: New datapoint submitted
+2022-09-28 11:04:20.423844: Generating report
+2022-09-28 11:04:30.519939: Report generation complete, run time: 10.08 seconds
+2022-09-28 11:04:34.976380: Meta data settings saved
+2022-09-28 11:04:35.593471: Generating report
+2022-09-28 11:05:02.127741: Report generation complete, run time: 26.53 seconds
+2022-09-28 14:12:13.978901: New datapoint submitted
+2022-09-28 14:12:17.157015: Generating report
+2022-09-28 14:12:32.697852: Report generation complete, run time: 15.54 seconds
