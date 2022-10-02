@@ -151,7 +151,7 @@ def createPowerProjection(df,Schedule,mean_power,std_power,stds_from_avg,include
     print(SchDF.head())
 
     sims = []
-    for i in range(100):
+    for i in range(1000):
         power = []
         extraction = []
         for d in df["Date and Time"]:

@@ -291,3 +291,49 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-09-28 14:12:13.978901: New datapoint submitted
 2022-09-28 14:12:17.157015: Generating report
 2022-09-28 14:12:32.697852: Report generation complete, run time: 15.54 seconds
+2022-09-29 06:18:44.548729: Directory selection dialog opened
+2022-10-02 05:39:25.566702: Directory selection dialog opened
+2022-10-02 05:39:30.105052: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-02 05:50:09.260940: Directory selection dialog opened
+2022-10-02 05:50:13.141223: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-02 05:50:18.384679: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-02 05:50:24.409594: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-10-02 05:50:27.301745: Generating report
+2022-10-02 05:51:30.275924: Directory selection dialog opened
+2022-10-02 05:51:35.425989: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-02 05:51:40.186702: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-02 05:51:43.297958: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-02 05:51:46.702358: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-10-02 05:51:49.076882: Generating report
+2022-10-02 05:55:05.657245: Report generation complete, run time: 196.58 seconds
+2022-10-02 07:37:58.723897: New datapoint submitted
+2022-10-02 07:38:13.419933: New datapoint submitted
+2022-10-02 07:39:00.319101: New datapoint submitted
+2022-10-02 07:39:08.582591: New datapoint submitted
+2022-10-02 07:39:20.242449: New datapoint submitted
+2022-10-02 07:39:40.246475: New datapoint submitted
+2022-10-02 07:39:49.694915: New datapoint submitted
+2022-10-02 07:40:06.634549: New datapoint submitted
+2022-10-02 07:40:17.208658: New datapoint submitted
+2022-10-02 07:40:27.343106: New datapoint submitted
+2022-10-02 07:40:37.325454: New datapoint submitted
+2022-10-02 07:40:47.357781: New datapoint submitted
+2022-10-02 07:40:57.247888: New datapoint submitted
+2022-10-02 07:41:21.836101: New datapoint submitted
+2022-10-02 07:41:31.123267: New datapoint submitted
+2022-10-02 07:41:38.970424: New datapoint submitted
+2022-10-02 07:41:53.846298: New datapoint submitted
+2022-10-02 07:42:04.065689: New datapoint submitted
+2022-10-02 07:42:13.521341: New datapoint submitted
+2022-10-02 07:42:25.948872: New datapoint submitted
+2022-10-02 07:42:34.181227: New datapoint submitted
+2022-10-02 07:42:45.305603: New datapoint submitted
+2022-10-02 07:42:56.300417: New datapoint submitted
+2022-10-02 07:43:39.572541: Generating report
+2022-10-02 07:47:06.152531: Report generation complete, run time: 206.58 seconds
+2022-10-02 12:52:37.759236: Meta data settings saved
+2022-10-02 12:52:40.328533: Generating report
+2022-10-02 12:53:34.623308: Report generation complete, run time: 54.29 seconds
+2022-10-02 13:44:25.865710: Meta data settings saved
+2022-10-02 13:44:26.893463: Generating report
+2022-10-02 13:45:48.530935: Report generation complete, run time: 81.64 seconds
