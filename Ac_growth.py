@@ -148,7 +148,6 @@ def createPowerProjection(df,Schedule,mean_power,std_power,stds_from_avg,include
     SchDF = pd.read_csv(Schedule)
     SchDF["Start date and time"] = parse_dates(SchDF,"Start date","Start time")
     SchDF["End date and time"] = parse_dates(SchDF,"End date","End time")
-##    print(SchDF.head())
 
     sims = []
     for i in range(500):
@@ -208,7 +207,6 @@ def find_regression(dfMeas, df):
     dfMeas["Date and Time"] = parse_dates(dfMeas,"Date","Time")
     regressions = []
     for i, row in dfMeas.iterrows():
-        print("{}: {} {}mCi".format(i,row["Date and Time"],row["Ac-225"]))
         for j, jow in df.iterrows():
             if jow["Date and Time"]>row["Date and Time"]:
                 print("Found the next date!")
@@ -224,7 +222,7 @@ def find_regression(dfMeas, df):
                 try:
                     rate = dy/dx
                 except ZeroDivisionError:
-                    print("dx is zero for some reason")
+                    append_to_log("Failed to find regression, dx is zero for some reason")
                     return()
 
                 y = (x-x1).total_seconds() * rate + y1
@@ -411,7 +409,6 @@ def Ac_growth(GUI_obj):
             h,M = pt["Time"].split(":")
             date = DT.datetime(int(y),int(m),int(d),int(h),int(M))
             data = pt["Ac-225"]
-##            print(date,data)
             ax.plot(date,float(data),'kx',ms=10)
             ax.text(date,float(data),data,ha='right',va='center',fontsize = 10) 
 
@@ -460,6 +457,8 @@ def Ac_growth(GUI_obj):
          ax.transAxes, fig.transFigure
     )              # Makes x axis 'axes' coordinates and y axis 'figure' coordinates
     ax.text(0.5, 0.03, caption_text, ha = 'center', va = 'top', fontsize = 12, transform = trans)
+    if End > DT.datetime.today():
+        ax.text(0,0,"Caution: Plot contains speculative data.",ha='center',va='top',fontsize=12,transform=trans)
 
     # Add current date to upper right corner of plot
 
@@ -525,7 +524,8 @@ class dummy_GUI:
         self.targetMeasPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Target measurements.csv")
         self.downSchedPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Schedule.csv")
         self.powerSchedPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Power scalar schedule.csv")
-        
+
+__version__ = "0.1.1"
 if __name__ == '__main__':
     GUI = dummy_GUI()
     Ac_growth(dummy_GUI())
