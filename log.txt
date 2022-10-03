@@ -337,3 +337,108 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-10-02 13:44:25.865710: Meta data settings saved
 2022-10-02 13:44:26.893463: Generating report
 2022-10-02 13:45:48.530935: Report generation complete, run time: 81.64 seconds
+2022-10-03 05:38:33.603387: Directory selection dialog opened
+2022-10-03 05:38:37.043839: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-03 05:38:39.864697: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-03 05:38:42.398021: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-03 05:38:46.296301: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-10-03 05:38:48.608451: Generating report
+2022-10-03 05:42:13.410343: Report generation complete, run time: 204.80 seconds
+2022-10-03 05:45:05.340409: Directory selection dialog opened
+2022-10-03 06:03:21.123503: New datapoint submitted
+2022-10-03 06:03:30.418367: New datapoint submitted
+2022-10-03 06:03:39.374064: New datapoint submitted
+2022-10-03 06:04:17.974405: New datapoint submitted
+2022-10-03 06:04:27.390046: New datapoint submitted
+2022-10-03 06:04:54.592942: New datapoint submitted
+2022-10-03 06:05:04.394437: New datapoint submitted
+2022-10-03 06:05:21.616348: New datapoint submitted
+2022-10-03 06:05:33.485786: New datapoint submitted
+2022-10-03 06:05:40.796120: New datapoint submitted
+2022-10-03 06:05:53.357928: New datapoint submitted
+2022-10-03 06:09:55.405650: Generating report
+2022-10-03 06:13:13.565034: Report generation complete, run time: 198.15 seconds
+2022-10-03 06:36:23.833700: Directory selection dialog opened
+2022-10-03 06:36:28.009169: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-03 06:36:31.633716: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-03 06:36:34.838391: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-03 06:36:37.134638: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-10-03 06:36:40.448859: Generating report
+2022-10-03 06:38:24.453672: Directory selection dialog opened
+2022-10-03 06:38:28.295210: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-03 06:38:31.605376: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-03 06:38:35.262366: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-03 06:38:41.108239: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-10-03 06:38:43.583530: Generating report
+2022-10-03 06:40:30.259867: Report generation complete, run time: 106.68 seconds
+2022-10-03 07:01:56.638527: Directory selection dialog opened
+2022-10-03 07:02:00.661814: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-03 07:02:03.406904: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-03 07:02:05.722286: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-03 07:02:09.888848: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-10-03 07:02:12.269697: Generating report
+2022-10-03 07:08:49.499278: Directory selection dialog opened
+2022-10-03 07:08:52.679489: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-03 07:08:55.323104: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-03 07:08:57.868456: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-03 07:09:01.968034: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-10-03 07:09:03.635670: Generating report
+2022-10-03 07:09:38.083391: Directory selection dialog opened
+2022-10-03 07:09:41.093532: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-03 07:09:43.725682: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-03 07:09:46.515246: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-03 07:09:49.308206: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-10-03 07:09:51.093889: Generating report
+2022-10-03 07:11:36.836153: Report generation complete, run time: 105.74 seconds
+2022-10-03 07:14:59.578520: Directory selection dialog opened
+2022-10-03 07:15:02.987867: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-03 07:15:06.125029: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-03 07:15:08.481732: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-03 07:15:13.748049: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-10-03 07:15:15.585658: Generating report
+2022-10-03 07:16:03.904503: Report generation complete, run time: 48.31 seconds
+2022-10-03 07:20:08.697659: Directory selection dialog opened
+2022-10-03 07:20:16.241701: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-03 07:20:21.481649: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-03 07:20:24.998034: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-03 07:20:27.755599: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-10-03 07:20:29.457328: Generating report
+2022-10-03 07:22:18.602597: Report generation complete, run time: 109.15 seconds
+2022-10-03 07:24:02.095203: Directory selection dialog opened
+2022-10-03 07:24:05.588738: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-03 07:24:09.718427: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-03 07:24:12.908864: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-03 07:24:17.377797: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-10-03 07:24:19.038844: Generating report
+2022-10-03 07:25:59.866102: Report generation complete, run time: 100.83 seconds
+2022-10-03 08:46:15.673513: Directory selection dialog opened
+2022-10-03 08:46:18.856390: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-03 08:46:22.315493: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-03 08:46:24.451370: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-03 08:46:26.677415: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/You're not special.csv
+2022-10-03 08:46:28.217413: Generating report
+2022-10-03 08:47:28.301646: Report generation complete, run time: 60.08 seconds
+2022-10-03 08:49:32.447256: Directory selection dialog opened
+2022-10-03 08:49:36.010040: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-03 08:49:39.007895: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-03 08:49:41.108711: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-03 08:49:49.401150: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Power scalar schedule.csv
+2022-10-03 08:49:56.368993: Meta data settings saved
+2022-10-03 08:49:57.172501: Generating report
+2022-10-03 08:50:43.033374: Report generation complete, run time: 45.86 seconds
+2022-10-03 08:51:30.573600: Meta data settings saved
+2022-10-03 08:51:31.786350: Generating report
+2022-10-03 08:52:39.027904: Report generation complete, run time: 67.24 seconds
+2022-10-03 09:01:45.859050: Directory selection dialog opened
+2022-10-03 09:01:50.166951: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/You're not special.csv
+2022-10-03 09:01:53.420811: Generating report
+2022-10-03 09:02:20.741719: Report generation complete, run time: 27.32 seconds
+2022-10-03 09:06:53.830645: Directory selection dialog opened
+2022-10-03 09:06:57.722830: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-03 09:07:00.312581: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-03 09:07:02.772324: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-03 09:07:08.021370: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/You're not special.csv
+2022-10-03 09:07:10.581091: Generating report
+2022-10-03 09:07:36.974458: Report generation complete, run time: 26.39 seconds
+2022-10-03 09:47:24.253529: Generating report
+2022-10-03 09:48:14.569032: Report generation complete, run time: 50.32 seconds

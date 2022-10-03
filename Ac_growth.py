@@ -148,10 +148,10 @@ def createPowerProjection(df,Schedule,mean_power,std_power,stds_from_avg,include
     SchDF = pd.read_csv(Schedule)
     SchDF["Start date and time"] = parse_dates(SchDF,"Start date","Start time")
     SchDF["End date and time"] = parse_dates(SchDF,"End date","End time")
-    print(SchDF.head())
+##    print(SchDF.head())
 
     sims = []
-    for i in range(1000):
+    for i in range(500):
         power = []
         extraction = []
         for d in df["Date and Time"]:
@@ -200,6 +200,39 @@ def createPowerProjection(df,Schedule,mean_power,std_power,stds_from_avg,include
         
 
     return(upper_power,mean_power,lower_power,extraction)
+
+def find_regression(dfMeas, df):
+    '''takes two dataframes, the first with activity measurements of the target,
+    the second with predicted data using the model and uses these data to find
+    a regression statistic.'''
+    dfMeas["Date and Time"] = parse_dates(dfMeas,"Date","Time")
+    regressions = []
+    for i, row in dfMeas.iterrows():
+        print("{}: {} {}mCi".format(i,row["Date and Time"],row["Ac-225"]))
+        for j, jow in df.iterrows():
+            if jow["Date and Time"]>row["Date and Time"]:
+                print("Found the next date!")
+                y1 = df.at[j-1,"Actinium-225 Activity (mCi)"]
+                x1 = df.at[j-1,"Date and Time"]
+                y2 = df.at[j,"Actinium-225 Activity (mCi)"]
+                x2 = df.at[j,"Date and Time"]
+                yhat = row["Ac-225"]
+                x = row["Date and Time"]
+
+                dy = y2-y1
+                dx = (x2-x1).total_seconds()
+                try:
+                    rate = dy/dx
+                except ZeroDivisionError:
+                    print("dx is zero for some reason")
+                    return()
+
+                y = (x-x1).total_seconds() * rate + y1
+                rsqr = (yhat-y)**2
+                regressions.append(rsqr)
+                break
+    return(regressions)
+
 def scale_power(df, dfpower):
     dfpower["Start Date and Time"] = parse_dates(dfpower,"Start date","Start time")
     dfpower["End Date and Time"] = parse_dates(dfpower,"End date","End time")
@@ -224,7 +257,6 @@ def Ac_growth(GUI_obj):
     # ----------------- S C R I P T   S E T T I N G S  -------------------------- #
 
     Adjustable_Ratio = meta["Adjustable ratio"]
-##    Fudge_Factor = meta["Fudge factor"]
     Reaction_Rate_Modification_Factor = meta["Reaction rate modification factor"]
     mGy_min_watt = meta["mGy per min per watt"]
 
@@ -259,7 +291,13 @@ def Ac_growth(GUI_obj):
                         Reaction_Rate_Modification_Factor)
 
     latest_Ac225 = DF["Actinium-225 Activity (mCi)"].tail(1).item()
-
+    reg = find_regression(DFmeas,DF)
+    rss = sum(reg)
+    for r in reg:
+        print(r)
+    print("RSS: {:4.4f}".format(rss))
+    
+    
     print("Total integrated beam power: {:4.2f} kWhr".format(DF["Integrated Power (kWhr from Acc)"].sum()))
     print("Activity of Ac-225 at the last reported time: {:4.3f} mCi".format(latest_Ac225))
 
@@ -373,7 +411,7 @@ def Ac_growth(GUI_obj):
             h,M = pt["Time"].split(":")
             date = DT.datetime(int(y),int(m),int(d),int(h),int(M))
             data = pt["Ac-225"]
-            print(date,data)
+##            print(date,data)
             ax.plot(date,float(data),'kx',ms=10)
             ax.text(date,float(data),data,ha='right',va='center',fontsize = 10) 
 

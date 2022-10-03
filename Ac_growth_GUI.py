@@ -511,7 +511,7 @@ class GUI:
         
 if __name__ == '__main__':
 
-    __version__ = "0.0.1"
+    __version__ = "0.1.1"
     last_modified = "10-August-2022"
 
     root = tk.Tk()
