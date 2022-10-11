@@ -583,3 +583,50 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-10-10 07:39:56.360795: Report generation complete, run time: 14.68 seconds
 2022-10-10 07:41:17.396960: Generating report
 2022-10-10 07:41:35.377394: Report generation complete, run time: 17.98 seconds
+2022-10-10 14:18:23.201035: Generating report
+2022-10-10 14:18:42.957826: Report generation complete, run time: 19.74 seconds
+2022-10-10 14:18:53.784344: Generating report
+2022-10-10 14:19:12.249305: Report generation complete, run time: 18.46 seconds
+2022-10-10 14:20:45.735426: Generating report
+2022-10-10 14:21:03.251252: Report generation complete, run time: 17.51 seconds
+2022-10-10 14:21:13.882319: Generating report
+2022-10-10 14:21:31.497698: Report generation complete, run time: 17.61 seconds
+2022-10-10 14:21:46.852925: Generating report
+2022-10-10 14:22:01.282842: Report generation complete, run time: 14.43 seconds
+2022-10-10 14:22:42.968812: Generating report
+2022-10-10 14:22:59.654689: Report generation complete, run time: 16.69 seconds
+2022-10-10 15:19:57.864255: Directory selection dialog opened
+2022-10-10 15:20:01.683720: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-10 15:20:07.322581: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-10 15:20:09.713030: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-10 15:20:13.978570: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/You're not special.csv
+2022-10-10 15:20:16.686006: Generating report
+2022-10-10 15:20:44.648613: Directory selection dialog opened
+2022-10-10 15:20:47.447528: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-10 15:20:49.791160: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-10 15:20:51.853757: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-10 15:20:54.181869: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/You're not special.csv
+2022-10-10 15:20:55.574839: Generating report
+2022-10-10 15:21:42.567733: Generating report
+2022-10-10 15:21:42.575654: Beam path selection is missing or invalid
+2022-10-10 15:21:43.943293: Error: Beam path selection is missing or invalid acknowledged by user
+2022-10-10 15:21:44.434358: Directory selection dialog opened
+2022-10-10 15:21:46.713933: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-10 15:21:48.931772: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-10 15:21:50.885161: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-10 15:21:53.057133: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/You're not special.csv
+2022-10-10 15:21:54.464344: Generating report
+2022-10-10 15:22:39.473005: Directory selection dialog opened
+2022-10-10 15:22:42.088087: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-10 15:22:44.529624: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-10 15:22:46.713067: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-10 15:22:50.244214: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/You're not special.csv
+2022-10-10 15:22:51.965413: Generating report
+2022-10-10 15:23:10.538037: Report generation complete, run time: 18.57 seconds
+2022-10-10 15:25:36.237281: Directory selection dialog opened
+2022-10-10 15:25:39.213143: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-10 15:25:42.167113: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-10 15:25:44.619734: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-10 15:25:48.056978: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/You're not special.csv
+2022-10-10 15:25:50.072280: Generating report
+2022-10-10 15:26:06.302531: Report generation complete, run time: 16.23 seconds

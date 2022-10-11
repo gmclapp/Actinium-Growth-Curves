@@ -278,11 +278,9 @@ def Ac_growth(GUI_obj):
     latest_time = DF["Date and Time"].tail(1).item().to_pydatetime()
 
     # ------------------------ Calculation Algorithm          ---------------- #
-
     # initial_ra_225_N = 32.4 * 3.7e4 / ra_225_l # Measured activity prior to start
     # initial_ac_225_N = 10.0 * 3.7e4 / ac_225_l # Measured activity prior to start
-    initial_ra_225_N = 0
-    initial_ac_225_N = 0
+
     reaction_calculator(DF,
                         initial_ra_225_N,
                         initial_ac_225_N,
