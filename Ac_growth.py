@@ -367,7 +367,6 @@ def Ac_growth(GUI_obj):
                         Reaction_Rate_Modification_Factor)
 
     DF.to_csv("output.csv")
-    DF_custom.to_csv("Alex.csv")
     DF_proj.to_csv("projection.csv")
 
     # ------------------- B E G I N   P L O T T I N G ---------------------------- #
