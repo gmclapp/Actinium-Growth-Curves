@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter.filedialog import askopenfile, asksaveasfilename
+from tkinter.filedialog import askopenfile, asksaveasfilename, askdirectory
 from tkinter import ttk, TclError
 import os
 from datetime import datetime
@@ -93,6 +93,11 @@ class dir_popup:
         append_to_log("Power scalar path set to {}".format(self.parent.powerSchedPath.get()))
         self.child.attributes('-topmost',True)
 
+    def out_cmd(self):
+        self.parent.outputPath.set(askdirectory())
+        append_to_log("Output directory set to {}".format(self.parent.outputPath.get()))
+        self.child.attributes('-topmost',True)
+
     def new_beam_data_cmd(self):
         pathstr = None
         pathstr = asksaveasfilename(defaultextension=".csv")
@@ -150,7 +155,8 @@ class dir_popup:
     def dir_frame(self):
         self.dirFR = tk.LabelFrame(self.child,
                                    text="Data sources")
-        
+
+        # Create elements
         beamDataPB = ttk.Button(self.dirFR,text="Select Beam Data",width=25,command=self.dir_cmd)
         newBeamDataPB = ttk.Button(self.dirFR,text="New",command=self.new_beam_data_cmd)
         
@@ -163,6 +169,8 @@ class dir_popup:
         powerSchedPB = ttk.Button(self.dirFR,text="Select Power Scale Data",width=25,command=self.pow_cmd)
         newPowerSchedDataPB = ttk.Button(self.dirFR,text="New",command=self.new_power_sched_data_cmd)
 
+        outputPB = ttk.Button(self.dirFR,text="Select Output Directory",width=25,command=self.out_cmd)
+
         DonePB = ttk.Button(self.dirFR,text="Done",command=self.child.destroy)
 
 
@@ -170,7 +178,9 @@ class dir_popup:
         schedLabel = ttk.Label(self.dirFR,text="Select the csv file with scheduled down time: ")
         targetLabel = ttk.Label(self.dirFR,text="Select the csv file with the target activity measurements: ")
         powerLabel = ttk.Label(self.dirFR,text="Select the csv file with the power scalars: ")
+        outputLabel = ttk.Label(self.dirFR,text="Select the directory for output csv and png files: ")
 
+        # Place elements
         beamDataLabel.grid(column=0,row=0)
         beamDataPB.grid(column=1,row=0,padx=2,pady=2)
         newBeamDataPB.grid(column=2,row=0,padx=2,pady=2)
@@ -187,7 +197,10 @@ class dir_popup:
         powerSchedPB.grid(column=1,row=3,padx=2,pady=2)
         newPowerSchedDataPB.grid(column=2,row=3,padx=2,pady=2)
 
-        DonePB.grid(column=0,row=4,columnspan=3)
+        outputLabel.grid(column=0,row=4)
+        outputPB.grid(column=1,row=4)
+        
+        DonePB.grid(column=0,row=5,columnspan=3)
         
 class GUI:
     def __init__(self,master,version,mod_date):
@@ -229,6 +242,7 @@ class GUI:
         self.simulationToggle = tk.BooleanVar(value=True)
         self.startRa = tk.DoubleVar(value=meta["starting Ra activity"])
         self.startAc = tk.DoubleVar(value=meta["starting Ac activity"])
+        self.outputPath = tk.StringVar()
 
         # Frame creation
         self.dose_frame()
@@ -273,13 +287,10 @@ class GUI:
             return()
         elif self.targetMeasPath.get()[-4:] != ".csv":
             error_popup(self.master,"Warning: Target measurement path selection is missing or invalid")
-##            return()
         elif self.downSchedPath.get()[-4:] != ".csv":
             error_popup(self.master,"Warning: Downtime schedule path selection is missing or invalid")
-##            return()
         elif self.powerSchedPath.get()[-4:] != ".csv":
             error_popup(self.master,"Warning: Power scalar schedule path selection is missing or invalid")
-##            return()
             
         start = datetime.now()
         try:
@@ -374,7 +385,6 @@ class GUI:
         
     def open_directory_popup(self):
         child = dir_popup(self)
-    
 # ------------------- L A B E L   F R A M E   S E T U P S ------------------- #
     def dir_frame(self):
         self.dirFR = tk.LabelFrame(self.master,

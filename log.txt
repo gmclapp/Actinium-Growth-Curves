@@ -753,3 +753,46 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-10-14 13:57:49.297964: Warning: Target measurement path selection is missing or invalid
 2022-10-14 13:57:55.289348: Report generation complete, run time: 5.99 seconds
 2022-10-14 13:57:58.975628: Error: Warning: Target measurement path selection is missing or invalid acknowledged by user
+2022-10-14 14:24:45.900484: Directory selection dialog opened
+2022-10-14 14:25:07.142374: Directory selection dialog opened
+2022-10-14 14:25:10.295583: Output directory set to C:/Users/clapp/Desktop/Ac Growth data
+2022-10-14 14:30:40.358663: Directory selection dialog opened
+2022-10-14 14:30:43.516707: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 14:30:46.612846: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-14 14:30:48.905237: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-14 14:30:54.014443: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Regression testing.csv
+2022-10-14 14:30:59.844712: Output directory set to C:/Users/clapp/Desktop/Ac Growth data
+2022-10-14 14:31:02.524191: Generating report
+2022-10-14 14:31:37.731929: Directory selection dialog opened
+2022-10-14 14:31:40.841723: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 14:31:44.091496: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-14 14:31:46.997684: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-14 14:31:50.075181: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Regression testing.csv
+2022-10-14 14:31:52.388331: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Regression testing.csv
+2022-10-14 14:31:55.215565: Output directory set to C:/Users/clapp/Desktop/Ac Growth data
+2022-10-14 14:31:57.721067: Generating report
+2022-10-14 14:32:13.553247: Report generation complete, run time: 15.83 seconds
+2022-10-14 14:35:17.844466: Generating report
+2022-10-14 14:35:36.622221: Report generation complete, run time: 18.77 seconds
+2022-10-14 14:36:13.862346: Directory selection dialog opened
+2022-10-14 14:36:17.255308: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 14:36:21.054595: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-14 14:36:24.654039: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-14 14:36:27.726890: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Regression testing.csv
+2022-10-14 14:36:30.400773: Output directory set to C:/Users/clapp/Desktop/Ac Growth data
+2022-10-14 14:36:33.591672: Generating report
+2022-10-14 14:36:50.009418: Report generation complete, run time: 16.42 seconds
+2022-10-14 14:41:41.731190: Directory selection dialog opened
+2022-10-14 14:41:44.533746: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 14:41:46.970861: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-14 14:41:49.650071: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-14 14:41:51.900142: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Regression testing.csv
+2022-10-14 14:41:59.016942: Output directory set to C:/Users/clapp/Desktop/Ac Growth data/output
+2022-10-14 14:43:05.759145: Directory selection dialog opened
+2022-10-14 14:43:10.382009: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 14:43:13.781822: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-14 14:43:16.381662: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-14 14:43:20.781897: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Regression testing.csv
+2022-10-14 14:43:25.748356: Output directory set to C:/Users/clapp/Desktop/Ac Growth data/output
+2022-10-14 14:43:27.792948: Generating report
+2022-10-14 14:43:43.059559: Report generation complete, run time: 15.27 seconds

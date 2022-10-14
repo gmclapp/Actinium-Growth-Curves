@@ -24,6 +24,7 @@ import json
 import warnings
 warnings.filterwarnings("ignore", message="FixedFormatter should only be used together with FixedLocator")
 import tkinter as tk
+import os
 
 # ------------------- P L O T   S E T T I N G S  ---------------------------- #
 
@@ -396,8 +397,8 @@ def Ac_growth(GUI_obj):
                         DF.tail(1)["Actinium-225"].item(),
                         Reaction_Rate_Modification_Factor)
 
-    DF.to_csv("output.csv")
-    DF_proj.to_csv("projection.csv")
+    DF.to_csv(os.path.join(GUI_obj.outputPath.get(),"output.csv"))
+    DF_proj.to_csv(os.path.join(GUI_obj.outputPath.get(),"projection.csv"))
 
     # ------------------- B E G I N   P L O T T I N G ---------------------------- #
 
@@ -495,8 +496,9 @@ def Ac_growth(GUI_obj):
     # Save figure as a png
     date_string_2   = DT.date.today().strftime('%Y%m%d')
     file_name = f'{date_string_2}_ac_225_growth_curve.png'
-    plt.savefig(file_name, bbox_inches = 'tight')
-    plt.savefig("current_ac_225_growth_curve.png")
+    plt.savefig(os.path.join(GUI_obj.outputPath.get(),file_name), bbox_inches = 'tight')
+    
+    plt.savefig(os.path.join(GUI_obj.outputPath.get(),"current_ac_225_growth_curve.png"))
 
     # ------------------- P O W E R   P L O T T I N G ---------------------------- #
 
@@ -542,7 +544,8 @@ def Ac_growth(GUI_obj):
     # Save figure as a png
     date_string_2   = DT.date.today().strftime('%Y%m%d')
     file_name = f'{date_string_2}_ac_225_growth_curve_power.png'
-    plt.savefig(file_name, bbox_inches = 'tight')
+    plt.savefig(os.path.join(GUI_obj.outputPath.get(),file_name),bbox_inches='tight')
+##    plt.savefig(file_name, bbox_inches = 'tight')
 
 class dummy_GUI:
     def __init__(self):
