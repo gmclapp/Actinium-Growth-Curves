@@ -200,6 +200,8 @@ class GUI:
         self.xlimMin = tk.StringVar(value=meta["plot x min"])
         self.xlimMax = tk.StringVar(value=meta["plot x max"])
         self.simulationToggle = tk.BooleanVar(value=True)
+        self.startRa = tk.DoubleVar(value=meta["starting Ra activity"])
+        self.startAc = tk.DoubleVar(value=meta["starting Ac activity"])
 
         # Frame creation
         self.dose_frame()
@@ -327,6 +329,8 @@ class GUI:
             meta["Custom projection power"] = self.custom_power.get()
             meta["Project length (days)"] = self.sim_length.get()
             meta["Moving avg length"] = self.movingAvgLen.get()
+            meta["starting Ra activity"] = self.startRa.get()
+            meta["starting Ac activity"] = self.startAc.get()
             
             json.dump(meta,f,indent=4)
         append_to_log("Meta data settings saved")
@@ -384,6 +388,14 @@ class GUI:
         self.applyPB = ttk.Button(self.simFR,
                                   text="Apply",
                                   command=self.apply_sim_settings)
+        self.startRaActivityLabel = ttk.Label(self.simFR,
+                                              text="Enter the starting activity of Ra-225 (mCi)")
+        self.startRaActivityEntry = ttk.Entry(self.simFR,
+                                              textvariable=self.startRa)
+        self.startAcActivityLabel = ttk.Label(self.simFR,
+                                              text="Enter the starting activity of Ac-225 (mCi)")
+        self.startAcActivityEntry = ttk.Entry(self.simFR,
+                                              textvariable=self.startAc)
         
 
         # Place elements
@@ -396,9 +408,12 @@ class GUI:
         self.movingAvgLenLabel.grid(column=0,row=2,padx=2,pady=2)
         self.movingAvgLenEntry.grid(column=1,row=2,padx=2,pady=2)
 
-
-
-        self.applyPB.grid(column=0,row=3,padx=2,pady=2)
+        self.startRaActivityLabel.grid(column=0,row=3,padx=2,pady=2)
+        self.startRaActivityEntry.grid(column=1,row=3,padx=2,pady=2)
+        self.startAcActivityLabel.grid(column=0,row=4,padx=2,pady=2)
+        self.startAcActivityEntry.grid(column=1,row=4,padx=2,pady=2)
+        
+        self.applyPB.grid(column=0,row=5,padx=2,pady=2)
         
     def dose_frame(self):
         # Create elements
@@ -511,7 +526,7 @@ class GUI:
         
 if __name__ == '__main__':
 
-    __version__ = "0.1.1"
+    __version__ = "0.1.2"
     last_modified = "10-August-2022"
 
     root = tk.Tk()
