@@ -9,9 +9,9 @@
     "Adjustable ratio": false,
     "Reaction rate modification factor": 1.0,
     "mGy per min per watt": 1.3,
-    "plot y-scale": 0.5,
+    "plot y-scale": 0.15,
     "plot x min": "220801",
     "plot x max": "221101",
-    "starting Ra activity": 0.0,
-    "starting Ac activity": 0.0
+    "starting Ra activity": 10.3,
+    "starting Ac activity": 4.8
 }

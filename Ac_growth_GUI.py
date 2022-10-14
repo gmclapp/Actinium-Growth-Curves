@@ -272,14 +272,14 @@ class GUI:
             error_popup(self.master,"Beam path selection is missing or invalid")
             return()
         elif self.targetMeasPath.get()[-4:] != ".csv":
-            error_popup(self.master,"Target measurement path selection is missing or invalid")
-            return()
+            error_popup(self.master,"Warning: Target measurement path selection is missing or invalid")
+##            return()
         elif self.downSchedPath.get()[-4:] != ".csv":
-            error_popup(self.master,"Downtime schedule path selection is missing or invalid")
-            return()
+            error_popup(self.master,"Warning: Downtime schedule path selection is missing or invalid")
+##            return()
         elif self.powerSchedPath.get()[-4:] != ".csv":
-            error_popup(self.master,"Power scalar schedule path selection is missing or invalid")
-            return()
+            error_popup(self.master,"Warning: Power scalar schedule path selection is missing or invalid")
+##            return()
             
         start = datetime.now()
         try:
@@ -416,11 +416,11 @@ class GUI:
                                   text="Apply",
                                   command=self.apply_sim_settings)
         self.startRaActivityLabel = ttk.Label(self.simFR,
-                                              text="Enter the starting activity of Ra-225 (mCi)")
+                                              text="Enter the starting activity of Ra-225 (\u03BCCi)")
         self.startRaActivityEntry = ttk.Entry(self.simFR,
                                               textvariable=self.startRa)
         self.startAcActivityLabel = ttk.Label(self.simFR,
-                                              text="Enter the starting activity of Ac-225 (mCi)")
+                                              text="Enter the starting activity of Ac-225 (\u03BCCi)")
         self.startAcActivityEntry = ttk.Entry(self.simFR,
                                               textvariable=self.startAc)
         

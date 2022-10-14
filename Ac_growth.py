@@ -47,7 +47,7 @@ def parse_dates(DF, date_col, time_col):
         new_series.append(new_datetime)
 
     return(pd.Series(new_series))
-
+           
 def parse_date(date, time):
     try:
         m,D,Y = date.split("/")
@@ -145,7 +145,17 @@ def createPowerProjection(df,Schedule,mean_power,std_power,stds_from_avg,include
     '''Takes a mean power from historical data, a standard deviation of power
     from historical data and populates the integrated power column of the given
     data frame'''
-    SchDF = pd.read_csv(Schedule)
+    try:
+        SchDF = pd.read_csv(Schedule)
+    except FileNotFoundError:
+        print("Schedule file not found.")
+        SchDF = pd.DataFrame(columns=["Start date",
+                                      "Start time",
+                                      "End date",
+                                      "End time",
+                                      "Extraction",
+                                      "Target mass addition"])
+        
     SchDF["Start date and time"] = parse_dates(SchDF,"Start date","Start time")
     SchDF["End date and time"] = parse_dates(SchDF,"End date","End time")
 
@@ -259,7 +269,13 @@ def Ac_growth(GUI_obj):
     mGy_min_watt = meta["mGy per min per watt"]
 
     DF = pd.read_csv(GUI_obj.beamPath.get(),parse_dates=True)
-    DFmeas = pd.read_csv(GUI_obj.targetMeasPath.get())
+    try:
+        DFmeas = pd.read_csv(GUI_obj.targetMeasPath.get())
+    except FileNotFoundError:
+        print("Target measurements file not found.")
+        DFmeas = pd.DataFrame(columns=["Date",
+                                       "Time",
+                                       "Ac-225"])
 
     DF["Date and Time"] = parse_dates(DF,"Date","Time")
     DF["Elapsed time (s)"] = (DF["Date and Time"] - DF["Date and Time"][0]).dt.total_seconds()
@@ -268,7 +284,15 @@ def Ac_growth(GUI_obj):
     # Create calculated data
     DF["Integrated Power (kWhr from Acc)"] = dose_to_accumulated_power(DF["Accumulated Dose"],
                                                                        mGy_min_watt)
-    DFPowerScale = pd.read_csv(GUI_obj.powerSchedPath.get())
+    try:
+        DFPowerScale = pd.read_csv(GUI_obj.powerSchedPath.get())
+    except FileNotFoundError:
+        print("Power scalar file not found.")
+        DFPowerScale = pd.DataFrame(columns=["Start date",
+                                             "Start time",
+                                             "End date",
+                                             "End time",
+                                             "Scalar"])
     scale_power(DF,DFPowerScale)
     
     DF["Dose rate (Gy/s)"] = DF["Accumulated Dose"]/DF["dt (s)"]
@@ -285,7 +309,7 @@ def Ac_growth(GUI_obj):
     ra_225_l = np.log(2)/ra_225_hl
     
     initial_ra_225_N = GUI_obj.startRa.get() * 3.7e4 / ra_225_l
-    initial_ac_225_N = GUI_obj.startAc.get() * 3.7e4 / ra_225_l
+    initial_ac_225_N = GUI_obj.startAc.get() * 3.7e4 / ac_225_l
     
     reaction_calculator(DF,
                         initial_ra_225_N,

@@ -630,3 +630,126 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-10-10 15:25:48.056978: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/You're not special.csv
 2022-10-10 15:25:50.072280: Generating report
 2022-10-10 15:26:06.302531: Report generation complete, run time: 16.23 seconds
+2022-10-14 11:16:22.638250: Meta data settings saved
+2022-10-14 11:17:25.476182: Directory selection dialog opened
+2022-10-14 11:17:29.764218: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 11:17:34.652392: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-10-14 11:17:38.053056: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-10-14 11:17:43.443171: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Regression testing.csv
+2022-10-14 11:18:14.044594: New datapoint submitted
+2022-10-14 11:18:16.826529: New datapoint submitted
+2022-10-14 11:18:20.201226: New datapoint submitted
+2022-10-14 11:18:26.492588: New datapoint submitted
+2022-10-14 11:18:30.820408: New datapoint submitted
+2022-10-14 11:18:33.774486: New datapoint submitted
+2022-10-14 11:18:37.608112: New datapoint submitted
+2022-10-14 11:18:41.514523: New datapoint submitted
+2022-10-14 11:18:49.711855: New datapoint submitted
+2022-10-14 11:18:52.499793: New datapoint submitted
+2022-10-14 11:18:55.459187: New datapoint submitted
+2022-10-14 11:18:58.117378: New datapoint submitted
+2022-10-14 11:19:01.307385: New datapoint submitted
+2022-10-14 11:19:03.992762: New datapoint submitted
+2022-10-14 11:19:07.385506: New datapoint submitted
+2022-10-14 11:19:10.444345: New datapoint submitted
+2022-10-14 11:19:13.368779: New datapoint submitted
+2022-10-14 11:19:16.213263: New datapoint submitted
+2022-10-14 11:19:19.078607: New datapoint submitted
+2022-10-14 11:19:21.744266: New datapoint submitted
+2022-10-14 11:19:26.979326: New datapoint submitted
+2022-10-14 11:19:29.516753: New datapoint submitted
+2022-10-14 11:19:31.840288: New datapoint submitted
+2022-10-14 11:19:34.573203: New datapoint submitted
+2022-10-14 11:19:37.439996: New datapoint submitted
+2022-10-14 11:19:40.152830: New datapoint submitted
+2022-10-14 11:19:43.073923: New datapoint submitted
+2022-10-14 11:19:46.202955: New datapoint submitted
+2022-10-14 11:19:49.650844: New datapoint submitted
+2022-10-14 11:19:52.814780: New datapoint submitted
+2022-10-14 11:19:55.699852: New datapoint submitted
+2022-10-14 11:19:59.024433: New datapoint submitted
+2022-10-14 11:20:04.808868: New datapoint submitted
+2022-10-14 11:20:08.746610: New datapoint submitted
+2022-10-14 11:20:11.126220: New datapoint submitted
+2022-10-14 11:20:13.424496: New datapoint submitted
+2022-10-14 11:20:15.871195: New datapoint submitted
+2022-10-14 11:20:18.266256: New datapoint submitted
+2022-10-14 11:20:20.457691: New datapoint submitted
+2022-10-14 11:20:22.705391: New datapoint submitted
+2022-10-14 11:20:25.356020: New datapoint submitted
+2022-10-14 11:20:27.933149: New datapoint submitted
+2022-10-14 11:20:30.969106: New datapoint submitted
+2022-10-14 11:20:33.415174: New datapoint submitted
+2022-10-14 11:20:42.301933: New datapoint submitted
+2022-10-14 11:23:05.984054: Directory selection dialog opened
+2022-10-14 11:23:08.553201: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 11:23:30.539751: New datapoint submitted
+2022-10-14 11:24:07.358730: New datapoint submitted
+2022-10-14 11:24:12.635165: New datapoint submitted
+2022-10-14 11:24:15.189865: New datapoint submitted
+2022-10-14 11:24:17.533417: New datapoint submitted
+2022-10-14 11:24:19.988664: New datapoint submitted
+2022-10-14 11:24:24.596613: New datapoint submitted
+2022-10-14 11:24:26.349712: Generating report
+2022-10-14 11:24:46.134538: Report generation complete, run time: 19.78 seconds
+2022-10-14 11:26:00.767121: Generating report
+2022-10-14 11:26:19.211426: Report generation complete, run time: 18.43 seconds
+2022-10-14 13:19:11.834979: Ac_growth_meta.txt does not exist, creating starter file
+2022-10-14 13:20:06.018815: Error: Ac_growth_meta.txt does not exist, creating starter file acknowledged by user
+2022-10-14 13:23:46.434327: Ac_growth_meta.txt does not exist, creating starter file
+2022-10-14 13:23:48.241701: Error: Ac_growth_meta.txt does not exist, creating starter file acknowledged by user
+2022-10-14 13:24:02.206714: Ac_growth_meta.txt does not exist, creating starter file
+2022-10-14 13:24:14.067872: Error: Ac_growth_meta.txt does not exist, creating starter file acknowledged by user
+2022-10-14 13:24:47.461385: Ac_growth_meta.txt does not exist, creating starter file
+2022-10-14 13:26:04.699574: Ac_growth_meta.txt does not exist, creating starter file
+2022-10-14 13:26:06.594510: Error: Ac_growth_meta.txt does not exist, creating starter file acknowledged by user
+2022-10-14 13:26:15.621051: Directory selection dialog opened
+2022-10-14 13:26:18.699656: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 13:26:26.597957: plot settings saved
+2022-10-14 13:26:27.253957: Meta data settings saved
+2022-10-14 13:27:28.094823: New datapoint submitted
+2022-10-14 13:35:57.626535: Directory selection dialog opened
+2022-10-14 13:36:01.000304: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 13:36:03.237020: Generating report
+2022-10-14 13:36:03.244574: Target measurement path selection is missing or invalid
+2022-10-14 13:36:05.449586: Error: Target measurement path selection is missing or invalid acknowledged by user
+2022-10-14 13:36:40.303468: Directory selection dialog opened
+2022-10-14 13:36:43.186972: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 13:36:45.185395: Generating report
+2022-10-14 13:36:45.192623: Target measurement path selection is missing or invalid
+2022-10-14 13:36:53.277190: Error: Target measurement path selection is missing or invalid acknowledged by user
+2022-10-14 13:41:36.131781: Directory selection dialog opened
+2022-10-14 13:41:39.109647: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 13:41:41.769011: Generating report
+2022-10-14 13:41:41.789759: Warning: Target measurement path selection is missing or invalid
+2022-10-14 13:43:54.499407: Error: Warning: Target measurement path selection is missing or invalid acknowledged by user
+2022-10-14 13:44:26.822956: Directory selection dialog opened
+2022-10-14 13:44:29.912267: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 13:44:31.814535: Generating report
+2022-10-14 13:44:31.821310: Warning: Target measurement path selection is missing or invalid
+2022-10-14 13:47:25.713301: Directory selection dialog opened
+2022-10-14 13:47:28.578967: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 13:47:30.957269: Generating report
+2022-10-14 13:47:30.963939: Warning: Target measurement path selection is missing or invalid
+2022-10-14 13:47:36.557409: Report generation complete, run time: 5.59 seconds
+2022-10-14 13:47:44.757815: Error: Warning: Target measurement path selection is missing or invalid acknowledged by user
+2022-10-14 13:47:45.590809: Directory selection dialog opened
+2022-10-14 13:49:27.971962: Directory selection dialog opened
+2022-10-14 13:49:30.778602: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 13:49:33.115636: Generating report
+2022-10-14 13:49:33.182333: Warning: Target measurement path selection is missing or invalid
+2022-10-14 13:49:40.069586: Report generation complete, run time: 6.89 seconds
+2022-10-14 13:50:08.516895: plot settings saved
+2022-10-14 13:52:13.452243: Meta data settings saved
+2022-10-14 13:52:18.611566: Error: Warning: Target measurement path selection is missing or invalid acknowledged by user
+2022-10-14 13:52:20.125281: Generating report
+2022-10-14 13:52:20.134286: Warning: Target measurement path selection is missing or invalid
+2022-10-14 13:52:25.584891: Report generation complete, run time: 5.45 seconds
+2022-10-14 13:52:32.466100: Error: Warning: Target measurement path selection is missing or invalid acknowledged by user
+2022-10-14 13:56:32.770893: Meta data settings saved
+2022-10-14 13:57:44.541317: Directory selection dialog opened
+2022-10-14 13:57:47.358039: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-10-14 13:57:49.288074: Generating report
+2022-10-14 13:57:49.297964: Warning: Target measurement path selection is missing or invalid
+2022-10-14 13:57:55.289348: Report generation complete, run time: 5.99 seconds
+2022-10-14 13:57:58.975628: Error: Warning: Target measurement path selection is missing or invalid acknowledged by user
