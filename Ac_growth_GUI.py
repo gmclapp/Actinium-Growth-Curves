@@ -6,6 +6,26 @@ from datetime import datetime
 from Ac_growth import *
 import json
 
+def create_meta_file():
+    meta = {"Custom projection power": 0.0,
+            "Project length (days)": 22,
+            "Project dt (s)": 7200,
+            "Moving avg length": 60,
+            "Standard deviations from average": 2,
+            "Project energy": 11.7,
+            "Radium target mass (g)": 0.0411,
+            "Adjustable ratio": False,
+            "Reaction rate modification factor": 1.0,
+            "mGy per min per watt": 1.3,
+            "plot y-scale": 0.5,
+            "plot x min": "220801",
+            "plot x max": "221101",
+            "starting Ra activity": 0,
+            "starting Ac activity": 0}
+    
+    with open("Ac_growth_meta.txt","w") as f:
+        json.dump(meta,f,indent=4)
+    
 def append_to_log(message):
     with open("log.txt",mode='a') as f:
         today = datetime.today()
@@ -177,8 +197,15 @@ class GUI:
         self.master = master
 
         # Get meta data
-        with open ("Ac_growth_meta.txt","r") as f:
-            meta = json.load(f)
+        try:
+            with open ("Ac_growth_meta.txt","r") as f:
+                meta = json.load(f)
+        except FileNotFoundError as ex:
+            errortxt = "Ac_growth_meta.txt does not exist, creating starter file"
+            E = error_popup(self.master,errortxt)
+            create_meta_file()
+            with open ("Ac_growth_meta.txt","r") as f:
+                meta = json.load(f)
             
         # GUI variable definitions
         self.date = tk.StringVar(value = datetime.today().strftime('%y%m%d'))
