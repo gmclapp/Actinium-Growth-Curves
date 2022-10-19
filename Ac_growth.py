@@ -320,8 +320,8 @@ def Ac_growth(GUI_obj):
     latest_Ac225 = DF["Actinium-225 Activity (mCi)"].tail(1).item()
     reg = find_regression(DFmeas,DF)
     rss = sum(reg)
-    for r in reg:
-        print(r)
+##    for r in reg:
+##        print(r)
     print("RSS: {:4.4f}".format(rss))
     
     
@@ -397,9 +397,12 @@ def Ac_growth(GUI_obj):
                         DF.tail(1)["Actinium-225"].item(),
                         Reaction_Rate_Modification_Factor)
 
-    DF.to_csv(os.path.join(GUI_obj.outputPath.get(),"output.csv"))
-    DF_proj.to_csv(os.path.join(GUI_obj.outputPath.get(),"projection.csv"))
-
+    try:
+        DF.to_csv(os.path.join(GUI_obj.outputPath.get(),"output.csv"))
+        DF_proj.to_csv(os.path.join(GUI_obj.outputPath.get(),"projection.csv"))
+    except AttributeError:
+        print("No output path provided. No output csv will be created.")
+        
     # ------------------- B E G I N   P L O T T I N G ---------------------------- #
 
     fig, ax = plt.subplots(1,1,figsize=(11,8.5)) 
@@ -496,9 +499,12 @@ def Ac_growth(GUI_obj):
     # Save figure as a png
     date_string_2   = DT.date.today().strftime('%Y%m%d')
     file_name = f'{date_string_2}_ac_225_growth_curve.png'
-    plt.savefig(os.path.join(GUI_obj.outputPath.get(),file_name), bbox_inches = 'tight')
-    
-    plt.savefig(os.path.join(GUI_obj.outputPath.get(),"current_ac_225_growth_curve.png"))
+    try:
+        plt.savefig(os.path.join(GUI_obj.outputPath.get(),file_name), bbox_inches = 'tight')
+        
+        plt.savefig(os.path.join(GUI_obj.outputPath.get(),"current_ac_225_growth_curve.png"))
+    except AttributeError:
+        print("No output path provided. No activity figures will be saved.")
 
     # ------------------- P O W E R   P L O T T I N G ---------------------------- #
 
@@ -544,8 +550,13 @@ def Ac_growth(GUI_obj):
     # Save figure as a png
     date_string_2   = DT.date.today().strftime('%Y%m%d')
     file_name = f'{date_string_2}_ac_225_growth_curve_power.png'
-    plt.savefig(os.path.join(GUI_obj.outputPath.get(),file_name),bbox_inches='tight')
-##    plt.savefig(file_name, bbox_inches = 'tight')
+    try:
+        plt.savefig(os.path.join(GUI_obj.outputPath.get(),file_name),bbox_inches='tight')
+
+    except AttributeError:
+        print("No output path provided. No power figures will be saved.")
+        
+    return(reg)
 
 class dummy_GUI:
     def __init__(self):
@@ -554,8 +565,11 @@ class dummy_GUI:
         self.targetMeasPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Target measurements.csv")
         self.downSchedPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Schedule.csv")
         self.powerSchedPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Power scalar schedule.csv")
-
+        self.startRa = tk.DoubleVar(value=0)
+        self.startAc = tk.DoubleVar(value=0)
 __version__ = "0.1.1"
 if __name__ == '__main__':
     GUI = dummy_GUI()
-    Ac_growth(dummy_GUI())
+    reg = Ac_growth(dummy_GUI())
+    for r in reg:
+        print(r)
