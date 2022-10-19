@@ -217,6 +217,10 @@ def find_regression(dfMeas, df):
     a regression statistic.'''
     dfMeas["Date and Time"] = parse_dates(dfMeas,"Date","Time")
     regressions = []
+    ybar = dfMeas["Ac-225"].mean()
+    SSreg = 0
+    SStot = 0
+    SSres = 0
     for i, row in dfMeas.iterrows():
         for j, jow in df.iterrows():
             if jow["Date and Time"]>row["Date and Time"]:
@@ -237,10 +241,12 @@ def find_regression(dfMeas, df):
                     return()
 
                 y = (x-x1).total_seconds() * rate + y1
-                rsqr = (yhat-y)**2
-                regressions.append(rsqr)
+                SSreg += (yhat-ybar)**2
+                SStot += (y-ybar)**2
+                SSres += (y-yhat)**2
                 break
-    return(regressions)
+    Rsqr = 1 - (SSreg/SStot)
+    return(Rsqr)
 
 def scale_power(df, dfpower):
     dfpower["Start Date and Time"] = parse_dates(dfpower,"Start date","Start time")
@@ -319,12 +325,7 @@ def Ac_growth(GUI_obj):
 
     latest_Ac225 = DF["Actinium-225 Activity (mCi)"].tail(1).item()
     reg = find_regression(DFmeas,DF)
-    rss = sum(reg)
-##    for r in reg:
-##        print(r)
-    print("RSS: {:4.4f}".format(rss))
-    
-    
+ 
     print("Total integrated beam power: {:4.2f} kWhr".format(DF["Integrated Power (kWhr from Acc)"].sum()))
     print("Activity of Ac-225 at the last reported time: {:4.3f} mCi".format(latest_Ac225))
 
@@ -570,6 +571,5 @@ class dummy_GUI:
 __version__ = "0.1.1"
 if __name__ == '__main__':
     GUI = dummy_GUI()
-    reg = Ac_growth(dummy_GUI())
-    for r in reg:
-        print(r)
+    Rsqr = Ac_growth(dummy_GUI())
+    print("Rsqr = {:4.2f}".format(Rsqr))
