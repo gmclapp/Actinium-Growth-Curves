@@ -565,10 +565,11 @@ class dummy_GUI:
         self.beamPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/irradiation log.csv")
         self.targetMeasPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Target measurements.csv")
         self.downSchedPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Schedule.csv")
-        self.powerSchedPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Power scalar schedule.csv")
+        self.powerSchedPath = tk.StringVar(value=r"C:\Users\clapp\Desktop\Ac Growth data/Regression testing.csv")
         self.startRa = tk.DoubleVar(value=0)
         self.startAc = tk.DoubleVar(value=0)
-__version__ = "0.1.1"
+        
+__version__ = "1.0.0"
 if __name__ == '__main__':
     GUI = dummy_GUI()
     Rsqr = Ac_growth(dummy_GUI())

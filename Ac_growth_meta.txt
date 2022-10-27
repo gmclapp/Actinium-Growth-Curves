@@ -1,6 +1,6 @@
 {
     "Custom projection power": 0.0,
-    "Project length (days)": 22,
+    "Project length (days)": 20,
     "Project dt (s)": 7200,
     "Moving avg length": 60,
     "Standard deviations from average": 2,
@@ -9,9 +9,9 @@
     "Adjustable ratio": false,
     "Reaction rate modification factor": 1.0,
     "mGy per min per watt": 1.3,
-    "plot y-scale": 0.15,
-    "plot x min": "220801",
-    "plot x max": "221101",
+    "plot y-scale": 0.2,
+    "plot x min": "221001",
+    "plot x max": "221115",
     "starting Ra activity": 10.3,
     "starting Ac activity": 4.8
 }
