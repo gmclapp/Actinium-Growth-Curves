@@ -251,7 +251,6 @@ def find_regression(dfMeas, df):
 def scale_power(df, dfpower):
     dfpower["Start Date and Time"] = parse_dates(dfpower,"Start date","Start time")
     dfpower["End Date and Time"] = parse_dates(dfpower,"End date","End time")
-    phase1end = DT.datetime(2022,8,19,9,0)
     
     for i,row in df.iterrows():
         for j,jow in dfpower.iterrows():
@@ -324,7 +323,8 @@ def Ac_growth(GUI_obj):
                         Reaction_Rate_Modification_Factor)
 
     latest_Ac225 = DF["Actinium-225 Activity (mCi)"].tail(1).item()
-    reg = find_regression(DFmeas,DF)
+    if len(DF) >= 3:
+        reg = find_regression(DFmeas,DF)
  
     print("Total integrated beam power: {:4.2f} kWhr".format(DF["Integrated Power (kWhr from Acc)"].sum()))
     print("Activity of Ac-225 at the last reported time: {:4.3f} mCi".format(latest_Ac225))
@@ -556,8 +556,13 @@ def Ac_growth(GUI_obj):
 
     except AttributeError:
         print("No output path provided. No power figures will be saved.")
-        
-    return(reg)
+    try:
+        return(reg)
+    except UnboundLocalError:
+        if len(DF) < 3:
+            print("Insufficient data to generate regression model. Failed to return Rsqr.")
+        else:
+            print("Unknown exception. Failed to return Rsqr.")
 
 class dummy_GUI:
     def __init__(self):

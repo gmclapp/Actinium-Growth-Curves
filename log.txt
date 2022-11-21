@@ -853,3 +853,64 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-10-21 09:40:25.191554: Generating report
 2022-10-21 09:42:06.070909: Generating report
 2022-10-21 09:43:08.750160: Report generation complete, run time: 62.68 seconds
+2022-11-21 08:41:36.477467: Directory selection dialog opened
+2022-11-21 08:42:07.011455: Directory selection dialog opened
+2022-11-21 08:42:25.070354: Created beam data file R:/0022 - 5mCi campaign/irradiation log.csv and set as beam path
+2022-11-21 08:42:33.282018: Created target measurement data file R:/0022 - 5mCi campaign/downtime schedule.csv and set as target measurement path
+2022-11-21 08:42:42.433951: Created downtime schedule data file R:/0022 - 5mCi campaign/target measurements.csv and set as downtime schedule path
+2022-11-21 08:42:49.484858: Created power scalar schedule data file R:/0022 - 5mCi campaign/power scalars.csv and set as power scalar schedule path
+2022-11-21 08:54:10.412870: plot settings saved
+2022-11-21 08:54:12.266153: Generating report
+2022-11-21 08:54:12.428064: Report generation complete, run time: 0.16 seconds
+2022-11-21 08:54:45.785226: New datapoint submitted
+2022-11-21 08:54:48.530051: Generating report
+2022-11-21 08:54:56.851008: plot settings saved
+2022-11-21 08:55:14.559139: Meta data settings saved
+2022-11-21 08:55:18.669320: Meta data settings saved
+2022-11-21 08:55:19.569790: Generating report
+2022-11-21 09:15:01.721632: Directory selection dialog opened
+2022-11-21 09:15:08.264844: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-21 09:15:15.732257: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-21 09:15:18.648422: Target measurement path set to R:/0022 - 5mCi campaign/target measurements.csv
+2022-11-21 09:15:20.614567: Power scalar path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-21 09:15:24.564833: Output directory set to R:/0022 - 5mCi campaign
+2022-11-21 09:15:35.918671: Generating report
+2022-11-21 09:19:27.470245: Directory selection dialog opened
+2022-11-21 09:19:32.097086: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-21 09:19:37.856610: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-21 09:19:42.012368: Target measurement path set to R:/0022 - 5mCi campaign/target measurements.csv
+2022-11-21 09:19:44.388475: Power scalar path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-21 09:19:46.811632: Output directory set to R:/0022 - 5mCi campaign
+2022-11-21 09:19:49.099387: Generating report
+2022-11-21 09:20:04.029658: Report generation complete, run time: 14.93 seconds
+2022-11-21 09:24:25.947021: Generating report
+2022-11-21 09:24:44.455822: Report generation complete, run time: 18.51 seconds
+2022-11-21 09:25:27.010964: Meta data settings saved
+2022-11-21 09:25:27.715245: Generating report
+2022-11-21 09:25:42.527462: Report generation complete, run time: 14.81 seconds
+2022-11-21 09:27:41.634821: Generating report
+2022-11-21 09:28:28.333728: Generating report
+2022-11-21 09:28:30.463421: Generating report
+2022-11-21 09:28:43.444441: Directory selection dialog opened
+2022-11-21 09:28:48.412002: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-21 09:28:55.729589: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-21 09:28:58.828665: Target measurement path set to R:/0022 - 5mCi campaign/target measurements.csv
+2022-11-21 09:29:01.614125: Power scalar path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-21 09:29:04.578106: Output directory set to R:/0022 - 5mCi campaign
+2022-11-21 09:29:11.873310: Generating report
+2022-11-21 09:30:21.910612: Directory selection dialog opened
+2022-11-21 09:30:24.981125: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-21 09:30:24.988019: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-11-21 09:30:26.564999: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-11-21 09:30:31.478733: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-21 09:30:31.480542: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-11-21 09:30:35.060880: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-11-21 09:30:38.863442: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-21 09:30:38.879256: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-11-21 09:30:46.254702: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
