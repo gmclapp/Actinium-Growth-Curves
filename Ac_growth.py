@@ -541,8 +541,6 @@ def Ac_growth(GUI_obj):
     ax.xaxis.grid(True, which = 'minor', alpha = 0.25)
 
     # Add caption below xlabel
-
-    caption_text = f'''Projected power taken averaging after 3/24 at 10:28 am.'''
     trans = transforms.blended_transform_factory(
          ax.transAxes, fig.transFigure
     )              # Makes x axis 'axes' coordinates and y axis 'figure' coordinates
