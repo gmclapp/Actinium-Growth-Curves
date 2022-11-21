@@ -5,6 +5,7 @@ import os
 from datetime import datetime
 from Ac_growth import *
 import json
+from utils import *
 
 def create_meta_file():
     meta = {"Custom projection power": 0.0,
@@ -25,11 +26,6 @@ def create_meta_file():
     
     with open("Ac_growth_meta.txt","w") as f:
         json.dump(meta,f,indent=4)
-    
-def append_to_log(message):
-    with open("log.txt",mode='a') as f:
-        today = datetime.today()
-        f.write("{}: {}\n".format(today,message))
 
 class error_popup:
     def __init__(self,parent,error):

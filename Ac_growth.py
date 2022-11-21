@@ -1,6 +1,9 @@
 ''' Python Plotting Template
- Glenn Clapp
- Austin Czyzewski
+ Current maintainer: Glenn Clapp
+ Last modified: 21 November 2022
+
+ Contributions from
+ Austin Czyzewski through
  23 April 2022
 
  Based on work by
@@ -25,6 +28,7 @@ import warnings
 warnings.filterwarnings("ignore", message="FixedFormatter should only be used together with FixedLocator")
 import tkinter as tk
 import os
+from utils import *
 
 # ------------------- P L O T   S E T T I N G S  ---------------------------- #
 
@@ -55,7 +59,7 @@ def parse_date(date, time):
         H,M = time.split(":")
         return(DT.datetime(int(Y),int(m),int(D),int(H),int(M)))
     except:
-        print("Failed to parse date. Expected a date and time, received: {} {}".format(date, time))
+        append_to_log("Failed to parse date. Expected a date and time, received: {} {}".format(date, time))
 
 def calculate_delta(df):
     delta = []
@@ -149,7 +153,7 @@ def createPowerProjection(df,Schedule,mean_power,std_power,stds_from_avg,include
     try:
         SchDF = pd.read_csv(Schedule)
     except FileNotFoundError:
-        print("Schedule file not found.")
+        append_to_log("Schedule file not found.")
         SchDF = pd.DataFrame(columns=["Start date",
                                       "Start time",
                                       "End date",
@@ -278,7 +282,7 @@ def Ac_growth(GUI_obj):
     try:
         DFmeas = pd.read_csv(GUI_obj.targetMeasPath.get())
     except FileNotFoundError:
-        print("Target measurements file not found.")
+        append_to_log("Target measurements file not found.")
         DFmeas = pd.DataFrame(columns=["Date",
                                        "Time",
                                        "Ac-225"])
@@ -293,7 +297,7 @@ def Ac_growth(GUI_obj):
     try:
         DFPowerScale = pd.read_csv(GUI_obj.powerSchedPath.get())
     except FileNotFoundError:
-        print("Power scalar file not found.")
+        append_to_log("Power scalar file not found.")
         DFPowerScale = pd.DataFrame(columns=["Start date",
                                              "Start time",
                                              "End date",
@@ -326,8 +330,8 @@ def Ac_growth(GUI_obj):
     if len(DF) >= 3:
         reg = find_regression(DFmeas,DF)
  
-    print("Total integrated beam power: {:4.2f} kWhr".format(DF["Integrated Power (kWhr from Acc)"].sum()))
-    print("Activity of Ac-225 at the last reported time: {:4.3f} mCi".format(latest_Ac225))
+    append_to_log("Total integrated beam power: {:4.2f} kWhr".format(DF["Integrated Power (kWhr from Acc)"].sum()))
+    append_to_log("Activity of Ac-225 at the last reported time: {:4.3f} mCi".format(latest_Ac225))
 
     # ------------------------ Projection Algorithm          ---------------- #
     #######################
@@ -402,7 +406,7 @@ def Ac_growth(GUI_obj):
         DF.to_csv(os.path.join(GUI_obj.outputPath.get(),"output.csv"))
         DF_proj.to_csv(os.path.join(GUI_obj.outputPath.get(),"projection.csv"))
     except AttributeError:
-        print("No output path provided. No output csv will be created.")
+        append_to_log("No output path provided. No projection csv will be created.")
         
     # ------------------- B E G I N   P L O T T I N G ---------------------------- #
 
@@ -445,7 +449,7 @@ def Ac_growth(GUI_obj):
             ax.text(date,float(data),data,ha='right',va='center',fontsize = 10) 
 
     except:
-        print("#"*60+'\n',"No measurements to display",'\n'+"#"*60)
+        append_to_log("No target measurements to display")
 
     caption_text = "{:.3f}".format(latest_Ac225)
     ax.annotate(caption_text,xy = (latest_time,latest_Ac225),
@@ -505,7 +509,7 @@ def Ac_growth(GUI_obj):
         
         plt.savefig(os.path.join(GUI_obj.outputPath.get(),"current_ac_225_growth_curve.png"))
     except AttributeError:
-        print("No output path provided. No activity figures will be saved.")
+        append_to_log("No output path provided. No activity figures will be saved.")
 
     # ------------------- P O W E R   P L O T T I N G ---------------------------- #
 
@@ -555,14 +559,14 @@ def Ac_growth(GUI_obj):
         plt.savefig(os.path.join(GUI_obj.outputPath.get(),file_name),bbox_inches='tight')
 
     except AttributeError:
-        print("No output path provided. No power figures will be saved.")
+        append_to_log("No output path provided. No power figures will be saved.")
     try:
         return(reg)
     except UnboundLocalError:
         if len(DF) < 3:
-            print("Insufficient data to generate regression model. Failed to return Rsqr.")
+            append_to_log("Insufficient data to generate regression model. Failed to return Rsqr.")            
         else:
-            print("Unknown exception. Failed to return Rsqr.")
+            append_to_log("Unknown exception. Failed to return Rsqr.")
 
 class dummy_GUI:
     def __init__(self):

@@ -914,3 +914,9 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 Exception: 'NoneType' object has no attribute 'strftime'
 2022-11-21 09:30:46.254702: Error: Failed to retrieve last line
 Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-11-21 10:05:49.040740: Directory selection dialog opened
+2022-11-21 10:05:59.958731: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-21 10:05:59.993919: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-11-21 10:06:03.793708: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
