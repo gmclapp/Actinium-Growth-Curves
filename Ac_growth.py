@@ -380,7 +380,14 @@ def Ac_growth(GUI_obj):
 
     Interval = meta["Standard deviations from average"]*Power_std
                            
-    DF_custom["Integrated Power (kWhr from Acc)"] = meta["Custom projection power"]*(DF_custom["dt (s)"]/3600)/1000
+##    DF_custom["Integrated Power (kWhr from Acc)"] = meta["Custom projection power"]*(DF_custom["dt (s)"]/3600)/1000
+    upper, mean, lower, extraction = createPowerProjection(DF_custom,
+                                                           GUI_obj.downSchedPath.get(),
+                                                           meta["Custom projection power"]*(meta["Project dt (s)"]/3600)/1000,
+                                                           0,
+                                                           meta["Standard deviations from average"],
+                                                           include_schedule=False)
+    DF_custom["Integrated Power (kWhr from Acc)"] = mean
     
     reaction_calculator(DF_proj,
                         DF.tail(1)["Radium-225"].item(),
