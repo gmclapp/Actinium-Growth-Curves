@@ -249,8 +249,12 @@ def find_regression(dfMeas, df):
                 SStot += (y-ybar)**2
                 SSres += (y-yhat)**2
                 break
-    Rsqr = 1 - (SSreg/SStot)
-    return(Rsqr)
+    if SStot != 0:
+        Rsqr = 1 - (SSreg/SStot)
+        return(Rsqr)
+    elif SStot == 0:
+        append_to_log("SStot = 0, there is no variability in the irradiation data!")
+        return(0.0)
 
 def scale_power(df, dfpower):
     dfpower["Start Date and Time"] = parse_dates(dfpower,"Start date","Start time")
