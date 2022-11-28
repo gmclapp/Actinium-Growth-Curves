@@ -920,3 +920,236 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 Exception: 'NoneType' object has no attribute 'strftime'
 2022-11-21 10:06:03.793708: Error: Failed to retrieve last line
 Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-11-21 10:34:45.701386: Directory selection dialog opened
+2022-11-21 10:34:56.951905: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-11-21 10:34:59.667966: Downtime schedule path set to C:/Users/clapp/Desktop/Ac Growth data/Schedule.csv
+2022-11-21 10:35:01.901798: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-11-21 10:35:04.135499: Power scalar path set to C:/Users/clapp/Desktop/Ac Growth data/Regression testing.csv
+2022-11-21 10:35:09.068085: Output directory set to C:/Users/clapp/Desktop/Ac Growth data/output
+2022-11-21 10:35:27.595081: plot settings saved
+2022-11-21 10:35:44.942769: Meta data settings saved
+2022-11-21 10:35:45.433530: Generating report
+2022-11-21 10:35:45.702701: Total integrated beam power: 188.29 kWhr
+2022-11-21 10:35:45.702857: Activity of Ac-225 at the last reported time: 16.947 mCi
+2022-11-21 10:35:55.074414: Report generation complete, run time: 9.64 seconds
+2022-11-21 10:40:19.331666: Directory selection dialog opened
+2022-11-21 10:40:57.111792: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-11-21 10:41:00.087355: Target measurement path set to C:/Users/clapp/Desktop/Ac Growth data/Target measurements.csv
+2022-11-21 10:41:05.364693: plot settings saved
+2022-11-21 10:41:07.385067: Generating report
+2022-11-21 10:41:07.654851: Total integrated beam power: 188.29 kWhr
+2022-11-21 10:41:07.654851: Activity of Ac-225 at the last reported time: -0.130 mCi
+2022-11-21 10:41:16.256691: Report generation complete, run time: 8.86 seconds
+2022-11-21 10:41:26.158962: plot settings saved
+2022-11-21 10:41:27.132126: Generating report
+2022-11-21 10:41:27.399033: Total integrated beam power: 188.29 kWhr
+2022-11-21 10:41:27.399033: Activity of Ac-225 at the last reported time: -0.130 mCi
+2022-11-21 10:41:34.813277: Report generation complete, run time: 7.68 seconds
+2022-11-21 10:42:40.757195: Meta data settings saved
+2022-11-21 10:42:44.874398: Generating report
+2022-11-21 10:42:45.120995: Total integrated beam power: 188.29 kWhr
+2022-11-21 10:42:45.120995: Activity of Ac-225 at the last reported time: -0.130 mCi
+2022-11-21 10:42:53.321473: Report generation complete, run time: 8.45 seconds
+2022-11-21 10:50:01.361517: Generating report
+2022-11-21 10:50:01.607101: Total integrated beam power: 188.29 kWhr
+2022-11-21 10:50:01.607101: Activity of Ac-225 at the last reported time: 0.002 mCi
+2022-11-21 10:50:09.591642: Report generation complete, run time: 8.23 seconds
+2022-11-21 10:50:39.828974: plot settings saved
+2022-11-21 10:50:44.734200: Meta data settings saved
+2022-11-21 11:14:44.059215: Directory selection dialog opened
+2022-11-21 11:14:46.940186: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-11-21 11:14:46.940186: Failed to parse date. Expected a date and time, received: nan nan
+2022-11-21 11:14:46.946452: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-11-21 11:14:48.561146: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-11-21 11:15:20.344766: Beam path set to C:/Users/clapp/Desktop/Ac Growth data/irradiation log.csv
+2022-11-21 11:15:22.274373: Generating report
+2022-11-21 11:15:22.594687: Total integrated beam power: 188.29 kWhr
+2022-11-21 11:15:22.594687: Activity of Ac-225 at the last reported time: 0.012 mCi
+2022-11-21 11:15:45.928138: Report generation complete, run time: 23.65 seconds
+2022-11-21 11:16:33.763671: plot settings saved
+2022-11-21 11:16:35.574754: Generating report
+2022-11-21 11:16:35.877990: Total integrated beam power: 188.29 kWhr
+2022-11-21 11:16:35.877990: Activity of Ac-225 at the last reported time: 0.012 mCi
+2022-11-21 11:16:54.511535: Report generation complete, run time: 18.94 seconds
+2022-11-21 11:17:09.340064: Meta data settings saved
+2022-11-21 11:17:09.990885: Generating report
+2022-11-21 11:17:10.294493: Total integrated beam power: 188.29 kWhr
+2022-11-21 11:17:10.294493: Activity of Ac-225 at the last reported time: 0.012 mCi
+2022-11-21 11:18:04.054109: Report generation complete, run time: 54.06 seconds
+2022-11-21 11:22:52.998069: plot settings saved
+2022-11-21 11:22:53.876911: Generating report
+2022-11-21 11:22:54.211402: Total integrated beam power: 188.29 kWhr
+2022-11-21 11:22:54.211402: Activity of Ac-225 at the last reported time: 0.012 mCi
+2022-11-21 11:23:58.064833: Report generation complete, run time: 64.18 seconds
+2022-11-21 11:24:19.554913: Meta data settings saved
+2022-11-21 11:25:40.752414: Meta data settings saved
+2022-11-21 11:25:47.685148: plot settings saved
+2022-11-21 11:25:48.455431: Generating report
+2022-11-21 11:25:48.774492: Total integrated beam power: 188.29 kWhr
+2022-11-21 11:25:48.774492: Activity of Ac-225 at the last reported time: 0.012 mCi
+2022-11-21 11:26:19.479892: Report generation complete, run time: 31.02 seconds
+2022-11-21 14:25:21.280819: Directory selection dialog opened
+2022-11-21 14:25:30.641665: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-21 14:25:30.657724: Failed to parse date. Expected a date and time, received: nan nan
+2022-11-21 14:25:30.657724: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-11-21 14:25:31.687374: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-11-21 14:26:02.465846: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-21 14:26:05.425381: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-21 14:26:08.359623: Target measurement path set to R:/0022 - 5mCi campaign/target measurements.csv
+2022-11-21 14:26:10.392236: Power scalar path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-21 14:26:14.858189: Output directory set to R:/0022 - 5mCi campaign/campaign planning
+2022-11-21 14:26:36.638223: plot settings saved
+2022-11-21 14:26:58.530597: Meta data settings saved
+2022-11-21 14:26:59.625812: Generating report
+2022-11-21 14:26:59.662810: Total integrated beam power: 0.00 kWhr
+2022-11-21 14:26:59.662810: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-21 14:27:08.324794: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-21 14:27:08.325804: Report generation complete, run time: 8.70 seconds
+2022-11-21 14:27:51.884875: Meta data settings saved
+2022-11-21 14:27:52.609937: Generating report
+2022-11-21 14:27:52.630162: Total integrated beam power: 0.00 kWhr
+2022-11-21 14:27:52.630162: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-21 14:28:05.344504: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-21 14:28:05.345413: Report generation complete, run time: 12.74 seconds
+2022-11-21 14:29:32.176002: Generating report
+2022-11-21 14:29:32.209710: Total integrated beam power: 0.00 kWhr
+2022-11-21 14:29:32.209710: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-21 14:29:47.538554: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-21 14:29:47.538554: Report generation complete, run time: 15.36 seconds
+2022-11-21 15:00:32.434700: Meta data settings saved
+2022-11-21 15:00:33.264716: Generating report
+2022-11-21 15:00:33.288036: Total integrated beam power: 0.00 kWhr
+2022-11-21 15:00:33.288036: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-21 15:00:49.006231: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-21 15:00:49.006231: Report generation complete, run time: 15.74 seconds
+2022-11-21 15:05:13.886023: Meta data settings saved
+2022-11-21 15:05:38.669368: Generating report
+2022-11-21 15:05:38.702181: Total integrated beam power: 0.00 kWhr
+2022-11-21 15:05:38.702181: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-21 15:06:04.952385: Generating report
+2022-11-21 15:06:04.986190: Total integrated beam power: 0.00 kWhr
+2022-11-21 15:06:04.986190: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-21 15:06:42.054731: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-21 15:06:42.054731: Report generation complete, run time: 37.10 seconds
+2022-11-21 15:12:56.671845: Directory selection dialog opened
+2022-11-21 15:13:02.055537: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-21 15:13:04.804772: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-21 15:13:07.805085: Target measurement path set to R:/0022 - 5mCi campaign/target measurements.csv
+2022-11-21 15:13:10.688320: Power scalar path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-21 15:13:14.955206: Output directory set to R:/0022 - 5mCi campaign/campaign planning
+2022-11-21 15:13:23.621904: Generating report
+2022-11-21 15:13:23.654876: Total integrated beam power: 0.00 kWhr
+2022-11-21 15:13:23.654876: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-21 15:13:54.565632: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-21 15:13:54.565632: Report generation complete, run time: 30.94 seconds
+2022-11-21 15:14:06.088464: Generating report
+2022-11-21 15:14:06.122178: Total integrated beam power: 0.00 kWhr
+2022-11-21 15:14:06.122178: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-21 15:14:47.633440: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-21 15:14:47.633440: Report generation complete, run time: 41.54 seconds
+2022-11-21 15:24:41.625454: Directory selection dialog opened
+2022-11-21 15:24:49.498036: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-21 15:24:58.075888: Generating report
+2022-11-21 15:24:58.113444: Total integrated beam power: 0.00 kWhr
+2022-11-21 15:24:58.113444: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-21 15:25:36.526481: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-21 15:25:36.526481: Report generation complete, run time: 38.45 seconds
+2022-11-22 07:41:12.889442: Directory selection dialog opened
+2022-11-22 07:41:16.937124: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-22 07:41:20.923465: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-22 07:41:23.423531: Target measurement path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-22 07:41:25.890326: Target measurement path set to R:/0022 - 5mCi campaign/target measurements.csv
+2022-11-22 07:41:27.840367: Power scalar path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-22 07:41:31.522791: Output directory set to R:/0022 - 5mCi campaign/campaign planning
+2022-11-22 07:41:38.440970: Generating report
+2022-11-22 07:41:38.491836: Total integrated beam power: 0.00 kWhr
+2022-11-22 07:41:38.491836: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-22 07:43:44.770570: Directory selection dialog opened
+2022-11-22 07:43:55.001425: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-22 07:43:59.684244: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-22 07:44:02.600168: Target measurement path set to R:/0022 - 5mCi campaign/target measurements.csv
+2022-11-22 07:44:05.366580: Power scalar path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-22 07:44:08.532035: Output directory set to R:/0022 - 5mCi campaign/campaign planning
+2022-11-22 07:44:15.333968: Generating report
+2022-11-22 07:44:15.366978: Total integrated beam power: 0.00 kWhr
+2022-11-22 07:44:15.366978: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-22 07:46:04.936411: Directory selection dialog opened
+2022-11-22 07:46:11.800638: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-22 07:46:15.800524: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-22 07:46:18.061276: Target measurement path set to R:/0022 - 5mCi campaign/target measurements.csv
+2022-11-22 07:46:20.350972: Power scalar path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-22 07:46:23.014507: Output directory set to R:/0022 - 5mCi campaign/campaign planning
+2022-11-22 07:46:24.467896: Generating report
+2022-11-22 07:46:24.484056: Total integrated beam power: 0.00 kWhr
+2022-11-22 07:46:24.484056: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-22 07:47:41.734652: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-22 07:47:41.734652: Report generation complete, run time: 77.27 seconds
+2022-11-22 07:49:51.068904: Directory selection dialog opened
+2022-11-22 07:49:57.801733: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-22 07:50:02.123076: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-22 07:50:05.385000: Target measurement path set to R:/0022 - 5mCi campaign/target measurements.csv
+2022-11-22 07:50:07.618794: Power scalar path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-22 07:50:11.217460: Output directory set to R:/0022 - 5mCi campaign/campaign planning
+2022-11-22 07:50:23.676021: Failed to parse date. Expected a date and time, received: NO11/22/2022 07:30
+2022-11-22 07:50:23.685682: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-11-22 07:50:23.686182: New datapoint submitted
+2022-11-22 07:50:26.202843: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-11-22 07:51:05.101775: Generating report
+2022-11-22 07:51:05.118561: Total integrated beam power: 0.00 kWhr
+2022-11-22 07:51:05.118561: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-22 07:52:23.447219: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-22 07:52:23.452285: Report generation complete, run time: 78.35 seconds
+2022-11-22 07:53:39.952476: Directory selection dialog opened
+2022-11-22 07:53:45.515417: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-22 07:53:50.569313: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-22 07:53:54.236302: Target measurement path set to R:/0022 - 5mCi campaign/target measurements.csv
+2022-11-22 07:53:56.686338: Power scalar path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-22 07:53:59.685538: Output directory set to R:/0022 - 5mCi campaign/campaign planning
+2022-11-22 07:54:01.819680: Generating report
+2022-11-22 07:54:01.852854: Total integrated beam power: 0.00 kWhr
+2022-11-22 07:54:01.852854: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-22 07:55:38.170166: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-22 07:55:38.170166: Report generation complete, run time: 96.35 seconds
+2022-11-22 08:47:06.729397: Generating report
+2022-11-22 08:47:06.762804: Total integrated beam power: 0.00 kWhr
+2022-11-22 08:47:06.762804: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-22 08:49:04.347592: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-22 08:49:04.347592: Report generation complete, run time: 117.62 seconds
+2022-11-22 08:49:25.811157: Meta data settings saved
+2022-11-22 08:49:38.214283: plot settings saved
+2022-11-22 08:50:14.380411: Generating report
+2022-11-22 08:50:14.398278: Total integrated beam power: 0.00 kWhr
+2022-11-22 08:50:14.398278: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-22 08:52:14.233046: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-22 08:52:14.233046: Report generation complete, run time: 119.85 seconds
+2022-11-22 09:23:44.578937: Generating report
+2022-11-22 09:23:44.612437: Total integrated beam power: 0.00 kWhr
+2022-11-22 09:23:44.612437: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-22 09:25:43.648304: Insufficient data to generate regression model. Failed to return Rsqr.
+2022-11-22 09:25:43.648304: Report generation complete, run time: 119.07 seconds
+2022-11-28 08:39:06.085886: Directory selection dialog opened
+2022-11-28 08:39:17.816101: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-28 08:39:23.467284: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-28 08:39:27.526529: Target measurement path set to R:/0022 - 5mCi campaign/target measurements.csv
+2022-11-28 08:39:30.502806: Power scalar path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-28 08:39:39.749987: Output directory set to R:/0022 - 5mCi campaign/campaign planning/with downtime
+2022-11-28 08:39:52.066543: New datapoint submitted
+2022-11-28 08:39:54.988223: Generating report
+2022-11-28 08:40:44.564319: Generating report
+2022-11-28 09:10:31.795017: Directory selection dialog opened
+2022-11-28 09:10:37.309063: Beam path set to R:/0022 - 5mCi campaign/irradiation log.csv
+2022-11-28 09:10:41.950594: Downtime schedule path set to R:/0022 - 5mCi campaign/downtime schedule.csv
+2022-11-28 09:10:44.558781: Target measurement path set to R:/0022 - 5mCi campaign/target measurements.csv
+2022-11-28 09:10:46.699580: Power scalar path set to R:/0022 - 5mCi campaign/power scalars.csv
+2022-11-28 09:10:54.055369: Output directory set to R:/0022 - 5mCi campaign/campaign planning/with downtime
+2022-11-28 09:11:04.597505: Generating report
+2022-11-28 09:11:04.750626: SStot = 0, there is no variability in the irradiation data!
+2022-11-28 09:11:04.752402: Total integrated beam power: 0.00 kWhr
+2022-11-28 09:11:04.752605: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-11-28 09:13:11.423869: Report generation complete, run time: 126.82 seconds
