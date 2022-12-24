@@ -1289,3 +1289,33 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-12-24 15:13:45.806469: Reaction calculator failed incorrect data type encountered in irradiation log.
 2022-12-24 15:13:45.806469: Report generation complete, run time: 0.08 seconds
 2022-12-24 15:13:45.806469: Completed with status: 1:Bad irradiation log
+2022-12-24 15:26:22.894724: Directory selection dialog opened
+2022-12-24 15:26:31.779011: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Irradiation log.csv
+2022-12-24 15:26:39.336923: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Downtime schedule.csv
+2022-12-24 15:26:43.915706: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Target measurements.csv
+2022-12-24 15:26:47.680592: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Power scalars.csv
+2022-12-24 15:26:52.288227: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/output
+2022-12-24 15:26:54.014000: Generating report
+2022-12-24 15:30:10.834623: Directory selection dialog opened
+2022-12-24 15:30:17.979014: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Irradiation log.csv
+2022-12-24 15:30:25.935998: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Downtime schedule.csv
+2022-12-24 15:30:31.398131: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Target measurements.csv
+2022-12-24 15:30:35.617485: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Power scalars.csv
+2022-12-24 15:30:39.791074: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/output
+2022-12-24 15:30:43.395007: Generating report
+2022-12-24 15:30:43.450121: Reaction calculator failed, bad beam energy range.
+2022-12-24 15:30:43.450999: Report generation complete, run time: 0.06 seconds
+2022-12-24 15:30:43.452001: Completed with status: 2:Beam energy out of range.
+2022-12-24 15:33:01.172928: Directory selection dialog opened
+2022-12-24 15:33:06.802765: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Irradiation log.csv
+2022-12-24 15:33:12.849096: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Downtime schedule.csv
+2022-12-24 15:33:18.491697: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Target measurements.csv
+2022-12-24 15:33:23.193482: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Power scalars.csv
+2022-12-24 15:33:28.098907: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/Power scalars.csv
+2022-12-24 15:33:31.724641: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Bad energy range/output
+2022-12-24 15:33:33.903402: Generating report
+2022-12-24 15:33:33.960009: Reaction calculator failed, bad beam energy range.
+2022-12-24 15:33:33.965491: Beam energy out of range.
+2022-12-24 15:33:33.966448: Report generation complete, run time: 0.06 seconds
+2022-12-24 15:33:33.967448: Completed with status: 2:Beam energy out of range.
+2022-12-24 15:33:35.592137: Error: Beam energy out of range. acknowledged by user

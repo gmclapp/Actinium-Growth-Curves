@@ -295,6 +295,9 @@ class GUI:
         except IndexError:
             testDF = pd.read_csv(self.beamPath.get())
             print(testDF)
+
+        if errorCode.get():
+            error_popup(self.master,errorCode.get_txt())
             
         runtime = datetime.now()-start
         append_to_log("Report generation complete, run time: {:4.2f} seconds".format(runtime.total_seconds()))

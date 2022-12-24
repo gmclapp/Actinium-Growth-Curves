@@ -42,7 +42,8 @@ class errorCode():
     def __init__(self):
         self.code = 0
         self.codes = {0:"Normal",
-                      1:"Bad irradiation log"}
+                      1:"Bad irradiation log.",
+                      2:"Beam energy out of range."}
 
     def check(self,new):
         try:
@@ -159,7 +160,7 @@ def reaction_rate_calculator(energy,Reaction_Rate_Modification_Factor):
 
     interpolate_func    = interpolate.interp1d(energy_list,reaction_rate_list)
     reaction_rate       = interpolate_func(energy)
-    return reaction_rate
+    return (reaction_rate)
 
 
 def dose_to_accumulated_power(dose,mGy_min_watt):
@@ -363,8 +364,12 @@ def Ac_growth(GUI_obj):
         append_to_log("Activity of Ac-225 at the last reported time: {:4.3f} mCi".format(latest_Ac225))
         
     except TypeError:
-        append_to_log("Reaction calculator failed incorrect data type encountered in irradiation log.")
+        append_to_log("Reaction calculator failed incorrect, data type encountered in irradiation log.")
         errorCodeInst.set(1)
+        return(errorCodeInst,0)
+    except ValueError:
+        append_to_log("Reaction calculator failed, bad beam energy range.")
+        errorCodeInst.set(2)
         return(errorCodeInst,0)
         
     if len(DF) >= 3:
