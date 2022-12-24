@@ -38,6 +38,31 @@ matplotlib.rcParams['mathtext.fontset'] = 'stix'
 matplotlib.rcParams['font.family'] = 'STIXGeneral'
 
 # ------------------ H E L P E R  F U N C T I O N S ------------------------- #
+class errorCode():
+    def __init__(self):
+        self.code = 0
+        self.codes = {0:"Normal",
+                      1:"Bad irradiation log"}
+
+    def check(self,new):
+        try:
+            self.codes[new]
+            return(True)
+        except KeyError:
+            appen_to_log("Error code not found in code dict.")
+            return(False)
+        
+    def set(self,new):
+        if self.check(new):
+            self.code = new
+        else:
+            pass
+
+    def get(self):
+        return(self.code)
+    def get_txt(self):
+        return(self.codes[self.code])
+        
 def parse_6dig_date(date):
     day = DT.datetime.strptime(date, '%y%m%d').day
     month = DT.datetime.strptime(date, '%y%m%d').month
@@ -270,6 +295,8 @@ def scale_power(df, dfpower):
                 pass
     
 def Ac_growth(GUI_obj):
+    errorCodeInst = errorCode()
+    errorCodeInst.set(0)
     # ------------------- R E T R I E V E   D A T A  ---------------------------- #
     
     # Import data from file
@@ -324,18 +351,28 @@ def Ac_growth(GUI_obj):
     
     initial_ra_225_N = GUI_obj.startRa.get() * 3.7e4 / ra_225_l
     initial_ac_225_N = GUI_obj.startAc.get() * 3.7e4 / ac_225_l
-    
-    reaction_calculator(DF,
-                        initial_ra_225_N,
-                        initial_ac_225_N,
-                        Reaction_Rate_Modification_Factor)
 
-    latest_Ac225 = DF["Actinium-225 Activity (mCi)"].tail(1).item()
+    try:
+        reaction_calculator(DF,
+                            initial_ra_225_N,
+                            initial_ac_225_N,
+                            Reaction_Rate_Modification_Factor)
+
+        latest_Ac225 = DF["Actinium-225 Activity (mCi)"].tail(1).item()
+        append_to_log("Total integrated beam power: {:4.2f} kWhr".format(DF["Integrated Power (kWhr from Acc)"].sum()))
+        append_to_log("Activity of Ac-225 at the last reported time: {:4.3f} mCi".format(latest_Ac225))
+        
+    except TypeError:
+        append_to_log("Reaction calculator failed incorrect data type encountered in irradiation log.")
+        errorCodeInst.set(1)
+        return(errorCodeInst,0)
+        
     if len(DF) >= 3:
         reg = find_regression(DFmeas,DF)
+    else:
+        append_to_log("Insufficient data points to calculate the coefficient of determination.")
  
-    append_to_log("Total integrated beam power: {:4.2f} kWhr".format(DF["Integrated Power (kWhr from Acc)"].sum()))
-    append_to_log("Activity of Ac-225 at the last reported time: {:4.3f} mCi".format(latest_Ac225))
+    
 
     # ------------------------ Projection Algorithm          ---------------- #
     #######################
@@ -570,7 +607,7 @@ def Ac_growth(GUI_obj):
     except AttributeError:
         append_to_log("No output path provided. No power figures will be saved.")
     try:
-        return(reg)
+        return(errorCodeInst, reg)
     except UnboundLocalError:
         if len(DF) < 3:
             append_to_log("Insufficient data to generate regression model. Failed to return Rsqr.")            
@@ -590,5 +627,5 @@ class dummy_GUI:
 __version__ = "1.0.0"
 if __name__ == '__main__':
     GUI = dummy_GUI()
-    Rsqr = Ac_growth(dummy_GUI())
+    errorCode, Rsqr = Ac_growth(dummy_GUI())
     print("Rsqr = {:4.2f}".format(Rsqr))

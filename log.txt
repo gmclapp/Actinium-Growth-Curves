@@ -1198,3 +1198,94 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-12-24 14:00:55.371094: Total integrated beam power: 0.00 kWhr
 2022-12-24 14:00:55.371094: Activity of Ac-225 at the last reported time: 0.000 mCi
 2022-12-24 14:02:05.829998: Report generation complete, run time: 70.50 seconds
+2022-12-24 14:24:20.163437: Directory selection dialog opened
+2022-12-24 14:24:32.504447: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Irradiation log.csv
+2022-12-24 14:24:32.506451: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:24:32.509155: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-12-24 14:24:36.579947: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-12-24 14:24:42.660138: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Downtime schedule.csv
+2022-12-24 14:24:47.816603: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Target measurements.csv
+2022-12-24 14:24:52.722995: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Power scalars.csv
+2022-12-24 14:24:59.332272: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/output
+2022-12-24 14:25:06.765395: Meta data settings saved
+2022-12-24 14:25:08.919990: Generating report
+2022-12-24 14:25:08.930988: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:25:08.931988: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:25:08.931988: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:25:08.932989: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:32:14.463626: Directory selection dialog opened
+2022-12-24 14:32:21.629044: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Irradiation log.csv
+2022-12-24 14:32:21.632038: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:32:21.634942: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-12-24 14:32:23.402436: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-12-24 14:32:29.941101: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Downtime schedule.csv
+2022-12-24 14:32:37.301284: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Target measurements.csv
+2022-12-24 14:32:41.410190: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Power scalars.csv
+2022-12-24 14:32:45.066197: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/output
+2022-12-24 14:32:47.854003: Generating report
+2022-12-24 14:32:47.859999: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:32:47.860999: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:32:47.860999: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:32:47.861999: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:32:47.925962: Reaction calculator failed incorrect data type encountered in irradiation log.
+2022-12-24 14:32:47.931700: SStot = 0, there is no variability in the irradiation data!
+2022-12-24 14:32:47.931700: Total integrated beam power: 1.99 kWhr
+2022-12-24 14:34:30.592245: Directory selection dialog opened
+2022-12-24 14:34:36.285272: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Irradiation log.csv
+2022-12-24 14:34:36.289274: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:34:36.290272: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-12-24 14:34:41.786209: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Downtime schedule.csv
+2022-12-24 14:34:45.910377: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Target measurements.csv
+2022-12-24 14:34:49.597466: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Power scalars.csv
+2022-12-24 14:34:53.785390: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/output
+2022-12-24 14:34:56.380091: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-12-24 14:34:58.587589: Generating report
+2022-12-24 14:34:58.594586: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:34:58.595586: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:34:58.595586: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:34:58.596586: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 14:34:58.618402: Reaction calculator failed incorrect data type encountered in irradiation log.
+2022-12-24 14:34:58.622441: SStot = 0, there is no variability in the irradiation data!
+2022-12-24 15:09:33.156471: Directory selection dialog opened
+2022-12-24 15:09:40.410736: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Irradiation log.csv
+2022-12-24 15:09:40.413745: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 15:09:40.416383: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-12-24 15:09:41.528138: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-12-24 15:09:48.441155: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Downtime schedule.csv
+2022-12-24 15:09:53.941494: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Target measurements.csv
+2022-12-24 15:09:59.394247: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Power scalars.csv
+2022-12-24 15:10:03.894898: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/output
+2022-12-24 15:10:06.541194: Generating report
+2022-12-24 15:10:06.548192: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 15:10:06.549192: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 15:10:06.549192: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 15:10:06.549192: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 15:10:06.638166: Reaction calculator failed incorrect data type encountered in irradiation log.
+2022-12-24 15:10:06.638166: Report generation complete, run time: 0.10 seconds
+2022-12-24 15:13:16.148890: Directory selection dialog opened
+2022-12-24 15:13:22.209538: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Irradiation log.csv
+2022-12-24 15:13:22.213620: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 15:13:22.215542: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2022-12-24 15:13:24.298485: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2022-12-24 15:13:30.287429: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Downtime schedule.csv
+2022-12-24 15:13:34.630632: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Target measurements.csv
+2022-12-24 15:13:38.257129: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/Power scalars.csv
+2022-12-24 15:13:42.319845: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Extra rows in data/output
+2022-12-24 15:13:45.728762: Generating report
+2022-12-24 15:13:45.736758: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 15:13:45.737758: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 15:13:45.737758: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 15:13:45.737758: Failed to parse date. Expected a date and time, received: nan nan
+2022-12-24 15:13:45.806469: Reaction calculator failed incorrect data type encountered in irradiation log.
+2022-12-24 15:13:45.806469: Report generation complete, run time: 0.08 seconds
+2022-12-24 15:13:45.806469: Completed with status: 1:Bad irradiation log

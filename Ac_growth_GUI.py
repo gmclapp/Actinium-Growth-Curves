@@ -291,13 +291,14 @@ class GUI:
             
         start = datetime.now()
         try:
-            Ac_growth(self)
+            errorCode, rsqr = Ac_growth(self)
         except IndexError:
             testDF = pd.read_csv(self.beamPath.get())
             print(testDF)
             
         runtime = datetime.now()-start
         append_to_log("Report generation complete, run time: {:4.2f} seconds".format(runtime.total_seconds()))
+        append_to_log("Completed with status: {}:{}".format(errorCode.get(),errorCode.get_txt()))
 
     def submit_data_cmd(self):
 
