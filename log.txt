@@ -1319,3 +1319,38 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-12-24 15:33:33.966448: Report generation complete, run time: 0.06 seconds
 2022-12-24 15:33:33.967448: Completed with status: 2:Beam energy out of range.
 2022-12-24 15:33:35.592137: Error: Beam energy out of range. acknowledged by user
+2022-12-24 16:02:23.446289: Directory selection dialog opened
+2022-12-24 16:02:44.841795: Directory selection dialog opened
+2022-12-24 16:03:09.104281: Created beam data file C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/Irradiation log.csv and set as beam path
+2022-12-24 16:03:12.191216: Directory selection dialog opened
+2022-12-24 16:03:28.712067: Created downtime schedule data file C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/Downtime schedule.csv and set as downtime schedule path
+2022-12-24 16:03:52.728701: Created target measurement data file C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/Target measurements.csv and set as target measurement path
+2022-12-24 16:04:00.995027: Created power scalar schedule data file C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/Power scalar.csv and set as power scalar schedule path
+2022-12-24 16:04:11.196005: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/output
+2022-12-24 16:04:13.988605: Generating report
+2022-12-24 16:06:25.339367: Directory selection dialog opened
+2022-12-24 16:06:31.788573: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/Irradiation log.csv
+2022-12-24 16:06:31.793567: Failed to retrieve last line
+Exception: can only convert an array of size 1 to a Python scalar
+2022-12-24 16:06:34.552084: Error: Failed to retrieve last line
+Exception: can only convert an array of size 1 to a Python scalar acknowledged by user
+2022-12-24 16:06:43.227571: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/Downtime schedule.csv
+2022-12-24 16:06:46.415065: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/Target measurements.csv
+2022-12-24 16:06:50.962361: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/Power scalar.csv
+2022-12-24 16:06:56.945506: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/output
+2022-12-24 16:06:59.124765: Generating report
+2022-12-24 16:09:19.630477: Directory selection dialog opened
+2022-12-24 16:09:25.568679: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/Irradiation log.csv
+2022-12-24 16:09:25.576100: Failed to retrieve last line
+Exception: can only convert an array of size 1 to a Python scalar
+2022-12-24 16:09:26.790370: Error: Failed to retrieve last line
+Exception: can only convert an array of size 1 to a Python scalar acknowledged by user
+2022-12-24 16:09:33.606309: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/Downtime schedule.csv
+2022-12-24 16:09:38.493932: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/Target measurements.csv
+2022-12-24 16:09:43.554428: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/Power scalar.csv
+2022-12-24 16:09:48.302656: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/New irradiation log/output
+2022-12-24 16:09:50.481892: Generating report
+2022-12-24 16:09:50.525294: Empty irradiation log.
+2022-12-24 16:09:50.526299: Report generation complete, run time: 0.04 seconds
+2022-12-24 16:09:50.527300: Completed with status: 3:Empty irradiation log.
+2022-12-24 16:09:53.688294: Error: Empty irradiation log. acknowledged by user

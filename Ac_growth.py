@@ -43,7 +43,8 @@ class errorCode():
         self.code = 0
         self.codes = {0:"Normal",
                       1:"Bad irradiation log.",
-                      2:"Beam energy out of range."}
+                      2:"Beam energy out of range.",
+                      3:"Empty irradiation log."}
 
     def check(self,new):
         try:
@@ -320,8 +321,12 @@ def Ac_growth(GUI_obj):
                                        "Ac-225"])
 
     DF["Date and Time"] = parse_dates(DF,"Date","Time")
-    DF["Elapsed time (s)"] = (DF["Date and Time"] - DF["Date and Time"][0]).dt.total_seconds()
-    calculate_delta(DF)
+    try:
+        DF["Elapsed time (s)"] = (DF["Date and Time"] - DF["Date and Time"][0]).dt.total_seconds()
+        calculate_delta(DF)
+    except IndexError:
+        errorCodeInst.set(3)
+        return(errorCodeInst,0)
 
     # Create calculated data
     DF["Integrated Power (kWhr from Acc)"] = dose_to_accumulated_power(DF["Accumulated Dose"],
