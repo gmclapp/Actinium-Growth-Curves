@@ -239,6 +239,7 @@ class GUI:
         self.startRa = tk.DoubleVar(value=meta["starting Ra activity"])
         self.startAc = tk.DoubleVar(value=meta["starting Ac activity"])
         self.outputPath = tk.StringVar()
+        self.startTargetMass = tk.DoubleVar(value=meta["Radium target mass (g)"])
 
         # Frame creation
         self.dose_frame()
@@ -365,6 +366,7 @@ class GUI:
             meta["Moving avg length"] = self.movingAvgLen.get()
             meta["starting Ra activity"] = self.startRa.get()
             meta["starting Ac activity"] = self.startAc.get()
+            meta["Radium target mass (g)"] = self.startTargetMass.get()
             
             json.dump(meta,f,indent=4)
         append_to_log("Meta data settings saved")
@@ -429,6 +431,10 @@ class GUI:
                                               text="Enter the starting activity of Ac-225 (\u03BCCi)")
         self.startAcActivityEntry = ttk.Entry(self.simFR,
                                               textvariable=self.startAc)
+        self.startTargetMassLabel = ttk.Label(self.simFR,
+                                              text="Enter the starting mass of the target (g)")
+        self.startTargetMassEntry = ttk.Entry(self.simFR,
+                                              textvariable=self.startTargetMass)
         
 
         # Place elements
@@ -445,8 +451,11 @@ class GUI:
         self.startRaActivityEntry.grid(column=1,row=3,padx=2,pady=2)
         self.startAcActivityLabel.grid(column=0,row=4,padx=2,pady=2)
         self.startAcActivityEntry.grid(column=1,row=4,padx=2,pady=2)
+
+        self.startTargetMassLabel.grid(column=0,row=5,padx=2,pady=2)
+        self.startTargetMassEntry.grid(column=1,row=5,padx=2,pady=2)
         
-        self.applyPB.grid(column=0,row=5,padx=2,pady=2)
+        self.applyPB.grid(column=0,row=6,padx=2,pady=2)
         
     def dose_frame(self):
         # Create elements

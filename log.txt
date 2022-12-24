@@ -1164,3 +1164,37 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-12-24 10:49:23.054493: Created target measurement data file C:/Users/clappg/Desktop/AcGrowth Test data/Test.csv and set as target measurement path
 2022-12-24 10:53:00.889294: Directory selection dialog opened
 2022-12-24 10:53:20.899005: Created downtime schedule data file C:/Users/clappg/Desktop/AcGrowth Test data/Test 2.csv and set as downtime schedule path
+2022-12-24 10:58:09.156858: Directory selection dialog opened
+2022-12-24 10:58:16.352130: Created beam data file C:/Users/clappg/Desktop/AcGrowth Test data/Irradiation log.csv and set as beam path
+2022-12-24 10:58:17.768301: Directory selection dialog opened
+2022-12-24 10:58:25.271424: Created downtime schedule data file C:/Users/clappg/Desktop/AcGrowth Test data/Downtime schedule.csv and set as downtime schedule path
+2022-12-24 10:58:38.943861: Created target measurement data file C:/Users/clappg/Desktop/AcGrowth Test data/Target measurements.csv and set as target measurement path
+2022-12-24 10:58:43.865685: Created power scalar schedule data file C:/Users/clappg/Desktop/AcGrowth Test data/Power scalars.csv and set as power scalar schedule path
+2022-12-24 10:58:56.004388: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/output
+2022-12-24 10:59:15.584081: New datapoint submitted
+2022-12-24 10:59:27.111580: New datapoint submitted
+2022-12-24 10:59:37.296255: New datapoint submitted
+2022-12-24 11:01:00.597718: Generating report
+2022-12-24 11:10:38.920563: Directory selection dialog opened
+2022-12-24 11:10:50.676549: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2022-12-24 11:10:59.175984: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Downtime schedule.csv
+2022-12-24 11:11:03.050682: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Target measurements.csv
+2022-12-24 11:11:06.285426: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Power scalars.csv
+2022-12-24 11:11:13.128636: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/output
+2022-12-24 11:11:17.417348: Generating report
+2022-12-24 11:11:17.504972: SStot = 0, there is no variability in the irradiation data!
+2022-12-24 11:11:17.506971: Total integrated beam power: 0.00 kWhr
+2022-12-24 11:11:17.507971: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-12-24 11:12:51.555578: Report generation complete, run time: 94.14 seconds
+2022-12-24 13:59:57.839510: Meta data settings saved
+2022-12-24 14:00:23.557101: Directory selection dialog opened
+2022-12-24 14:00:30.848227: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2022-12-24 14:00:39.707375: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Downtime schedule.csv
+2022-12-24 14:00:44.004245: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Target measurements.csv
+2022-12-24 14:00:47.863660: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Power scalars.csv
+2022-12-24 14:00:52.895136: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/output
+2022-12-24 14:00:55.327988: Generating report
+2022-12-24 14:00:55.370130: SStot = 0, there is no variability in the irradiation data!
+2022-12-24 14:00:55.371094: Total integrated beam power: 0.00 kWhr
+2022-12-24 14:00:55.371094: Activity of Ac-225 at the last reported time: 0.000 mCi
+2022-12-24 14:02:05.829998: Report generation complete, run time: 70.50 seconds
