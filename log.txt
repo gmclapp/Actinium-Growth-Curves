@@ -1153,3 +1153,14 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2022-11-28 09:11:04.752402: Total integrated beam power: 0.00 kWhr
 2022-11-28 09:11:04.752605: Activity of Ac-225 at the last reported time: 0.000 mCi
 2022-11-28 09:13:11.423869: Report generation complete, run time: 126.82 seconds
+2022-12-24 10:18:05.682705: Directory selection dialog opened
+2022-12-24 10:18:31.146242: Created beam data file C:/Users/clappg/Desktop/AcGrowth Test data/irradiation log.csv and set as beam path
+2022-12-24 10:18:33.959440: Directory selection dialog opened
+2022-12-24 10:18:42.135411: Created target measurement data file C:/Users/clappg/Desktop/AcGrowth Test data/Downtime schedule.csv and set as target measurement path
+2022-12-24 10:18:51.803017: Created downtime schedule data file C:/Users/clappg/Desktop/AcGrowth Test data/Target measurements.csv and set as downtime schedule path
+2022-12-24 10:19:08.990291: Created power scalar schedule data file C:/Users/clappg/Desktop/AcGrowth Test data/Power scalar schedule.csv and set as power scalar schedule path
+2022-12-24 10:48:40.715034: Directory selection dialog opened
+2022-12-24 10:48:48.787483: Created target measurement data file C:/Users/clappg/Desktop/AcGrowth Test data/Test.csv and set as target measurement path
+2022-12-24 10:49:23.054493: Created target measurement data file C:/Users/clappg/Desktop/AcGrowth Test data/Test.csv and set as target measurement path
+2022-12-24 10:53:00.889294: Directory selection dialog opened
+2022-12-24 10:53:20.899005: Created downtime schedule data file C:/Users/clappg/Desktop/AcGrowth Test data/Test 2.csv and set as downtime schedule path

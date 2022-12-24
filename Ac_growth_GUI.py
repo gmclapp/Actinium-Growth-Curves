@@ -183,11 +183,11 @@ class dir_popup:
 
         schedLabel.grid(column=0,row=1)
         schedPB.grid(column=1,row=1,padx=2,pady=2)
-        newTargetDataPB.grid(column=2,row=1,padx=2,pady=2)
+        newSchedDataPB.grid(column=2,row=1,padx=2,pady=2)
         
         targetLabel.grid(column=0,row=2)
         targetPB.grid(column=1,row=2,padx=2,pady=2)
-        newSchedDataPB.grid(column=2,row=2,padx=2,pady=2)
+        newTargetDataPB.grid(column=2,row=2,padx=2,pady=2)
 
         powerLabel.grid(column=0,row=3)
         powerSchedPB.grid(column=1,row=3,padx=2,pady=2)
