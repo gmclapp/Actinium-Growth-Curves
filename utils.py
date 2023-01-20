@@ -2,7 +2,15 @@ import datetime as dt
 import pandas as pd
 from exceptions import *
 
+def calculate_delta(df):
+    delta = []
+    for i,t in enumerate(df["Elapsed time (s)"]):
+        if i==0:
+            delta.append(df["Elapsed time (s)"][0])
+        else:
+            delta.append(t-df["Elapsed time (s)"][i-1])
 
+    df["dt (s)"] = delta
 
 def parse_dates(DF, date_col, time_col):
     new_series = []
@@ -43,5 +51,9 @@ def error_check_source(file,date_col="Date",time_col="Time"):
         DF["Date and Time"] = parse_dates(DF,date_col,time_col)
     except:
         print(file)
+
+    DF["Elapsed time (s)"] = (DF["Date and Time"] - DF["Date and Time"][0]).dt.total_seconds()
+    calculate_delta(DF)
+        
     
     ##    raise BadDatesError(file)

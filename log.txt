@@ -1609,3 +1609,27 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2023-01-20 14:57:48.940199: SStot = 0, there is no variability in the irradiation data!
 2023-01-20 14:58:00.077343: Report generation complete, run time: 11.22 seconds
 2023-01-20 14:58:00.077343: Completed with status: 0:Normal
+2023-01-20 15:00:24.521547: Directory selection dialog opened
+2023-01-20 15:00:28.759787: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 15:00:32.696328: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Downtime schedule.csv
+2023-01-20 15:00:35.525135: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Target measurements.csv
+2023-01-20 15:00:37.852915: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Power scalars.csv
+2023-01-20 15:00:40.995424: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/output
+2023-01-20 15:00:42.405920: Generating report
+2023-01-20 15:00:42.443341: Total integrated beam power: 0.00 kWhr
+2023-01-20 15:00:42.444296: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 15:00:42.449296: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 15:00:53.074696: Report generation complete, run time: 10.67 seconds
+2023-01-20 15:00:53.075660: Completed with status: 0:Normal
+2023-01-20 15:09:57.545039: Directory selection dialog opened
+2023-01-20 15:10:01.711583: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 15:10:05.666389: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Downtime schedule.csv
+2023-01-20 15:10:07.866887: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Target measurements.csv
+2023-01-20 15:10:09.914043: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Power scalars.csv
+2023-01-20 15:10:13.055084: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/output
+2023-01-20 15:10:15.127525: Generating report
+2023-01-20 15:10:15.157690: Total integrated beam power: 0.00 kWhr
+2023-01-20 15:10:15.157690: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 15:10:15.163016: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 15:10:25.855206: Report generation complete, run time: 10.73 seconds
+2023-01-20 15:10:25.856256: Completed with status: 0:Normal

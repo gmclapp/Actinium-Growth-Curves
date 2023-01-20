@@ -75,15 +75,15 @@ def parse_6dig_date(date):
     year = DT.datetime.strptime(date, '%y%m%d').year
     return(DT.datetime(year,month,day))
     
-def calculate_delta(df):
-    delta = []
-    for i,t in enumerate(df["Elapsed time (s)"]):
-        if i==0:
-            delta.append(df["Elapsed time (s)"][0])
-        else:
-            delta.append(t-df["Elapsed time (s)"][i-1])
-
-    df["dt (s)"] = delta
+##def calculate_delta(df):
+##    delta = []
+##    for i,t in enumerate(df["Elapsed time (s)"]):
+##        if i==0:
+##            delta.append(df["Elapsed time (s)"][0])
+##        else:
+##            delta.append(t-df["Elapsed time (s)"][i-1])
+##
+##    df["dt (s)"] = delta
     
 def reaction_calculator(df,ra_225_init,ac_225_init,Reaction_Rate_Modification_Factor):
     '''Takes a data frame with "Integrated Power (kWhr from Acc)", "dt (s)",
