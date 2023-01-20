@@ -304,7 +304,8 @@ def Ac_growth(GUI_obj):
     except FileNotFoundError:
         errorCodeInst.set(5) # Source data not found
 
-    except BadDatesError:
+    except BadDatesError as ex:
+        print(ex)
         errorCodeInst.set(4) # Bad dates found in source files
         
     except Exception as ex: # Make this specific to a custom error type

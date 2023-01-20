@@ -37,7 +37,7 @@ def error_check_source(file):
         raise FileNotFoundError
 
     print(DF.head())
-    raise BadDatesError
+    raise BadDatesError(file)
 
 ##    DF["Date and Time"] = parse_dates(DF,"Date","Time")
     # if dates are in the wrong order
