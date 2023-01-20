@@ -1354,3 +1354,150 @@ Exception: can only convert an array of size 1 to a Python scalar acknowledged b
 2022-12-24 16:09:50.526299: Report generation complete, run time: 0.04 seconds
 2022-12-24 16:09:50.527300: Completed with status: 3:Empty irradiation log.
 2022-12-24 16:09:53.688294: Error: Empty irradiation log. acknowledged by user
+2023-01-20 09:38:10.672887: Generating report
+2023-01-20 09:38:10.678910: Beam path selection is missing or invalid
+2023-01-20 09:38:12.404871: Error: Beam path selection is missing or invalid acknowledged by user
+2023-01-20 09:38:13.008971: Directory selection dialog opened
+2023-01-20 09:38:22.353551: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 09:38:29.341726: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Downtime schedule.csv
+2023-01-20 09:38:33.080624: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Target measurements.csv
+2023-01-20 09:38:34.784194: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Power scalars.csv
+2023-01-20 09:38:38.376245: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/output
+2023-01-20 09:38:40.498483: Generating report
+2023-01-20 09:38:40.539441: Total integrated beam power: 0.00 kWhr
+2023-01-20 09:38:40.539441: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 09:38:40.540468: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 09:39:00.385608: Report generation complete, run time: 19.89 seconds
+2023-01-20 09:39:00.385608: Completed with status: 0:Normal
+2023-01-20 09:39:28.102176: Meta data settings saved
+2023-01-20 09:39:32.492058: Generating report
+2023-01-20 09:39:32.514184: Total integrated beam power: 0.00 kWhr
+2023-01-20 09:39:32.514184: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 09:39:32.514184: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 09:39:52.401140: Report generation complete, run time: 19.91 seconds
+2023-01-20 09:39:52.402139: Completed with status: 0:Normal
+2023-01-20 09:40:03.923300: New datapoint submitted
+2023-01-20 09:40:05.898388: Generating report
+2023-01-20 09:40:05.914994: Total integrated beam power: 0.00 kWhr
+2023-01-20 09:40:05.914994: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 09:40:05.917041: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 09:40:26.469611: Report generation complete, run time: 20.57 seconds
+2023-01-20 09:40:26.469611: Completed with status: 0:Normal
+2023-01-20 09:40:49.889075: plot settings saved
+2023-01-20 09:40:58.964523: Meta data settings saved
+2023-01-20 09:40:59.757681: Generating report
+2023-01-20 09:40:59.778810: Total integrated beam power: 0.00 kWhr
+2023-01-20 09:40:59.778810: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 09:40:59.778810: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 09:41:30.019185: Report generation complete, run time: 30.26 seconds
+2023-01-20 09:41:30.019185: Completed with status: 0:Normal
+2023-01-20 09:41:48.561856: Meta data settings saved
+2023-01-20 09:41:55.162156: plot settings saved
+2023-01-20 09:41:56.128204: Generating report
+2023-01-20 09:41:56.149202: Total integrated beam power: 0.00 kWhr
+2023-01-20 09:41:56.150203: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 09:41:56.152202: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 09:42:56.611785: Report generation complete, run time: 60.48 seconds
+2023-01-20 09:42:56.611785: Completed with status: 0:Normal
+2023-01-20 09:44:12.587531: plot settings saved
+2023-01-20 09:44:13.439222: Meta data settings saved
+2023-01-20 09:44:14.219042: Generating report
+2023-01-20 09:44:14.240966: Total integrated beam power: 0.00 kWhr
+2023-01-20 09:44:14.240966: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 09:44:14.240966: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 09:45:47.462025: Report generation complete, run time: 93.24 seconds
+2023-01-20 09:45:47.462025: Completed with status: 0:Normal
+2023-01-20 09:54:28.344805: New datapoint submitted
+2023-01-20 09:54:34.734241: Generating report
+2023-01-20 09:54:34.744250: Total integrated beam power: 0.00 kWhr
+2023-01-20 09:54:34.744250: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 09:54:34.745240: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 09:56:11.734202: Report generation complete, run time: 97.00 seconds
+2023-01-20 09:56:11.734202: Completed with status: 0:Normal
+2023-01-20 11:18:08.973588: Meta data settings saved
+2023-01-20 11:18:09.766241: Generating report
+2023-01-20 11:18:09.812258: Total integrated beam power: 0.00 kWhr
+2023-01-20 11:18:09.812258: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 11:18:09.813210: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 11:19:47.255889: Report generation complete, run time: 97.49 seconds
+2023-01-20 11:19:47.256855: Completed with status: 0:Normal
+2023-01-20 13:44:18.554773: Directory selection dialog opened
+2023-01-20 13:44:26.535399: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Dates out of order/Irradiation log - bad.csv
+2023-01-20 13:44:34.487482: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Downtime schedule.csv
+2023-01-20 13:44:37.706295: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Target measurements.csv
+2023-01-20 13:44:40.097152: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Power scalars.csv
+2023-01-20 13:44:46.143847: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Dates out of order/output
+2023-01-20 13:44:49.497086: Generating report
+2023-01-20 13:44:49.585126: Total integrated beam power: 0.00 kWhr
+2023-01-20 13:44:49.585126: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 13:44:49.589126: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 13:46:27.484427: Report generation complete, run time: 97.98 seconds
+2023-01-20 13:46:27.485464: Completed with status: 0:Normal
+2023-01-20 13:48:38.089616: Generating report
+2023-01-20 13:51:26.370732: Directory selection dialog opened
+2023-01-20 13:51:32.092012: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 13:51:32.095085: Failed to parse date. Expected a date and time, received: 1/20/2023 09:50
+2023-01-20 13:51:32.097049: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2023-01-20 13:51:34.994516: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2023-01-20 13:51:41.248539: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 13:51:41.250547: Failed to parse date. Expected a date and time, received: 1/20/2023 09:50
+2023-01-20 13:51:41.252541: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2023-01-20 13:51:43.179095: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2023-01-20 13:52:19.389107: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 13:52:19.391187: Failed to parse date. Expected a date and time, received: 1/20/2023 09:50
+2023-01-20 13:52:19.393019: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2023-01-20 13:52:48.360215: Directory selection dialog opened
+2023-01-20 13:52:51.324688: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 13:52:51.327765: Failed to parse date. Expected a date and time, received: 1/20/2023 09:50
+2023-01-20 13:52:51.330694: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2023-01-20 13:52:52.576936: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2023-01-20 13:53:17.698189: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 13:53:17.700165: Failed to parse date. Expected a date and time, received: 12/24/2022 10:00
+2023-01-20 13:53:17.702158: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2023-01-20 13:53:18.952113: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2023-01-20 13:54:15.768286: Directory selection dialog opened
+2023-01-20 13:54:19.838410: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 13:54:19.841411: Failed to parse date. Expected a date and time, received: 12/24/2022 10:00
+2023-01-20 13:54:19.843453: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2023-01-20 13:54:20.948349: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2023-01-20 13:55:18.663432: Directory selection dialog opened
+2023-01-20 13:55:21.916210: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 13:55:47.233430: Directory selection dialog opened
+2023-01-20 13:55:49.899945: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 13:55:49.903351: Failed to parse date. Expected a date and time, received: 12/24/2022 10:00
+2023-01-20 13:55:49.904363: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2023-01-20 13:55:50.964489: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2023-01-20 13:56:36.052345: Directory selection dialog opened
+2023-01-20 13:56:38.899026: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 13:56:38.902007: Failed to parse date. Expected a date and time, received: 12/24/2022 10:00
+2023-01-20 13:56:38.904130: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime'
+2023-01-20 13:56:39.925444: Error: Failed to retrieve last line
+Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
+2023-01-20 13:58:36.695335: Directory selection dialog opened
+2023-01-20 13:58:39.258084: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 13:58:45.804919: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Downtime schedule.csv
+2023-01-20 13:58:48.569987: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Target measurements.csv
+2023-01-20 13:58:50.492382: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Power scalars.csv
+2023-01-20 13:58:54.523152: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/output
+2023-01-20 13:58:56.946316: Generating report
+2023-01-20 13:58:57.042812: Total integrated beam power: 0.00 kWhr
+2023-01-20 13:58:57.042812: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 13:58:57.048814: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 14:00:39.712702: Dates out of order in source file.
+2023-01-20 14:00:39.712702: Report generation complete, run time: 102.77 seconds
+2023-01-20 14:00:39.712702: Completed with status: 4:Dates out of order in source file.
+2023-01-20 14:01:33.171481: Error: Dates out of order in source file. acknowledged by user

@@ -290,11 +290,7 @@ class GUI:
             error_popup(self.master,"Warning: Power scalar schedule path selection is missing or invalid")
             
         start = datetime.now()
-##        try:
         errorCode, rsqr = Ac_growth(self)
-##        except IndexError:
-##            testDF = pd.read_csv(self.beamPath.get())
-##            print(testDF)
 
         if errorCode.get():
             error_popup(self.master,errorCode.get_txt())

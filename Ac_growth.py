@@ -1,6 +1,6 @@
 ''' Python Plotting Template
  Current maintainer: Glenn Clapp
- Last modified: 21 November 2022
+ Last modified: 20 January 2023
 
  Contributions from
  Austin Czyzewski through
@@ -44,7 +44,9 @@ class errorCode():
         self.codes = {0:"Normal",
                       1:"Bad irradiation log.",
                       2:"Beam energy out of range.",
-                      3:"Empty irradiation log."}
+                      3:"Empty irradiation log.",
+                      4:"Dates out of order in source file.",
+                      5:"Source data not found."}
 
     def check(self,new):
         try:
@@ -71,23 +73,6 @@ def parse_6dig_date(date):
     year = DT.datetime.strptime(date, '%y%m%d').year
     return(DT.datetime(year,month,day))
     
-def parse_dates(DF, date_col, time_col):
-    new_series = []
-    
-    for i,row in DF.iterrows():
-        new_datetime = parse_date(row[date_col],row[time_col])
-        new_series.append(new_datetime)
-
-    return(pd.Series(new_series))
-           
-def parse_date(date, time):
-    try:
-        m,D,Y = date.split("/")
-        H,M = time.split(":")
-        return(DT.datetime(int(Y),int(m),int(D),int(H),int(M)))
-    except:
-        append_to_log("Failed to parse date. Expected a date and time, received: {} {}".format(date, time))
-
 def calculate_delta(df):
     delta = []
     for i,t in enumerate(df["Elapsed time (s)"]):
@@ -307,6 +292,19 @@ def Ac_growth(GUI_obj):
 
     # ----------------- S C R I P T   S E T T I N G S  -------------------------- #
 
+    # Error check source files
+    try:
+        error_check_source(GUI_obj.beamPath.get())
+        error_check_source(GUI_obj.targetMeasPath.get())
+        error_check_source(GUI_obj.downSchedPath.get())
+        error_check_source(GUI_obj.powerSchedPath.get())
+
+    except FileNotFoundError:
+        errorCodeInst.set(5) # Source data not found
+    except Exception as ex: # Make this specific to a custom error type
+        print(ex)
+        errorCodeInst.set(4) # Bad dates found in source files
+    
     Adjustable_Ratio = meta["Adjustable ratio"]
     Reaction_Rate_Modification_Factor = meta["Reaction rate modification factor"]
     mGy_min_watt = meta["mGy per min per watt"]
