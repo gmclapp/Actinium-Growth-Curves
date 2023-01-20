@@ -55,5 +55,8 @@ def error_check_source(file,date_col="Date",time_col="Time"):
     DF["Elapsed time (s)"] = (DF["Date and Time"] - DF["Date and Time"][0]).dt.total_seconds()
     calculate_delta(DF)
         
-    
-    ##    raise BadDatesError(file)
+    for i,row in DF.iterrows():
+        if row["dt (s)"] < 0:
+            raise BadDatesError(file)
+        else:
+            pass
