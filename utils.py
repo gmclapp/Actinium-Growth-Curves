@@ -1,5 +1,8 @@
 import datetime as dt
 import pandas as pd
+from exceptions import *
+
+
 
 def parse_dates(DF, date_col, time_col):
     new_series = []
@@ -32,6 +35,9 @@ def error_check_source(file):
     except FileNotFoundError:
         # I don't we can ever get here without already raising this exception...
         raise FileNotFoundError
+
+    print(DF.head())
+    raise BadDatesError
 
 ##    DF["Date and Time"] = parse_dates(DF,"Date","Time")
     # if dates are in the wrong order

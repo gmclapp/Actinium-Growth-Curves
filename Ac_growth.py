@@ -29,6 +29,7 @@ warnings.filterwarnings("ignore", message="FixedFormatter should only be used to
 import tkinter as tk
 import os
 from utils import *
+from exceptions import *
 
 # ------------------- P L O T   S E T T I N G S  ---------------------------- #
 
@@ -46,7 +47,8 @@ class errorCode():
                       2:"Beam energy out of range.",
                       3:"Empty irradiation log.",
                       4:"Dates out of order in source file.",
-                      5:"Source data not found."}
+                      5:"Source data not found.",
+                      6:"Unhandled exception"}
 
     def check(self,new):
         try:
@@ -301,9 +303,14 @@ def Ac_growth(GUI_obj):
 
     except FileNotFoundError:
         errorCodeInst.set(5) # Source data not found
-    except Exception as ex: # Make this specific to a custom error type
-        print(ex)
+
+    except BadDatesError:
         errorCodeInst.set(4) # Bad dates found in source files
+        
+    except Exception as ex: # Make this specific to a custom error type
+        errorCodeInst.set(6) # Unhandled exception
+        print(ex)
+        
     
     Adjustable_Ratio = meta["Adjustable ratio"]
     Reaction_Rate_Modification_Factor = meta["Reaction rate modification factor"]
