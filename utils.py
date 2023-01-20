@@ -33,7 +33,7 @@ def error_check_source(file):
         # I don't we can ever get here without already raising this exception...
         raise FileNotFoundError
 
-    DF["Date and Time"] = parse_dates(DF,"Date","Time")
+##    DF["Date and Time"] = parse_dates(DF,"Date","Time")
     # if dates are in the wrong order
     # raise exception
     

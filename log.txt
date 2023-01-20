@@ -1501,3 +1501,29 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2023-01-20 14:00:39.712702: Report generation complete, run time: 102.77 seconds
 2023-01-20 14:00:39.712702: Completed with status: 4:Dates out of order in source file.
 2023-01-20 14:01:33.171481: Error: Dates out of order in source file. acknowledged by user
+2023-01-20 14:03:59.420515: Directory selection dialog opened
+2023-01-20 14:04:04.850900: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 14:04:09.679249: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Downtime schedule.csv
+2023-01-20 14:04:12.446114: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Target measurements.csv
+2023-01-20 14:04:14.897898: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Power scalars.csv
+2023-01-20 14:04:18.084772: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/output
+2023-01-20 14:04:20.262987: Generating report
+2023-01-20 14:04:20.355508: Total integrated beam power: 0.00 kWhr
+2023-01-20 14:04:20.355508: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 14:04:20.361510: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 14:06:07.564270: Dates out of order in source file.
+2023-01-20 14:06:07.565278: Report generation complete, run time: 107.30 seconds
+2023-01-20 14:06:07.565278: Completed with status: 4:Dates out of order in source file.
+2023-01-20 14:06:38.675227: Error: Dates out of order in source file. acknowledged by user
+2023-01-20 14:07:07.022322: Directory selection dialog opened
+2023-01-20 14:07:12.054828: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 14:07:18.239785: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Downtime schedule.csv
+2023-01-20 14:07:20.146457: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Target measurements.csv
+2023-01-20 14:07:22.662247: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Power scalars.csv
+2023-01-20 14:07:25.693253: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/output
+2023-01-20 14:07:27.855053: Generating report
+2023-01-20 14:07:27.874052: Total integrated beam power: 0.00 kWhr
+2023-01-20 14:07:27.874052: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 14:07:27.879358: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 14:09:40.426048: Report generation complete, run time: 132.57 seconds
+2023-01-20 14:09:40.427052: Completed with status: 0:Normal
