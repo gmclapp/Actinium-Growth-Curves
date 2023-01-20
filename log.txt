@@ -1597,3 +1597,15 @@ Exception: 'NoneType' object has no attribute 'strftime' acknowledged by user
 2023-01-20 14:48:26.259356: Report generation complete, run time: 10.47 seconds
 2023-01-20 14:48:26.260356: Completed with status: 4:Dates out of order in source file.
 2023-01-20 14:48:49.232542: Error: Dates out of order in source file. acknowledged by user
+2023-01-20 14:57:31.492726: Directory selection dialog opened
+2023-01-20 14:57:35.839499: Beam path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Irradiation log.csv
+2023-01-20 14:57:38.761483: Downtime schedule path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Downtime schedule.csv
+2023-01-20 14:57:41.056381: Target measurement path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Target measurements.csv
+2023-01-20 14:57:43.449955: Power scalar path set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/Power scalars.csv
+2023-01-20 14:57:46.587118: Output directory set to C:/Users/clappg/Desktop/AcGrowth Test data/Correct/output
+2023-01-20 14:57:48.857563: Generating report
+2023-01-20 14:57:48.931466: Total integrated beam power: 0.00 kWhr
+2023-01-20 14:57:48.931466: Activity of Ac-225 at the last reported time: 0.000 mCi
+2023-01-20 14:57:48.940199: SStot = 0, there is no variability in the irradiation data!
+2023-01-20 14:58:00.077343: Report generation complete, run time: 11.22 seconds
+2023-01-20 14:58:00.077343: Completed with status: 0:Normal

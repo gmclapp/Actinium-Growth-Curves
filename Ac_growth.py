@@ -296,10 +296,12 @@ def Ac_growth(GUI_obj):
 
     # Error check source files
     try:
-        error_check_source(GUI_obj.beamPath.get())
-        error_check_source(GUI_obj.targetMeasPath.get())
-        error_check_source(GUI_obj.downSchedPath.get())
-        error_check_source(GUI_obj.powerSchedPath.get())
+        error_check_source(GUI_obj.beamPath.get(),
+                           date_col="Date",
+                           time_col="Time")
+##        error_check_source(GUI_obj.targetMeasPath.get())
+##        error_check_source(GUI_obj.downSchedPath.get())
+##        error_check_source(GUI_obj.powerSchedPath.get())
 
     except FileNotFoundError:
         errorCodeInst.set(5) # Source data not found

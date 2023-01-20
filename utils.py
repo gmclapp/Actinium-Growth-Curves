@@ -26,7 +26,7 @@ def append_to_log(message):
         today = dt.datetime.today()
         f.write("{}: {}\n".format(today,message))
 
-def error_check_source(file):
+def error_check_source(file,date_col="Date",time_col="Time"):
     '''Takes a file path and detects whether the datetime data is appropriately
     sorted from oldest to newest.'''
     try:
@@ -37,9 +37,11 @@ def error_check_source(file):
         raise FileNotFoundError
 
     print(DF.head())
-    raise BadDatesError(file)
 
-##    DF["Date and Time"] = parse_dates(DF,"Date","Time")
-    # if dates are in the wrong order
-    # raise exception
+
+    try:
+        DF["Date and Time"] = parse_dates(DF,date_col,time_col)
+    except:
+        print(file)
     
+    ##    raise BadDatesError(file)
